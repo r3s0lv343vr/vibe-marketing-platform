@@ -29,12 +29,15 @@ export default function HomePage() {
             live profiles, and intros you can taste.
           </p>
           <div className="animate-rise-delay-2 mt-8 flex flex-wrap gap-3">
-            <Link href="/cohort" className="btn btn-primary bg-white !text-[var(--ink)]">
+            <Link
+              href="/cohort"
+              className="btn border border-[#3a2a28] bg-[#3a2a28] text-[#fff8f4] hover:bg-[#c45d78] hover:border-[#c45d78]"
+            >
               Meet the cohort
             </Link>
             <Link
               href="/studio"
-              className="btn btn-ghost border-white/30 bg-white/10 text-white hover:bg-white/20"
+              className="btn border border-[#3a2a28] bg-[#fff8f4] text-[#3a2a28] hover:bg-white"
             >
               Open the studio
             </Link>
