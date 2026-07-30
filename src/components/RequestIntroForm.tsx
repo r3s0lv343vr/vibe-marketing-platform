@@ -26,14 +26,36 @@ export function RequestIntroForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Request failed");
+      if (res.ok) {
+        const data = await res.json();
+        setStatus("sent");
+        setMessage(data.message || "Intro request received.");
+        event.currentTarget.reset();
+        return;
+      }
+      throw new Error("API unavailable");
+    } catch {
+      // Static / Pages fallback — open mail client for placement lead
+      const students = payload.students.join(", ") || "(none selected)";
+      const subject = encodeURIComponent(
+        `Pixie Dust Cheesecake intro request — ${payload.company}`,
+      );
+      const body = encodeURIComponent(
+        [
+          `Partner: ${payload.partnerName}`,
+          `Company: ${payload.company}`,
+          `Email: ${payload.email}`,
+          `Students: ${students}`,
+          "",
+          payload.note,
+        ].join("\n"),
+      );
+      window.location.href = `mailto:placement@hult-cohort.local?subject=${subject}&body=${body}`;
       setStatus("sent");
-      setMessage(data.message || "Intro request received.");
+      setMessage(
+        "Opened your mail client with the intro request. If nothing opened, email the placement lead directly.",
+      );
       event.currentTarget.reset();
-    } catch (err) {
-      setStatus("error");
-      setMessage(err instanceof Error ? err.message : "Something went wrong.");
     }
   }
 
