@@ -47,30 +47,20 @@ export default function HomePage() {
 
       <section className="site-shell mt-20">
         <div className="max-w-3xl">
-          <h2 className="display text-4xl sm:text-5xl">A public slice of the loop</h2>
+          <h2 className="display text-4xl sm:text-5xl">Marketing, redesigned.</h2>
           <div className="mt-6 space-y-4 text-base leading-relaxed text-[var(--ink-soft)] sm:text-lg">
+            <p>Stop juggling tools.</p>
             <p>
-              Pixie Dust Cheesecake is the outward-facing marketing surface for the Hult Cohort
-              Developer Program Summer Pilot 2026. Hiring partners should not have to decode
-              Slack threads or trust a résumé — they should open a profile, click through to
-              production apps, and watch GitHub tell the story. This platform is that tasting
-              menu: cohort narrative, student portfolios, partner pathways, and a live PM status
-              snapshot wired to the Phase 1 build trail.
+              <strong className="font-semibold text-[var(--ink)]">Pixie Dust Cheesecake</strong> is
+              an AI marketing platform that builds your brand, creates your content, designs your
+              website, and launches campaigns—all from a simple conversation.
             </p>
             <p>
-              The brand is deliberately sensorial. Soft rose sugar, champagne gold, and mint
-              frosting signal warmth without softness of standards. Under the glaze sits an AI
-              Brand Designer studio — one prompt (“What are we marketing today?”) spins Brand DNA,
-              Vibe Meter gauges, a dynamic mood board, campaign starters, and a conversational
-              website preview. Agents coordinate copy, visuals, and channel strategy so the same
-              identity can ship websites, Instagram, Facebook, email, and lifecycle campaigns
-              without losing the crumb trail of consistency.
+              Powered by intelligent AI agents, it helps businesses create consistent,
+              high-performing marketing faster than ever before.
             </p>
-            <p>
-              For partners, the ask is simple: browse builders, filter by signal, request an
-              intro. For the cohort, the promise is visibility with dignity — public by default,
-              private when opted out, always linked to real deploys. Pixie Dust Cheesecake does
-              not invent achievement; it plates it. Come for the vibe. Stay for the GitHub.
+            <p className="display text-2xl font-semibold text-[var(--ink)] sm:text-3xl">
+              Create. Launch. Grow.
             </p>
           </div>
         </div>
