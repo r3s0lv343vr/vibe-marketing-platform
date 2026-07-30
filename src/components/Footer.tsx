@@ -7,27 +7,17 @@ export function Footer() {
         <div>
           <p className="display text-2xl text-[var(--ink)]">Pixie Dust Cheesecake</p>
           <p className="mt-2 max-w-md">
-            Vibe marketing for the Hult Cohort Developer Program · Summer Pilot 2026.
-            Inspect the work on GitHub — then request an intro.
+            AI marketing platform — create brands, websites, images, and campaigns with coordinated
+            agents. Create. Launch. Grow.
           </p>
         </div>
         <div className="flex flex-wrap gap-4">
-          <Link href="/cohort">Cohort</Link>
-          <Link href="/studio">Studio</Link>
-          <Link href="/partners">Partners</Link>
-          <Link href="/status">PM Status</Link>
-          <a
-            href="https://github.com/rogerSuperBuilderAlpha/hult-cohort-program"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Cohort repo
-          </a>
+          <Link href="/signup">Sign up</Link>
+          <Link href="/login">Log in</Link>
+          <Link href="/app">Agents</Link>
+          <Link href="/studio">Studio demo</Link>
         </div>
       </div>
-      <p className="mt-8 text-xs opacity-70">
-        Built by @r3s0lv343vr · Profiles default to public; opt-out shows as private.
-      </p>
     </footer>
   );
 }

@@ -1,10 +1,6 @@
 import Link from "next/link";
-import { ProfileCard } from "@/components/ProfileCard";
-import { publicProfiles } from "@/data/profiles";
 
 export default function HomePage() {
-  const featured = publicProfiles().slice(0, 3);
-
   return (
     <>
       <section className="relative min-h-[calc(100svh-5.5rem)] overflow-hidden">
@@ -25,27 +21,27 @@ export default function HomePage() {
             <span className="shine-text">Pixie Dust Cheesecake</span>
           </h1>
           <p className="animate-rise-delay-2 mt-5 max-w-xl rounded-2xl bg-[rgba(255,248,244,0.92)] px-4 py-3 text-lg text-[#3a2a28] sm:text-xl">
-            The vibe marketing studio that plates cohort proof for hiring partners — Brand DNA,
-            live profiles, and intros you can taste.
+            An AI marketing platform that builds your brand, creates content, designs websites, and
+            launches campaigns — from one conversation.
           </p>
           <div className="animate-rise-delay-2 mt-8 flex flex-wrap gap-3">
             <Link
-              href="/cohort"
+              href="/signup"
               className="btn border border-[#3a2a28] bg-[#3a2a28] text-[#fff8f4] hover:bg-[#c45d78] hover:border-[#c45d78]"
             >
-              Meet the cohort
+              Sign up
             </Link>
             <Link
-              href="/studio"
+              href="/login"
               className="btn border border-[#3a2a28] bg-[#fff8f4] !text-[#3a2a28] hover:bg-white hover:!text-[#3a2a28]"
             >
-              Open the studio
+              Log in
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="site-shell mt-20">
+      <section id="marketing" className="site-shell mt-20">
         <div className="max-w-3xl">
           <h2 className="display text-4xl sm:text-5xl">Marketing, redesigned.</h2>
           <div className="mt-6 space-y-4 text-base leading-relaxed text-[var(--ink-soft)] sm:text-lg">
@@ -69,18 +65,37 @@ export default function HomePage() {
       <section className="site-shell mt-20">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 className="display text-4xl">Featured builders</h2>
+            <h2 className="display text-4xl">What agents can build</h2>
             <p className="mt-2 text-[var(--ink-soft)]">
-              Sample profiles while the roster finishes filling — placeholders marked clearly.
+              After you sign up, pick a tile and coordinated AI agents start the work.
             </p>
           </div>
-          <Link href="/cohort" className="btn btn-ghost">
-            View full cohort
+          <Link href="/signup" className="btn btn-ghost !text-[#3a2a28]">
+            Sign up to begin
           </Link>
         </div>
         <div className="mt-8 grid gap-5 md:grid-cols-3">
-          {featured.map((profile) => (
-            <ProfileCard key={profile.slug} profile={profile} />
+          {[
+            {
+              title: "AI Web Page Creation",
+              body: "Brand Strategist, Copywriter, and Layout Architect draft a live page preview from your brief.",
+            },
+            {
+              title: "AI Image Generation",
+              body: "Art Director, Prompt Engineer, and Style Critic produce generation-ready campaign visuals.",
+            },
+            {
+              title: "AI Video Creation",
+              body: "Scriptwriter, Shot Planner, and Motion Director align a launch clip you can produce next.",
+            },
+          ].map((card) => (
+            <article
+              key={card.title}
+              className="rounded-[2rem] border border-[var(--line)] bg-white/55 p-6"
+            >
+              <h3 className="display text-2xl">{card.title}</h3>
+              <p className="mt-3 text-[var(--ink-soft)]">{card.body}</p>
+            </article>
           ))}
         </div>
       </section>
@@ -88,13 +103,12 @@ export default function HomePage() {
       <section className="site-shell mt-20">
         <div className="grid gap-6 overflow-hidden rounded-[2.5rem] border border-[var(--line)] bg-white/50 md:grid-cols-2">
           <div className="p-8 sm:p-10">
-            <h2 className="display text-4xl">Partner pathway</h2>
+            <h2 className="display text-4xl">Ready when you are</h2>
             <p className="mt-4 text-[var(--ink-soft)]">
-              Evaluate on shipped work. Request intros. Fee model: ~25% of first-year base on
-              successful hire, with a 90-day clawback — details on the partners page.
+              Create an account, open your agent workspace, and choose what to market today.
             </p>
-            <Link href="/partners" className="btn btn-primary mt-8">
-              Hire from this cohort
+            <Link href="/signup" className="btn btn-primary mt-8">
+              Sign up free
             </Link>
           </div>
           <div

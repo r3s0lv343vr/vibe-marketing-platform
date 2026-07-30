@@ -1,10 +1,9 @@
 import Link from "next/link";
 
 const links = [
-  { href: "/cohort", label: "Cohort" },
-  { href: "/studio", label: "Studio" },
-  { href: "/status", label: "PM Status" },
-  { href: "/partners", label: "Partners" },
+  { href: "/#marketing", label: "Product" },
+  { href: "/signup", label: "Sign up" },
+  { href: "/login", label: "Log in" },
 ];
 
 export function Header() {
@@ -21,8 +20,8 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Link href="/partners#request-intro" className="btn btn-primary !px-4 !py-2 text-sm">
-          Request intro
+        <Link href="/signup" className="btn btn-primary !px-4 !py-2 text-sm">
+          Sign up
         </Link>
       </div>
       <nav className="mt-3 flex gap-3 overflow-x-auto pb-1 text-sm font-medium text-[var(--ink-soft)] md:hidden">
