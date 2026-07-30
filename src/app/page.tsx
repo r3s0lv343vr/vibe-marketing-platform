@@ -24,7 +24,7 @@ export default function HomePage() {
           <h1 className="display animate-rise-delay mt-4 max-w-4xl text-5xl leading-[0.95] sm:text-7xl">
             <span className="shine-text">Pixie Dust Cheesecake</span>
           </h1>
-          <p className="animate-rise-delay-2 mt-5 max-w-xl text-lg text-white/90 sm:text-xl">
+          <p className="animate-rise-delay-2 mt-5 max-w-xl rounded-2xl bg-[rgba(255,248,244,0.92)] px-4 py-3 text-lg text-[#3a2a28] sm:text-xl">
             The vibe marketing studio that plates cohort proof for hiring partners — Brand DNA,
             live profiles, and intros you can taste.
           </p>
