@@ -21,37 +21,16 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: "22"
           cache: npm
-      - name: Install
-        run: npm ci
-      - name: Configure static export
-        run: |
-          node <<'NODE'
-          const fs = require('fs');
-          const path = 'next.config.ts';
-          fs.writeFileSync(path, `import type { NextConfig } from "next";
-
-const repo = "vibe-marketing-platform";
-const nextConfig: NextConfig = {
-  output: "export",
-  basePath: \`/\${repo}\`,
-  assetPrefix: \`/\${repo}/\`,
-  images: { unoptimized: true },
-  trailingSlash: true,
-};
-
-export default nextConfig;
-`);
-          NODE
-      - name: Stub API route for static export
-        run: rm -rf src/app/api
-      - name: Build
+      - run: npm ci
+      - name: Use Pages Next config
+        run: cp next.config.pages.ts next.config.ts && rm -rf src/app/api
+      - name: Build static export
         env:
           NEXT_PUBLIC_SITE_URL: https://r3s0lv343vr.github.io/vibe-marketing-platform
         run: npm run build
-      - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: out
 
