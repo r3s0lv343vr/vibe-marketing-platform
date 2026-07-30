@@ -37,7 +37,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/studio"
-              className="btn border border-[#3a2a28] bg-[#fff8f4] text-[#3a2a28] hover:bg-white"
+              className="btn border border-[#3a2a28] bg-[#fff8f4] !text-[#3a2a28] hover:bg-white hover:!text-[#3a2a28]"
             >
               Open the studio
             </Link>
