@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[22016,["/vibe-marketing-platform/_next/static/chunks/1s2ib-5b1p2lk.js","/vibe-marketing-platform/_next/static/chunks/14mrh2-p_w84d.js"],""]
+3:I[97367,["/vibe-marketing-platform/_next/static/chunks/1s2ib-5b1p2lk.js","/vibe-marketing-platform/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"site-shell py-20","children":[["$","p",null,{"className":"text-xs uppercase tracking-[0.22em] text-[var(--ink-soft)]","children":"Privacy"}],["$","h1",null,{"className":"display mt-3 text-5xl","children":"Private profile"}],["$","p",null,{"className":"mt-4 max-w-xl text-lg text-[var(--ink-soft)]","children":"This participant opted out of a public page. Partners can still request a general intro via the partners form."}],["$","$L2",null,{"href":"/partners#request-intro","className":"btn btn-primary mt-8","children":"Request intro"}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"n7wt499R5UewRNpEYINHU"}
+5:null

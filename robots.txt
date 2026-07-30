@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://r3s0lv343vr.github.io/vibe-marketing-platform/sitemap.xml
