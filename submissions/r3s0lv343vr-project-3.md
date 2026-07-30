@@ -4,14 +4,17 @@
 
 ## Production URL
 
-**https://pixie-dust-cheesecake.vercel.app**
+**Primary (Vercel):** https://pixie-dust-cheesecake.vercel.app
+
+**GitHub Pages (enable `gh-pages` in repo Settings → Pages if not live yet):** https://r3s0lv343vr.github.io/vibe-marketing-platform/
 
 - Build repo: https://github.com/r3s0lv343vr/vibe-marketing-platform (`main`)
 - Partner-facing README: https://github.com/r3s0lv343vr/vibe-marketing-platform/blob/main/README.md
+- Static mirror branch: `gh-pages` (already pushed)
 
 ## Sample profile URLs
 
-Roster still filling — placeholders included:
+Roster still filling — placeholders included (swap host if using Pages):
 
 - https://pixie-dust-cheesecake.vercel.app/profiles/r3s0lv343vr
 - https://pixie-dust-cheesecake.vercel.app/profiles/maya-sugarveil
