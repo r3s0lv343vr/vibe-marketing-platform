@@ -1,6 +1,18 @@
 import Link from "next/link";
 import type { CohortProfile } from "@/data/profiles";
 
+function Initials({ name }: { name: string }) {
+  return (
+    <>
+      {name
+        .split(" ")
+        .map((n) => n[0])
+        .slice(0, 2)
+        .join("")}
+    </>
+  );
+}
+
 export function ProfileCard({ profile }: { profile: CohortProfile }) {
   if (!profile.public) {
     return (
@@ -12,36 +24,45 @@ export function ProfileCard({ profile }: { profile: CohortProfile }) {
     );
   }
 
+  const liveCount = (profile.homepageUrls || []).length;
+  const prCount = (profile.prUrls || []).length;
+
   return (
-    <Link
-      href={`/profiles/${profile.slug}`}
-      className="tile group !min-h-0 block"
-    >
-      <div
-        className="mb-5 flex h-16 w-16 items-center justify-center rounded-full text-xl font-semibold text-[var(--ink)] shadow-inner"
-        style={{ background: profile.photoGradient }}
-        aria-hidden
-      >
-        {profile.name
-          .split(" ")
-          .map((n) => n[0])
-          .slice(0, 2)
-          .join("")}
-      </div>
+    <Link href={`/profiles/${profile.slug}`} className="tile group !min-h-0 block">
+      {profile.avatarUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={profile.avatarUrl}
+          alt=""
+          className="mb-5 h-16 w-16 rounded-full object-cover shadow-inner"
+        />
+      ) : (
+        <div
+          className="mb-5 flex h-16 w-16 items-center justify-center rounded-full text-xl font-semibold text-[var(--ink)] shadow-inner"
+          style={{ background: profile.photoGradient }}
+          aria-hidden
+        >
+          <Initials name={profile.name} />
+        </div>
+      )}
       <p className="eyebrow">{profile.campus}</p>
       <h3 className="display mt-1 text-2xl group-hover:text-[var(--rose-deep)]">{profile.name}</h3>
       <p className="mt-1 text-sm text-[var(--ink-soft)]">{profile.role}</p>
       <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-[var(--ink-soft)]">{profile.bio}</p>
       <ul className="mt-4 flex flex-wrap gap-2">
         {profile.skills.slice(0, 4).map((skill) => (
-          <li
-            key={skill}
-            className="chip !px-2.5 !py-1 text-xs"
-          >
+          <li key={skill} className="chip !px-2.5 !py-1 text-xs">
             {skill}
           </li>
         ))}
       </ul>
+      {(liveCount > 0 || prCount > 0) && (
+        <p className="mt-4 text-xs font-medium text-[var(--ink-soft)]">
+          {liveCount > 0 ? `${liveCount} live project${liveCount === 1 ? "" : "s"}` : null}
+          {liveCount > 0 && prCount > 0 ? " · " : null}
+          {prCount > 0 ? `${prCount} PR${prCount === 1 ? "" : "s"}` : null}
+        </p>
+      )}
     </Link>
   );
 }

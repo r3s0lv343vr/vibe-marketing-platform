@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { profiles } from "@/data/profiles";
+import { getRoster } from "@/lib/roster";
 
 export const dynamic = "force-static";
 
@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${base}${path}`,
     lastModified: new Date(),
   }));
-  const profileRoutes = profiles.map((p) => ({
+  const profileRoutes = getRoster().map((p) => ({
     url: `${base}/profiles/${p.slug}`,
     lastModified: new Date(),
   }));

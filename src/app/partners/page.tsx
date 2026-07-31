@@ -1,23 +1,39 @@
 import type { Metadata } from "next";
+import { ProjectShowcaseSlider } from "@/components/ProjectShowcaseSlider";
 import { RequestIntroForm } from "@/components/RequestIntroForm";
+import { getRosterShowcaseSlides } from "@/lib/roster";
 
 export const metadata: Metadata = {
   title: "Partners",
   description:
-    "Hire from the Hult Cohort Summer Pilot 2026 via Pixie Dust Cheesecake — browse proof, request intros, understand the fee model.",
+    "Hire from the Hult Cohort Summer Pilot 2026 via Pixie Dust Cheesecake — browse live projects, request intros, understand the fee model.",
 };
 
 export default function PartnersPage() {
+  const slides = getRosterShowcaseSlides();
+
   return (
     <div className="site-shell py-14">
-      <p className="text-xs uppercase tracking-[0.22em] text-[var(--ink-soft)]">Hiring partners</p>
+      <p className="eyebrow">Hiring partners</p>
       <h1 className="display mt-3 max-w-3xl text-5xl">Evaluate on GitHub. Hire with confidence.</h1>
       <p className="mt-5 max-w-2xl text-lg text-[var(--ink-soft)]">
         We produce developers you can evaluate entirely on public work — every review, deployment,
         and merged PR is inspectable. You pay only when you hire.
       </p>
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-3">
+      <section id="showcase" className="mt-12">
+        <div className="mb-6 max-w-2xl">
+          <p className="eyebrow">Forward-facing showcase</p>
+          <h2 className="display mt-3 text-4xl">Live project homepages</h2>
+          <p className="mt-3 text-[var(--ink-soft)]">
+            Partners, employers, and investors can skim shipped work in one place — then open the
+            full site or builder profile.
+          </p>
+        </div>
+        <ProjectShowcaseSlider slides={slides} />
+      </section>
+
+      <div className="mt-14 grid gap-6 lg:grid-cols-3">
         {[
           {
             title: "Browse",
@@ -32,10 +48,7 @@ export default function PartnersPage() {
             body: "Your interview process, your bar. Referral fee is ~25% of first-year base salary on start date.",
           },
         ].map((step) => (
-          <article
-            key={step.title}
-            className="panel-solid p-6"
-          >
+          <article key={step.title} className="panel-solid p-6">
             <h2 className="display text-3xl">{step.title}</h2>
             <p className="mt-3 text-[var(--ink-soft)]">{step.body}</p>
           </article>

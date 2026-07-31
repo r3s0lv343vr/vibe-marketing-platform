@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-07-31T03:07:34.634Z",
+  "cohortRepo": "rogerSuperBuilderAlpha/hult-cohort-program",
+  "count": 1,
+  "profiles": [
+    {
+      "slug": "r3s0lv343vr",
+      "name": "Craig Ferguson",
+      "github": "r3s0lv343vr",
+      "campus": "Boston",
+      "role": "Builder",
+      "skills": [],
+      "bio": "Craig Ferguson — imported from GitHub @r3s0lv343vr.",
+      "public": true,
+      "avatarUrl": "https://avatars.githubusercontent.com/u/297017555?v=4",
+      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
+      "homepageUrls": [
+        "https://lnq-eight.vercel.app"
+      ],
+      "prUrls": [
+        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/185",
+        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/123",
+        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/70",
+        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/68",
+        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/44",
+        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/32"
+      ],
+      "portfolio": [
+        {
+          "label": "vibe-marketing-platform",
+          "href": "https://github.com/r3s0lv343vr/vibe-marketing-platform",
+          "kind": "repo"
+        },
+        {
+          "label": "MessageMe",
+          "href": "https://github.com/r3s0lv343vr/MessageMe",
+          "kind": "repo"
+        },
+        {
+          "label": "lnq",
+          "href": "https://github.com/r3s0lv343vr/lnq",
+          "kind": "repo"
+        },
+        {
+          "label": "lnq · live",
+          "href": "https://lnq-eight.vercel.app",
+          "kind": "showcase"
+        },
+        {
+          "label": "pm-r3s0lv343vr",
+          "href": "https://github.com/r3s0lv343vr/pm-r3s0lv343vr",
+          "kind": "repo"
+        },
+        {
+          "label": "portfolio",
+          "href": "https://github.com/r3s0lv343vr/portfolio",
+          "kind": "repo"
+        },
+        {
+          "label": "my-first-repo",
+          "href": "https://github.com/r3s0lv343vr/my-first-repo",
+          "kind": "repo"
+        },
+        {
+          "label": "Cohort submission PR",
+          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/185",
+          "kind": "pr"
+        },
+        {
+          "label": "Cohort submission PR",
+          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/123",
+          "kind": "pr"
+        },
+        {
+          "label": "Cohort submission PR",
+          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/70",
+          "kind": "pr"
+        },
+        {
+          "label": "Cohort submission PR",
+          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/68",
+          "kind": "pr"
+        },
+        {
+          "label": "Cohort submission PR",
+          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/44",
+          "kind": "pr"
+        }
+      ],
+      "highlight": "Live: https://lnq-eight.vercel.app"
+    }
+  ]
+}

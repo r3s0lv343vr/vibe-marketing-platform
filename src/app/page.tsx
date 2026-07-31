@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { ProjectShowcaseSlider } from "@/components/ProjectShowcaseSlider";
+import { getRosterShowcaseSlides } from "@/lib/roster";
 
 const capabilities = [
   {
@@ -24,6 +26,8 @@ const capabilities = [
 ];
 
 export default function HomePage() {
+  const slides = getRosterShowcaseSlides();
+
   return (
     <>
       <section className="relative min-h-[calc(100svh-4.5rem)] overflow-hidden">
@@ -120,6 +124,22 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+      </section>
+
+      <section id="showcase" className="site-shell mt-24">
+        <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-2xl">
+            <p className="eyebrow">For partners & investors</p>
+            <h2 className="display mt-3 text-4xl">Project homepages</h2>
+            <p className="mt-3 text-[var(--ink-soft)]">
+              Skim live cohort builds in a slider — open any homepage or jump to the builder.
+            </p>
+          </div>
+          <Link href="/partners#showcase" className="btn btn-ghost">
+            Full partner view
+          </Link>
+        </div>
+        <ProjectShowcaseSlider slides={slides} />
       </section>
 
       <section className="site-shell mt-24 mb-4">
