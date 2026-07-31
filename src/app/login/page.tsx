@@ -10,9 +10,7 @@ type Props = { searchParams: Promise<{ next?: string }> };
 
 export default async function LoginPage({ searchParams }: Props) {
   const { next } = await searchParams;
-  // Default to profile builder; middleware sends complete profiles to /app freely.
-  const nextPath =
-    next?.startsWith("/") && next !== "/app" ? next : "/app/profile";
+  const nextPath = next?.startsWith("/") ? next : "/app/profile";
   return (
     <div className="site-shell py-16">
       <AuthForm mode="login" nextPath={nextPath} />

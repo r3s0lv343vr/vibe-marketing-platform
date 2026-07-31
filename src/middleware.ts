@@ -1,7 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 const SESSION_COOKIE = "pixie_session";
-const PROFILE_COMPLETE_COOKIE = "pixie_profile_complete";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -17,14 +16,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(login);
   }
 
-  const profileComplete = request.cookies.get(PROFILE_COMPLETE_COOKIE)?.value === "1";
-  const onProfileBuilder = pathname === "/app/profile" || pathname.startsWith("/app/profile/");
-
-  // Incomplete profiles must finish the builder before agent workspace pages.
-  if (!profileComplete && !onProfileBuilder) {
-    return NextResponse.redirect(new URL("/app/profile", request.url));
-  }
-
+  // Temporary: allow unfinished profiles into the agent workspace.
   return NextResponse.next();
 }
 

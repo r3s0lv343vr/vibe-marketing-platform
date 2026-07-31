@@ -135,14 +135,6 @@ export function ProfileBuilder({
 
     setProfile(next);
 
-    if (!isProfileComplete(next)) {
-      setSaving(false);
-      setError(
-        "Complete your name, bio (40+ characters), at least one university, one skill, and one project with a website or GitHub repo.",
-      );
-      return;
-    }
-
     try {
       localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(next));
       const res = await fetch("/api/profile", {
@@ -156,6 +148,40 @@ export function ProfileBuilder({
       router.refresh();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Save failed");
+      setSaving(false);
+    }
+  }
+
+  async function continueAnyway() {
+    setSaving(true);
+    setError("");
+    const next: StudentProfile = {
+      ...profile,
+      displayName: profile.displayName.trim() || defaultName,
+      bio: profile.bio.trim(),
+      skills: splitTags(skillsInput),
+      universities: splitTags(uniInput),
+      projects: profile.projects.map((p) => ({
+        ...p,
+        title: p.title.trim(),
+        websiteUrl: p.websiteUrl.trim(),
+        githubUrl: p.githubUrl.trim(),
+      })),
+      updatedAt: new Date().toISOString(),
+    };
+    try {
+      localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(next));
+      const res = await fetch("/api/profile", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ profile: next }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Could not continue");
+      router.push("/app");
+      router.refresh();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not continue");
       setSaving(false);
     }
   }
@@ -176,8 +202,9 @@ export function ProfileBuilder({
         </p>
         <h1 className="display mt-3 text-5xl">Build your student profile</h1>
         <p className="mt-4 text-lg text-[var(--ink-soft)]">
-          Complete this once so hiring partners and investors can find you. When you finish,
-          you&apos;ll unlock <strong className="text-[var(--ink)]">What do you want to do today?</strong>
+          Add what you can now — bio, universities, skills, and projects. For this testing phase you
+          can save a partial profile and continue to{" "}
+          <strong className="text-[var(--ink)]">What do you want to do today?</strong>
         </p>
         <p className="mt-2 text-sm text-[var(--ink-soft)]">Signed in as {email}</p>
       </header>
@@ -215,7 +242,6 @@ export function ProfileBuilder({
             <label className="grid gap-1 text-sm">
               <span>Display name</span>
               <input
-                required
                 value={profile.displayName}
                 onChange={(e) =>
                   setProfile((prev) => ({ ...prev, displayName: e.target.value }))
@@ -227,7 +253,6 @@ export function ProfileBuilder({
             <label className="grid gap-1 text-sm">
               <span>Bio</span>
               <textarea
-                required
                 rows={5}
                 value={profile.bio}
                 onChange={(e) => setProfile((prev) => ({ ...prev, bio: e.target.value }))}
@@ -248,7 +273,6 @@ export function ProfileBuilder({
           Separate schools with a comma or semicolon.
         </p>
         <input
-          required
           value={uniInput}
           onChange={(e) => {
             setUniInput(e.target.value);
@@ -276,7 +300,6 @@ export function ProfileBuilder({
           employers, clients, and investors.
         </p>
         <input
-          required
           value={skillsInput}
           onChange={(e) => {
             setSkillsInput(e.target.value);
@@ -391,14 +414,20 @@ export function ProfileBuilder({
 
       <div className="flex flex-wrap items-center gap-3">
         <button type="submit" disabled={saving} className="btn btn-primary disabled:opacity-60">
-          {saving
-            ? "Saving…"
-            : complete
-              ? "Save profile & continue"
-              : "Save profile & unlock workspace"}
+          {saving ? "Saving…" : "Save & continue to agents"}
+        </button>
+        <button
+          type="button"
+          disabled={saving}
+          onClick={continueAnyway}
+          className="btn border border-[#3a2a28] bg-[#fff8f4] !text-[#3a2a28] hover:bg-white disabled:opacity-60"
+        >
+          Skip for now
         </button>
         <p className="text-sm text-[var(--ink-soft)]">
-          Next: <span className="text-[var(--ink)]">What do you want to do today?</span>
+          {complete
+            ? "Profile looks complete."
+            : "Partial profiles are allowed during testing."}
         </p>
       </div>
     </form>

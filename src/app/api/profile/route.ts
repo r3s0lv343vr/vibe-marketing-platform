@@ -52,16 +52,18 @@ export async function POST(request: Request) {
     );
   }
 
+  // Temporary soft launch: always allow continue to agent workspace,
+  // even when bio/skills/projects are still incomplete.
   const response = NextResponse.json({
     ok: true,
     complete,
     index,
-    next: complete ? "/app" : "/app/profile",
+    next: "/app",
   });
 
   response.cookies.set({
     name: PROFILE_COMPLETE_COOKIE,
-    value: complete ? "1" : "0",
+    value: "1",
     httpOnly: true,
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
