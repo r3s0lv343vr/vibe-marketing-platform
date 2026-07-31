@@ -34,7 +34,7 @@ export default function PartnersPage() {
         ].map((step) => (
           <article
             key={step.title}
-            className="rounded-[2rem] border border-[var(--line)] bg-white/55 p-6"
+            className="panel-solid p-6"
           >
             <h2 className="display text-3xl">{step.title}</h2>
             <p className="mt-3 text-[var(--ink-soft)]">{step.body}</p>

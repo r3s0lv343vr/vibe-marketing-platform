@@ -48,7 +48,7 @@ export function StudioApp() {
 
   if (!state) {
     return (
-      <div className="rounded-[2rem] border border-[var(--line)] bg-white/50 p-8 text-[var(--ink-soft)]">
+      <div className="panel p-8 text-[var(--ink-soft)]">
         Warming the ovens…
       </div>
     );
@@ -56,7 +56,7 @@ export function StudioApp() {
 
   return (
     <div className="grid gap-4 xl:grid-cols-[280px_minmax(0,1fr)_300px] xl:grid-rows-[minmax(520px,1fr)_auto]">
-      <section className="flex min-h-[420px] flex-col rounded-[2rem] border border-[var(--line)] bg-white/60 p-4 xl:row-span-1">
+      <section className="panel flex min-h-[420px] flex-col p-4 xl:row-span-1">
         <h2 className="display text-2xl">Conversation</h2>
         <div className="mt-4 flex-1 space-y-3 overflow-y-auto pr-1">
           {messages.map((m, i) => (
@@ -97,7 +97,7 @@ export function StudioApp() {
         </form>
       </section>
 
-      <section className="overflow-hidden rounded-[2rem] border border-[var(--line)] bg-white/50 shadow-[var(--shadow)]">
+      <section className="panel-solid overflow-hidden">
         <div className="flex items-center justify-between border-b border-[var(--line)] px-4 py-3 text-sm">
           <span className="font-medium">Live preview · {state.goal}</span>
           <span className="text-[var(--ink-soft)]">Conversational website builder</span>
@@ -109,7 +109,7 @@ export function StudioApp() {
       </section>
 
       <aside className="space-y-4 xl:row-span-1">
-        <section className="rounded-[2rem] border border-[var(--line)] bg-white/60 p-4">
+        <section className="panel p-4">
           <h2 className="display text-2xl">Brand DNA</h2>
           <dl className="mt-3 space-y-2 text-sm">
             <div>
@@ -144,7 +144,7 @@ export function StudioApp() {
           </dl>
         </section>
 
-        <section className="rounded-[2rem] border border-[var(--line)] bg-white/60 p-4">
+        <section className="panel p-4">
           <h2 className="display text-2xl">Vibe Meter</h2>
           <ul className="mt-3 space-y-3">
             {vibeLabels.map((key) => (
@@ -161,7 +161,7 @@ export function StudioApp() {
           </ul>
         </section>
 
-        <section className="rounded-[2rem] border border-[var(--line)] bg-white/60 p-4">
+        <section className="panel p-4">
           <h2 className="display text-2xl">Mood Board</h2>
           <ul className="mt-3 flex flex-wrap gap-2">
             {state.mood.map((item) => (
@@ -176,7 +176,7 @@ export function StudioApp() {
         </section>
       </aside>
 
-      <section className="rounded-[2rem] border border-[var(--line)] bg-white/60 p-4 xl:col-span-3">
+      <section className="panel p-4 xl:col-span-3">
         <h2 className="display text-2xl">Marketing feed</h2>
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           {state.feed.map((item) => (

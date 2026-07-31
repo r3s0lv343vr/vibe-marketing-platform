@@ -15,7 +15,12 @@ export function LogoutButton() {
   }
 
   return (
-    <button type="button" onClick={logout} disabled={loading} className="btn btn-ghost !py-2">
+    <button
+      type="button"
+      onClick={logout}
+      disabled={loading}
+      className="btn btn-secondary !py-2 disabled:opacity-60"
+    >
       {loading ? "…" : "Log out"}
     </button>
   );

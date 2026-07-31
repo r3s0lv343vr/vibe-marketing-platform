@@ -58,7 +58,7 @@ export default async function ProfilePage({ params }: Props) {
       <div className="mt-6 grid gap-10 lg:grid-cols-[280px_minmax(0,1fr)]">
         <aside>
           <div
-            className="flex h-40 w-40 items-center justify-center rounded-[2rem] text-4xl font-semibold shadow-[var(--shadow)]"
+            className="flex h-40 w-40 items-center justify-center rounded-[var(--radius-lg)] text-4xl font-semibold shadow-[var(--shadow)]"
             style={{ background: profile.photoGradient }}
           >
             {profile.name
