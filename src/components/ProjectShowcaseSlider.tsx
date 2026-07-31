@@ -52,12 +52,6 @@ export function ProjectShowcaseSlider({
     setAnimKey((k) => k + 1);
   }
 
-  function goTo(nextIndex: number) {
-    setDirection(nextIndex >= index ? "next" : "prev");
-    setIndex(nextIndex);
-    setAnimKey((k) => k + 1);
-  }
-
   const frameHeight =
     size === "hero"
       ? "min-h-[56vh] lg:min-h-[620px]"
@@ -69,48 +63,45 @@ export function ProjectShowcaseSlider({
   const slideAnim = direction === "next" ? "animate-slide-rtl" : "animate-slide-ltr";
 
   const details = (
-    <div className="flex flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:py-5">
-      <div className="flex min-w-0 items-start gap-3">
-        {slide.avatarUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={slide.avatarUrl}
-            alt=""
-            className="h-12 w-12 shrink-0 rounded-full object-cover"
-          />
-        ) : (
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--champagne,#f7e7ce)] text-sm font-semibold">
-            {slide.builderName
-              .split(" ")
-              .map((n) => n[0])
-              .slice(0, 2)
-              .join("")}
-          </div>
-        )}
-        <div className="min-w-0">
-          <p className="eyebrow">{slide.kind}</p>
-          <h3 className="display mt-1 truncate text-2xl sm:text-3xl">{slide.title}</h3>
-          <p className="mt-1 text-sm text-[var(--ink-soft)]">
-            <Link
-              href={`/profiles/${slide.builderSlug}`}
-              className="font-semibold text-[var(--ink)] underline underline-offset-2"
-            >
-              {slide.builderName}
-            </Link>
-            <span className="mx-2 text-[var(--line-strong)]">·</span>
-            <a
-              href={`https://github.com/${slide.github}`}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-[var(--rose-deep)]"
-            >
-              @{slide.github}
-            </a>
-          </p>
+    <div className="flex flex-col items-center px-4 py-6 text-center sm:px-8 sm:py-7">
+      {slide.avatarUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={slide.avatarUrl}
+          alt=""
+          className="h-14 w-14 rounded-full object-cover shadow-[var(--shadow-sm)]"
+        />
+      ) : (
+        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--champagne,#f7e7ce)] text-base font-semibold shadow-[var(--shadow-sm)]">
+          {slide.builderName
+            .split(" ")
+            .map((n) => n[0])
+            .slice(0, 2)
+            .join("")}
         </div>
-      </div>
+      )}
 
-      <div className="flex flex-wrap items-center gap-2">
+      <p className="eyebrow mt-4">{slide.kind}</p>
+      <h3 className="display mt-2 max-w-2xl text-3xl sm:text-4xl">{slide.title}</h3>
+      <p className="mt-2 text-base text-[var(--ink-soft)]">
+        <Link
+          href={`/profiles/${slide.builderSlug}`}
+          className="font-semibold text-[var(--ink)] underline underline-offset-2"
+        >
+          {slide.builderName}
+        </Link>
+        <span className="mx-2 text-[var(--line-strong)]">·</span>
+        <a
+          href={`https://github.com/${slide.github}`}
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-[var(--rose-deep)]"
+        >
+          @{slide.github}
+        </a>
+      </p>
+
+      <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
         {showOpenActions ? (
           <>
             <a href={slide.href} target="_blank" rel="noreferrer" className="btn btn-primary !py-2">
@@ -121,15 +112,12 @@ export function ProjectShowcaseSlider({
             </Link>
           </>
         ) : null}
-        <button type="button" className="btn btn-ghost !px-3 !py-2" onClick={() => go(-1)}>
+        <button type="button" className="btn btn-ghost !px-3 !py-2" onClick={() => go(-1)} aria-label="Previous slide">
           ←
         </button>
-        <button type="button" className="btn btn-ghost !px-3 !py-2" onClick={() => go(1)}>
+        <button type="button" className="btn btn-ghost !px-3 !py-2" onClick={() => go(1)} aria-label="Next slide">
           →
         </button>
-        <span className="text-sm text-[var(--ink-soft)]">
-          {index + 1}/{slides.length}
-        </span>
       </div>
     </div>
   );
@@ -154,30 +142,13 @@ export function ProjectShowcaseSlider({
     </div>
   );
 
-  const dots = (
-    <div className="flex gap-1.5 overflow-x-auto px-4 pb-4 sm:px-6">
-      {slides.map((item, i) => (
-        <button
-          key={item.id}
-          type="button"
-          aria-label={`Show ${item.title}`}
-          onClick={() => goTo(i)}
-          className={`h-2 w-8 shrink-0 rounded-full transition ${
-            i === index ? "bg-[var(--rose-deep)]" : "bg-[var(--line-strong)]"
-          }`}
-        />
-      ))}
-    </div>
-  );
-
   if (variant === "split") {
     return (
       <div className={`panel-solid mx-auto w-full ${widthClass} overflow-hidden`}>
         <div className="grid lg:grid-cols-[1.35fr_0.85fr]">
           {preview}
-          <div className="flex flex-col justify-between border-t border-[var(--line)] lg:border-l lg:border-t-0">
+          <div className="flex flex-col justify-center border-t border-[var(--line)] lg:border-l lg:border-t-0">
             {details}
-            {dots}
           </div>
         </div>
       </div>
@@ -190,13 +161,11 @@ export function ProjectShowcaseSlider({
         <>
           <div className="border-b border-[var(--line)] bg-white/70">{details}</div>
           {preview}
-          {dots}
         </>
       ) : (
         <>
           {preview}
           <div className="border-t border-[var(--line)] bg-white/70">{details}</div>
-          {dots}
         </>
       )}
     </div>
