@@ -1,9 +1,12 @@
 import { cookies } from "next/headers";
 import { createHmac, timingSafeEqual } from "crypto";
 
+export type UserRole = "student" | "partner";
+
 export type SessionUser = {
   email: string;
   name: string;
+  role: UserRole;
 };
 
 const COOKIE = "pixie_session";
@@ -32,7 +35,10 @@ export function decodeSession(token: string | undefined | null): SessionUser | n
     if (a.length !== b.length || !timingSafeEqual(a, b)) return null;
     const user = JSON.parse(Buffer.from(body, "base64url").toString("utf8")) as SessionUser;
     if (!user?.email || !user?.name) return null;
-    return user;
+    return {
+      ...user,
+      role: user.role === "partner" ? "partner" : "student",
+    };
   } catch {
     return null;
   }

@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 const links = [
-  { href: "/#marketing", label: "Product" },
-  { href: "/partners#showcase", label: "Showcase" },
+  { href: "/#showcase", label: "Showcase" },
+  { href: "/partners", label: "Partners" },
   { href: "/cohort", label: "Cohort" },
-  { href: "/signup", label: "Sign up" },
-  { href: "/login", label: "Log in" },
+  { href: "/signup", label: "Student sign up" },
+  { href: "/login", label: "Student log in" },
 ];
 
 export function Header() {
@@ -16,7 +16,7 @@ export function Header() {
         <Link href="/" className="display text-lg font-semibold tracking-tight sm:text-xl">
           Pixie Dust <span className="brand-mark">Cheesecake</span>
         </Link>
-        <nav className="hidden items-center gap-7 text-sm font-medium text-[var(--ink-soft)] md:flex">
+        <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--ink-soft)] lg:flex">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -27,11 +27,11 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Link href="/signup" className="btn btn-primary !px-4 !py-2 text-sm">
-          Sign up
+        <Link href="/partners/login" className="btn btn-primary !px-4 !py-2 text-sm">
+          Partner log in
         </Link>
       </div>
-      <nav className="site-shell flex gap-4 overflow-x-auto pb-3 text-sm font-medium text-[var(--ink-soft)] md:hidden">
+      <nav className="site-shell flex gap-4 overflow-x-auto pb-3 text-sm font-medium text-[var(--ink-soft)] lg:hidden">
         {links.map((link) => (
           <Link
             key={link.href}

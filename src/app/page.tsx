@@ -27,6 +27,8 @@ const capabilities = [
 
 export default function HomePage() {
   const slides = getRosterShowcaseSlides();
+  const primarySlides = slides;
+  const secondarySlides = [...slides].reverse();
 
   return (
     <>
@@ -50,14 +52,49 @@ export default function HomePage() {
           </p>
           <div className="animate-rise-delay-2 mt-8 flex flex-wrap gap-3">
             <Link href="/signup" className="btn btn-primary">
-              Sign up
+              Student sign up
             </Link>
-            <Link href="/login" className="btn btn-secondary">
-              Log in
+            <Link href="/partners" className="btn btn-secondary">
+              Partners
+            </Link>
+            <Link href="/login" className="btn btn-ghost !bg-white/20 !text-[var(--cream)] !border-white/40">
+              Student log in
             </Link>
           </div>
         </div>
       </section>
+
+      <section id="showcase" className="site-shell mt-16">
+        <div className="mb-5 max-w-2xl">
+          <p className="eyebrow">Cohort builds</p>
+          <h2 className="display mt-3 text-4xl sm:text-5xl">Project homepage slider</h2>
+          <p className="mt-3 text-[var(--ink-soft)]">
+            Bigger previews with builder name and GitHub handle under each slide.
+          </p>
+        </div>
+        <ProjectShowcaseSlider
+          slides={primarySlides}
+          variant="stacked"
+          detailsPosition="bottom"
+          size="large"
+        />
+      </section>
+
+      {secondarySlides.length > 1 ? (
+        <section className="site-shell mt-16">
+          <div className="mb-5 max-w-2xl">
+            <p className="eyebrow">More live work</p>
+            <h2 className="display mt-3 text-4xl">Another pass through the cohort</h2>
+          </div>
+          <ProjectShowcaseSlider
+            slides={secondarySlides}
+            variant="stacked"
+            detailsPosition="top"
+            size="large"
+            autoPlayMs={8000}
+          />
+        </section>
+      ) : null}
 
       <section id="marketing" className="site-shell mt-24">
         <div className="max-w-3xl">
@@ -71,9 +108,12 @@ export default function HomePage() {
               AI agents to optimize how hiring partners and investors discover them.
             </p>
             <p>
-              Stakeholders get a forward-facing showcase of real work. The cohort gets a private
-              workspace to build assets, polish social profiles, and track what the market wants —
-              so every project is easier to hire for or invest in.
+              Stakeholders use the{" "}
+              <Link href="/partners" className="font-semibold text-[var(--rose-deep)] underline">
+                Partners
+              </Link>{" "}
+              side. The cohort gets a private workspace to build assets, polish social profiles, and
+              track what the market wants.
             </p>
             <p className="display text-2xl font-semibold text-[var(--rose-deep)] sm:text-3xl">
               Create. Launch. Grow.
@@ -126,22 +166,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="showcase" className="site-shell mt-24">
-        <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-2xl">
-            <p className="eyebrow">For partners & investors</p>
-            <h2 className="display mt-3 text-4xl">Project homepages</h2>
-            <p className="mt-3 text-[var(--ink-soft)]">
-              Skim live cohort builds in a slider — open any homepage or jump to the builder.
-            </p>
-          </div>
-          <Link href="/partners#showcase" className="btn btn-ghost">
-            Full partner view
-          </Link>
-        </div>
-        <ProjectShowcaseSlider slides={slides} />
-      </section>
-
       <section className="site-shell mt-24 mb-4">
         <div className="relative overflow-hidden rounded-[var(--radius-lg)] border border-[var(--line)]">
           <div
@@ -153,14 +177,25 @@ export default function HomePage() {
               backgroundPosition: "center",
             }}
           />
-          <div className="relative max-w-xl px-8 py-14 text-[var(--cream)] sm:px-12 sm:py-16">
-            <h2 className="display text-4xl">Ready when you are</h2>
-            <p className="mt-4 leading-relaxed text-white/90">
-              Create an account, open your agent workspace, and choose what to market today.
-            </p>
-            <Link href="/signup" className="btn btn-secondary mt-8">
-              Sign up free
-            </Link>
+          <div className="relative grid gap-8 px-8 py-14 text-[var(--cream)] sm:px-12 sm:py-16 lg:grid-cols-2">
+            <div>
+              <h2 className="display text-4xl">Students</h2>
+              <p className="mt-4 leading-relaxed text-white/90">
+                Create an account, build your profile, and open the agent workspace.
+              </p>
+              <Link href="/signup" className="btn btn-secondary mt-8">
+                Student sign up
+              </Link>
+            </div>
+            <div>
+              <h2 className="display text-4xl">Partners</h2>
+              <p className="mt-4 leading-relaxed text-white/90">
+                Hiring managers, employers, and investors — sign in for the full showcase feed.
+              </p>
+              <Link href="/partners/signup" className="btn btn-secondary mt-8">
+                Partner sign up
+              </Link>
+            </div>
           </div>
         </div>
       </section>

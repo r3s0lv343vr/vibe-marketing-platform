@@ -1,47 +1,78 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ProjectShowcaseSlider } from "@/components/ProjectShowcaseSlider";
 import { RequestIntroForm } from "@/components/RequestIntroForm";
+import { getSession } from "@/lib/auth";
 import { getRosterShowcaseSlides } from "@/lib/roster";
 
 export const metadata: Metadata = {
   title: "Partners",
   description:
-    "Hire from the Hult Cohort Summer Pilot 2026 via Pixie Dust Cheesecake — browse live projects, request intros, understand the fee model.",
+    "Partners portal for hiring managers, employers, and investors evaluating Hult Cohort Summer Pilot builders.",
 };
 
-export default function PartnersPage() {
+export default async function PartnersPage() {
+  const session = await getSession();
   const slides = getRosterShowcaseSlides();
+  const isPartner = session?.role === "partner";
 
   return (
     <div className="site-shell py-14">
-      <p className="eyebrow">Hiring partners</p>
-      <h1 className="display mt-3 max-w-3xl text-5xl">Evaluate on GitHub. Hire with confidence.</h1>
+      <p className="eyebrow">Partners</p>
+      <h1 className="display mt-3 max-w-3xl text-5xl">
+        Hire and invest on evidence — not résumés.
+      </h1>
       <p className="mt-5 max-w-2xl text-lg text-[var(--ink-soft)]">
-        We produce developers you can evaluate entirely on public work — every review, deployment,
-        and merged PR is inspectable. You pay only when you hire.
+        The Partners side is for hiring partners, employers, and investors. Sign in to open the full
+        showcase feed: a large project slider up top, then a dense portal of builders and live work.
       </p>
 
-      <section id="showcase" className="mt-12">
+      <div className="mt-8 flex flex-wrap gap-3">
+        {isPartner ? (
+          <Link href="/partners/home" className="btn btn-primary">
+            Open Partners home
+          </Link>
+        ) : (
+          <>
+            <Link href="/partners/signup" className="btn btn-primary">
+              Partner sign up
+            </Link>
+            <Link href="/partners/login" className="btn btn-secondary">
+              Partner log in
+            </Link>
+          </>
+        )}
+        <Link href="/cohort" className="btn btn-ghost">
+          Browse cohort
+        </Link>
+      </div>
+
+      <section id="showcase" className="mt-14">
         <div className="mb-6 max-w-2xl">
-          <p className="eyebrow">Forward-facing showcase</p>
-          <h2 className="display mt-3 text-4xl">Live project homepages</h2>
+          <p className="eyebrow">Preview</p>
+          <h2 className="display mt-3 text-4xl">Live project slider</h2>
           <p className="mt-3 text-[var(--ink-soft)]">
-            Partners, employers, and investors can skim shipped work in one place — then open the
-            full site or builder profile.
+            After you sign in, this becomes your greeting screen — bigger, with builder details under
+            each slide and the MSN-style feed below.
           </p>
         </div>
-        <ProjectShowcaseSlider slides={slides} />
+        <ProjectShowcaseSlider
+          slides={slides}
+          variant="stacked"
+          detailsPosition="bottom"
+          size="large"
+        />
       </section>
 
       <div className="mt-14 grid gap-6 lg:grid-cols-3">
         {[
           {
             title: "Browse",
-            body: "Open cohort profiles, filter by campus and skills, click through to live PM, comms, and showcase apps.",
+            body: "Open cohort profiles, scan campuses and skills, and click through to live apps.",
           },
           {
             title: "Request intro",
-            body: "Tell us who you want to meet. Placement lead is notified; acknowledge within 24 hours.",
+            body: "Tell us who you want to meet. Placement lead is notified within 24 hours.",
           },
           {
             title: "Hire",
@@ -63,13 +94,9 @@ export default function PartnersPage() {
           <li>100% clawback if terminated for cause / leaves within 90 days</li>
           <li>No exclusivity — students may receive multiple offers</li>
         </ul>
-        <p className="mt-4 text-sm text-[var(--ink-soft)]">
-          Full partner terms live in the cohort program docs (
-          <code>partnerships/hiring-partners.md</code>).
-        </p>
       </section>
 
-      <section className="mt-14">
+      <section className="mt-14" id="request-intro">
         <RequestIntroForm />
       </section>
     </div>

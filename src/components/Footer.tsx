@@ -19,17 +19,20 @@ export function Footer() {
         <div className="flex flex-col gap-3 sm:items-end">
           <p className="eyebrow">Navigate</p>
           <div className="flex flex-wrap gap-x-5 gap-y-2 sm:justify-end">
-            <Link href="/signup" className="hover:text-[var(--rose-deep)]">
-              Sign up
+            <Link href="/partners" className="hover:text-[var(--rose-deep)]">
+              Partners
             </Link>
-            <Link href="/login" className="hover:text-[var(--rose-deep)]">
-              Log in
+            <Link href="/partners/login" className="hover:text-[var(--rose-deep)]">
+              Partner log in
+            </Link>
+            <Link href="/signup" className="hover:text-[var(--rose-deep)]">
+              Student sign up
+            </Link>
+            <Link href="/cohort" className="hover:text-[var(--rose-deep)]">
+              Cohort
             </Link>
             <Link href="/app" className="hover:text-[var(--rose-deep)]">
               Agents
-            </Link>
-            <Link href="/studio" className="hover:text-[var(--rose-deep)]">
-              Studio demo
             </Link>
           </div>
         </div>
