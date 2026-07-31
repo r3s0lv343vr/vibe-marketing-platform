@@ -40,24 +40,24 @@ export function AgentRunner({
   }
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
-      <section className="rounded-[2rem] border border-[var(--line)] bg-white/65 p-6 shadow-[var(--shadow)] sm:p-8">
-        <p className="text-xs uppercase tracking-[0.2em] text-[var(--ink-soft)]">AI agents</p>
-        <h1 className="display mt-2 text-4xl sm:text-5xl">{title}</h1>
-        <p className="mt-3 max-w-2xl text-[var(--ink-soft)]">
+    <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
+      <section className="panel-solid p-6 sm:p-8">
+        <p className="eyebrow">AI agents</p>
+        <h1 className="display mt-3 text-4xl sm:text-5xl">{title}</h1>
+        <p className="mt-3 max-w-2xl leading-relaxed text-[var(--ink-soft)]">
           Specialized agents coordinate this task. Describe what you want — they draft the next
           step together.
         </p>
 
         <form onSubmit={onSubmit} className="mt-8 space-y-4">
-          <label className="grid gap-2 text-sm">
-            <span className="font-medium">Brief</span>
+          <label className="label">
+            <span>Brief</span>
             <textarea
               required
               value={brief}
               onChange={(e) => setBrief(e.target.value)}
               rows={5}
-              className="rounded-2xl border border-[var(--line)] bg-white px-4 py-3"
+              className="field"
               placeholder={placeholder}
             />
           </label>
@@ -74,13 +74,13 @@ export function AgentRunner({
 
         {result ? (
           <div className="mt-8 space-y-4">
-            <div className="rounded-2xl border border-[var(--line)] bg-[var(--cream)] p-4">
-              <p className="text-xs uppercase tracking-[0.16em] text-[var(--ink-soft)]">
+            <div className="rounded-[var(--radius)] border border-[var(--line)] bg-[var(--cream)] p-5">
+              <p className="eyebrow">
                 {result.mode} mode
                 {result.provider ? ` · ${result.provider}` : ""}
               </p>
-              <h2 className="display mt-1 text-3xl">{result.output.headline}</h2>
-              <p className="mt-2 text-[var(--ink-soft)]">{result.output.summary}</p>
+              <h2 className="display mt-2 text-3xl">{result.output.headline}</h2>
+              <p className="mt-2 leading-relaxed text-[var(--ink-soft)]">{result.output.summary}</p>
               <p className="mt-3 text-sm text-[var(--ink-soft)]">{result.apiNote}</p>
             </div>
 
@@ -89,7 +89,7 @@ export function AgentRunner({
               <img
                 src={result.output.imageUrl}
                 alt={result.output.headline || "Generated image"}
-                className="w-full rounded-2xl border border-[var(--line)]"
+                className="w-full rounded-[var(--radius)] border border-[var(--line)]"
               />
             ) : null}
 
@@ -97,7 +97,7 @@ export function AgentRunner({
               {result.steps.map((step) => (
                 <li
                   key={step.agentId}
-                  className="rounded-2xl border border-[var(--line)] bg-white/80 px-4 py-3"
+                  className="rounded-[var(--radius)] border border-[var(--line)] bg-white px-4 py-3"
                 >
                   <p className="font-semibold">{step.title}</p>
                   <p className="text-sm text-[var(--ink-soft)]">{step.detail}</p>
@@ -109,11 +109,9 @@ export function AgentRunner({
               {result.output.artifacts.map((item) => (
                 <article
                   key={item.label}
-                  className="rounded-2xl border border-[var(--line)] bg-white/80 p-4"
+                  className="rounded-[var(--radius)] border border-[var(--line)] bg-white p-4"
                 >
-                  <p className="text-xs uppercase tracking-[0.16em] text-[var(--ink-soft)]">
-                    {item.label}
-                  </p>
+                  <p className="eyebrow">{item.label}</p>
                   <p className="mt-2 text-sm leading-relaxed">{item.content}</p>
                 </article>
               ))}
@@ -121,7 +119,7 @@ export function AgentRunner({
 
             {result.output.previewHtml ? (
               <div
-                className="overflow-hidden rounded-2xl border border-[var(--line)]"
+                className="overflow-hidden rounded-[var(--radius)] border border-[var(--line)]"
                 dangerouslySetInnerHTML={{ __html: result.output.previewHtml }}
               />
             ) : null}
@@ -129,11 +127,14 @@ export function AgentRunner({
         ) : null}
       </section>
 
-      <aside className="h-fit rounded-[2rem] border border-[var(--line)] bg-white/60 p-5">
+      <aside className="panel h-fit p-5">
         <h2 className="display text-2xl">Agent roster</h2>
         <ul className="mt-4 space-y-3">
           {agents.map((agent) => (
-            <li key={agent.id} className="rounded-2xl border border-[var(--line)] bg-white/80 p-3">
+            <li
+              key={agent.id}
+              className="rounded-[var(--radius)] border border-[var(--line)] bg-white p-3"
+            >
               <p className="font-semibold">{agent.name}</p>
               <p className="text-sm text-[var(--ink-soft)]">{agent.specialty}</p>
             </li>

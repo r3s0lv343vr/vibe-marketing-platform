@@ -65,7 +65,7 @@ export default function StatusPage() {
         {pmProjects.map((project) => (
           <article
             key={project.id}
-            className="rounded-[2rem] border border-[var(--line)] bg-white/60 p-6"
+            className="panel-solid p-6"
           >
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>

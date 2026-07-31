@@ -63,7 +63,7 @@ export function RequestIntroForm() {
     <form
       id="request-intro"
       onSubmit={onSubmit}
-      className="rounded-[2rem] border border-[var(--line)] bg-white/65 p-6 shadow-[var(--shadow)] sm:p-8"
+      className="panel-solid p-6 sm:p-8"
     >
       <h2 className="display text-3xl">Request an intro</h2>
       <p className="mt-2 max-w-xl text-[var(--ink-soft)]">

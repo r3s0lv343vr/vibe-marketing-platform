@@ -45,17 +45,12 @@ export function AuthForm({
   }
 
   return (
-    <form
-      onSubmit={onSubmit}
-      className="mx-auto w-full max-w-md rounded-[2rem] border border-[var(--line)] bg-white/70 p-6 shadow-[var(--shadow)] sm:p-8"
-    >
-      <p className="text-xs uppercase tracking-[0.2em] text-[var(--ink-soft)]">
-        Pixie Dust Cheesecake
-      </p>
-      <h1 className="display mt-2 text-4xl">
+    <form onSubmit={onSubmit} className="panel-solid mx-auto w-full max-w-md p-7 sm:p-9">
+      <p className="eyebrow">Pixie Dust Cheesecake</p>
+      <h1 className="display mt-3 text-4xl">
         {mode === "signup" ? "Create your account" : "Welcome back"}
       </h1>
-      <p className="mt-2 text-[var(--ink-soft)]">
+      <p className="mt-3 text-[var(--ink-soft)] leading-relaxed">
         {mode === "signup"
           ? "Start building brands, pages, images, and campaigns with AI agents."
           : "Log in to open your AI agent workspace."}
@@ -63,34 +58,29 @@ export function AuthForm({
 
       <div className="mt-8 grid gap-4">
         {mode === "signup" ? (
-          <label className="grid gap-1 text-sm">
+          <label className="label">
             <span>Name</span>
-            <input
-              required
-              name="name"
-              className="rounded-2xl border border-[var(--line)] bg-white px-4 py-3"
-              placeholder="Jordan Lee"
-            />
+            <input required name="name" className="field" placeholder="Jordan Lee" />
           </label>
         ) : null}
-        <label className="grid gap-1 text-sm">
+        <label className="label">
           <span>Email</span>
           <input
             required
             type="email"
             name="email"
-            className="rounded-2xl border border-[var(--line)] bg-white px-4 py-3"
+            className="field"
             placeholder="you@brand.com"
           />
         </label>
-        <label className="grid gap-1 text-sm">
+        <label className="label">
           <span>Password</span>
           <input
             required
             type="password"
             name="password"
             minLength={6}
-            className="rounded-2xl border border-[var(--line)] bg-white px-4 py-3"
+            className="field"
             placeholder="••••••••"
           />
         </label>
@@ -102,22 +92,26 @@ export function AuthForm({
         </p>
       ) : null}
 
-      <button type="submit" disabled={loading} className="btn btn-primary mt-6 w-full disabled:opacity-60">
+      <button
+        type="submit"
+        disabled={loading}
+        className="btn btn-primary mt-7 w-full disabled:opacity-60"
+      >
         {loading ? "Working…" : mode === "signup" ? "Sign up" : "Log in"}
       </button>
 
-      <p className="mt-5 text-center text-sm text-[var(--ink-soft)]">
+      <p className="mt-6 text-center text-sm text-[var(--ink-soft)]">
         {mode === "signup" ? (
           <>
             Already have an account?{" "}
-            <Link href="/login" className="font-semibold text-[var(--ink)] underline">
+            <Link href="/login" className="font-semibold text-[var(--ink)] underline underline-offset-2">
               Log in
             </Link>
           </>
         ) : (
           <>
             New here?{" "}
-            <Link href="/signup" className="font-semibold text-[var(--ink)] underline">
+            <Link href="/signup" className="font-semibold text-[var(--ink)] underline underline-offset-2">
               Sign up
             </Link>
           </>
