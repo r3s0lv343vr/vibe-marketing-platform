@@ -63,45 +63,48 @@ export function ProjectShowcaseSlider({
   const slideAnim = direction === "next" ? "animate-slide-rtl" : "animate-slide-ltr";
 
   const details = (
-    <div className="flex flex-col items-center px-4 py-6 text-center sm:px-8 sm:py-7">
-      {slide.avatarUrl ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={slide.avatarUrl}
-          alt=""
-          className="h-14 w-14 rounded-full object-cover shadow-[var(--shadow-sm)]"
-        />
-      ) : (
-        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--champagne,#f7e7ce)] text-base font-semibold shadow-[var(--shadow-sm)]">
-          {slide.builderName
-            .split(" ")
-            .map((n) => n[0])
-            .slice(0, 2)
-            .join("")}
+    <div className="flex flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:py-5">
+      <div className="flex min-w-0 items-start gap-3">
+        {slide.avatarUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={slide.avatarUrl}
+            alt=""
+            className="h-12 w-12 shrink-0 rounded-full object-cover"
+          />
+        ) : (
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--champagne,#f7e7ce)] text-sm font-semibold">
+            {slide.builderName
+              .split(" ")
+              .map((n) => n[0])
+              .slice(0, 2)
+              .join("")}
+          </div>
+        )}
+        <div className="min-w-0 text-left">
+          <p className="eyebrow">{slide.kind}</p>
+          <h3 className="display mt-1 truncate text-2xl sm:text-3xl">{slide.title}</h3>
+          <p className="mt-1 text-sm text-[var(--ink-soft)]">
+            <Link
+              href={`/profiles/${slide.builderSlug}`}
+              className="font-semibold text-[var(--ink)] underline underline-offset-2"
+            >
+              {slide.builderName}
+            </Link>
+            <span className="mx-2 text-[var(--line-strong)]">·</span>
+            <a
+              href={`https://github.com/${slide.github}`}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-[var(--rose-deep)]"
+            >
+              @{slide.github}
+            </a>
+          </p>
         </div>
-      )}
+      </div>
 
-      <p className="eyebrow mt-4">{slide.kind}</p>
-      <h3 className="display mt-2 max-w-2xl text-3xl sm:text-4xl">{slide.title}</h3>
-      <p className="mt-2 text-base text-[var(--ink-soft)]">
-        <Link
-          href={`/profiles/${slide.builderSlug}`}
-          className="font-semibold text-[var(--ink)] underline underline-offset-2"
-        >
-          {slide.builderName}
-        </Link>
-        <span className="mx-2 text-[var(--line-strong)]">·</span>
-        <a
-          href={`https://github.com/${slide.github}`}
-          target="_blank"
-          rel="noreferrer"
-          className="hover:text-[var(--rose-deep)]"
-        >
-          @{slide.github}
-        </a>
-      </p>
-
-      <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+      <div className="flex flex-wrap items-center gap-2 sm:justify-end">
         {showOpenActions ? (
           <>
             <a href={slide.href} target="_blank" rel="noreferrer" className="btn btn-primary !py-2">
@@ -112,10 +115,20 @@ export function ProjectShowcaseSlider({
             </Link>
           </>
         ) : null}
-        <button type="button" className="btn btn-ghost !px-3 !py-2" onClick={() => go(-1)} aria-label="Previous slide">
+        <button
+          type="button"
+          className="btn btn-ghost !px-3 !py-2"
+          onClick={() => go(-1)}
+          aria-label="Previous slide"
+        >
           ←
         </button>
-        <button type="button" className="btn btn-ghost !px-3 !py-2" onClick={() => go(1)} aria-label="Next slide">
+        <button
+          type="button"
+          className="btn btn-ghost !px-3 !py-2"
+          onClick={() => go(1)}
+          aria-label="Next slide"
+        >
           →
         </button>
       </div>
@@ -147,7 +160,7 @@ export function ProjectShowcaseSlider({
       <div className={`panel-solid mx-auto w-full ${widthClass} overflow-hidden`}>
         <div className="grid lg:grid-cols-[1.35fr_0.85fr]">
           {preview}
-          <div className="flex flex-col justify-center border-t border-[var(--line)] lg:border-l lg:border-t-0">
+          <div className="flex flex-col justify-end border-t border-[var(--line)] lg:border-l lg:border-t-0">
             {details}
           </div>
         </div>
