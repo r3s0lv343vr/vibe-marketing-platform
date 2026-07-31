@@ -77,11 +77,21 @@ export function AgentRunner({
             <div className="rounded-2xl border border-[var(--line)] bg-[var(--cream)] p-4">
               <p className="text-xs uppercase tracking-[0.16em] text-[var(--ink-soft)]">
                 {result.mode} mode
+                {result.provider ? ` · ${result.provider}` : ""}
               </p>
               <h2 className="display mt-1 text-3xl">{result.output.headline}</h2>
               <p className="mt-2 text-[var(--ink-soft)]">{result.output.summary}</p>
               <p className="mt-3 text-sm text-[var(--ink-soft)]">{result.apiNote}</p>
             </div>
+
+            {result.output.imageUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={result.output.imageUrl}
+                alt={result.output.headline || "Generated image"}
+                className="w-full rounded-2xl border border-[var(--line)]"
+              />
+            ) : null}
 
             <ul className="space-y-2">
               {result.steps.map((step) => (

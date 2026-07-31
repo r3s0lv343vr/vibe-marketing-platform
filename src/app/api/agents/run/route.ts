@@ -23,6 +23,6 @@ export async function POST(request: Request) {
     );
   }
 
-  const result = runAgents(task, body.brief || "");
+  const result = await runAgents(task, body.brief || "");
   return NextResponse.json({ ok: true, user: session.email, result });
 }

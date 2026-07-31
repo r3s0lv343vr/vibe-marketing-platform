@@ -1,3 +1,10 @@
+import {
+  chatLLM,
+  extractJsonObject,
+  generateImageOpenAI,
+  llmAvailability,
+} from "@/lib/llm";
+
 export type AgentRole = {
   id: string;
   name: string;
@@ -13,6 +20,7 @@ export type AgentStep = {
 
 export type AgentRunResult = {
   mode: "demo" | "live";
+  provider?: string;
   steps: AgentStep[];
   output: {
     headline: string;
@@ -20,6 +28,7 @@ export type AgentRunResult = {
     artifacts: Array<{ label: string; content: string }>;
     previewHtml?: string;
     imagePrompt?: string;
+    imageUrl?: string;
     videoBrief?: string;
   };
   apiNote: string;
@@ -90,147 +99,223 @@ export const TASKS = {
 
 export type TaskKey = keyof typeof TASKS;
 
-export function runAgents(task: TaskKey, brief: string): AgentRunResult {
-  const subject = brief.trim() || "a student digital project";
+function baseSteps(task: TaskKey, subject: string, details?: string[]): AgentStep[] {
   const pack = TASKS[task];
-  const hasOpenAI = Boolean(process.env.OPENAI_API_KEY);
-  const hasImage = Boolean(process.env.OPENAI_API_KEY || process.env.REPLICATE_API_TOKEN);
-  const hasVideo = Boolean(process.env.RUNWAY_API_KEY || process.env.REPLICATE_API_TOKEN);
-
-  const steps: AgentStep[] = pack.agents.map((agent, index) => ({
+  return pack.agents.map((agent, index) => ({
     agentId: agent.id,
     title: `${agent.name} · ${agent.specialty}`,
     detail:
-      index === 0
+      details?.[index] ||
+      (index === 0
         ? `Framed the brief around “${subject}”.`
         : index === 1
           ? `Drafted core assets for ${pack.title.toLowerCase()}.`
-          : `Checked consistency against career goals and audience fit.`,
-    status: "done",
+          : `Checked consistency against career goals and audience fit.`),
+    status: "done" as const,
   }));
+}
+
+function demoResult(task: TaskKey, brief: string): AgentRunResult {
+  const subject = brief.trim() || "a student digital project";
+  const avail = llmAvailability();
 
   if (task === "web") {
     return {
-      mode: hasOpenAI ? "live" : "demo",
-      steps,
+      mode: "demo",
+      steps: baseSteps(task, subject),
       output: {
         headline: subject,
-        summary: `Three agents drafted a project showcase page for “${subject}” that stakeholders can review.`,
+        summary: `Demo agents drafted a project showcase page for “${subject}”.`,
         artifacts: [
           { label: "Hero", content: `${subject} — shipped proof, not a résumé claim.` },
           { label: "CTA", content: "View live demo · Inspect GitHub · Request intro" },
-          {
-            label: "Sections",
-            content: "Problem → Build → Proof links → Skills → Ask (hire / invest)",
-          },
+          { label: "Sections", content: "Problem → Build → Proof links → Skills → Ask" },
         ],
-        previewHtml: `<section style="font-family:Georgia,serif;padding:2rem;background:linear-gradient(160deg,#f7b6c8,#f3d9a4);color:#2b2420"><p style="letter-spacing:.16em;text-transform:uppercase;font-size:.7rem">Pixie Dust · Web Agent</p><h1 style="font-size:2rem;margin:.5rem 0 1rem">${subject}</h1><p>Student project showcase — optimized for hiring partners and investors.</p><a style="display:inline-block;margin-top:1rem;padding:.75rem 1.2rem;border-radius:999px;background:#2b2420;color:#fff8f4;text-decoration:none">View proof</a></section>`,
+        previewHtml: `<section style="font-family:Georgia,serif;padding:2rem;background:linear-gradient(160deg,#f7b6c8,#f3d9a4);color:#2b2420"><p style="letter-spacing:.16em;text-transform:uppercase;font-size:.7rem">Pixie Dust · Demo</p><h1 style="font-size:2rem;margin:.5rem 0 1rem">${subject}</h1><p>Student project showcase preview.</p></section>`,
       },
-      apiNote: hasOpenAI
-        ? "OPENAI_API_KEY detected — wire live LLM rewrite in a follow-up."
-        : "Demo agents active. Optional: set OPENAI_API_KEY for live copy generation.",
+      apiNote: avail.any
+        ? "Live keys found but demo fallback used."
+        : "Demo mode. Add OPENAI_API_KEY and/or KIMI_API_KEY for live agents.",
     };
   }
 
   if (task === "image") {
-    const imagePrompt = `Editorial campaign still for student project “${subject}”, soft bakery light, rose sugar and champagne gold palette, shallow depth of field, no text overlay, premium product photography`;
+    const imagePrompt = `Editorial campaign still for student project “${subject}”, soft bakery light, rose sugar and champagne gold palette, shallow depth of field, no text overlay`;
     return {
-      mode: hasImage ? "live" : "demo",
-      steps,
+      mode: "demo",
+      steps: baseSteps(task, subject),
       output: {
         headline: `Visual system for ${subject}`,
-        summary: "Art Director + Prompt Engineer + Style Critic produced a generation-ready brief.",
+        summary: "Demo agents produced a generation-ready brief.",
         artifacts: [
           { label: "Primary prompt", content: imagePrompt },
           { label: "Formats", content: "1:1 feed · 4:5 story · 16:9 hero" },
-          { label: "Negative", content: "No watermarks, no cluttered backgrounds, no distorted hands" },
         ],
         imagePrompt,
       },
-      apiNote: hasImage
-        ? "Image provider key detected — connect generation endpoint next."
-        : "Demo agents active. Real pixels need OPENAI_API_KEY (DALL·E) or REPLICATE_API_TOKEN.",
+      apiNote: "Demo mode. OPENAI_API_KEY enables DALL·E image generation.",
     };
   }
 
   if (task === "video") {
-    const videoBrief = `15s opener for “${subject}”: hook (0–3s), product moment (3–10s), CTA (10–15s). Warm rose/gold grade, handheld intimacy, end card Create. Launch. Grow.`;
     return {
-      mode: hasVideo ? "live" : "demo",
-      steps,
+      mode: "demo",
+      steps: baseSteps(task, subject),
       output: {
         headline: `Motion brief for ${subject}`,
-        summary: "Scriptwriter + Shot Planner + Motion Director aligned a launch clip plan.",
+        summary: "Demo agents aligned a launch clip plan.",
         artifacts: [
           { label: "Hook", content: `What if ${subject} marketed itself overnight?` },
-          { label: "Shot list", content: "1) Detail macro 2) Human reaction 3) UI/product 4) Logo lockup" },
-          { label: "Delivery", content: "Vertical 9:16 first, crop to 1:1 and 16:9" },
+          { label: "Shot list", content: "1) Detail 2) Reaction 3) Product UI 4) Logo" },
         ],
-        videoBrief,
+        videoBrief: `15s opener for “${subject}”.`,
       },
-      apiNote: hasVideo
-        ? "Video provider key detected — connect render pipeline next."
-        : "Demo agents active. Real video needs RUNWAY_API_KEY or REPLICATE_API_TOKEN.",
+      apiNote: "Demo mode for scripts. Real rendered video needs Runway/Replicate later.",
     };
   }
 
   if (task === "social") {
     return {
-      mode: hasOpenAI ? "live" : "demo",
-      steps,
+      mode: "demo",
+      steps: baseSteps(task, subject),
       output: {
         headline: `Professional presence for ${subject}`,
-        summary:
-          "LinkedIn, Instagram, and Facebook agents drafted channel-specific profile upgrades so employers and investors see a coherent story.",
+        summary: "Demo social agents drafted LinkedIn, Instagram, and Facebook upgrades.",
         artifacts: [
-          {
-            label: "LinkedIn",
-            content: `Headline: Builder of ${subject} · shipping production apps with AI-assisted velocity. About: lead with problem solved, live URL, GitHub proof, ask (hire/intro). Featured: demo + repo + case study.`,
-          },
-          {
-            label: "Instagram",
-            content: `Bio: “Shipping ${subject} in public.” Highlights: Build log · Demo · Stack. Cadence: 3x/week — process reel, UI still, proof post with link in bio.`,
-          },
-          {
-            label: "Facebook",
-            content: `Page voice: clear, professional, lightly warm. Pin a launch post with live demo. Weekly update: what shipped, what learned, who it’s for.`,
-          },
+          { label: "LinkedIn", content: `Headline + about focused on ${subject} with live proof links.` },
+          { label: "Instagram", content: "Bio, highlights, and 3x/week cadence." },
+          { label: "Facebook", content: "Pinned launch post + weekly shipping updates." },
         ],
       },
-      apiNote: hasOpenAI
-        ? "OPENAI_API_KEY detected — connect live social rewrite next."
-        : "Demo agents active. Optional OPENAI_API_KEY for live rewrites. Official Meta/LinkedIn posting APIs can connect later for publish.",
+      apiNote: "Demo mode. Live rewrite uses OPENAI_API_KEY or KIMI_API_KEY.",
     };
   }
 
-  // market
   return {
-    mode: hasOpenAI ? "live" : "demo",
-    steps,
+    mode: "demo",
+    steps: baseSteps(task, subject),
     output: {
       headline: `Pulse check for ${subject}`,
-      summary:
-        "Employer Scout, Buzzword Analyst, and Market Sentiment mapped what to emphasize so your project reads as hireable and investable right now.",
+      summary: "Demo market agents listed employer signals and buzzwords.",
       artifacts: [
-        {
-          label: "Employers want",
-          content:
-            "Production deploys, readable GitHub history, peer reviews, clear ownership, and proof you can ship with AI tools without losing engineering judgment.",
-        },
-        {
-          label: "Buzzwords that land (use honestly)",
-          content:
-            "Agent orchestration · production-ready · multi-user · observability · integration-ready · portfolio of live apps · measurable outcomes",
-        },
-        {
-          label: "Themes & sentiment",
-          content:
-            "Strong interest in AI-native builders who show real products (not slide decks), open collaboration, and projects that connect to hiring/ops workflows. Lead with live URL + what a partner can do in 2 minutes.",
-        },
+        { label: "Employers want", content: "Live deploys, GitHub proof, clear ownership." },
+        { label: "Buzzwords", content: "production-ready · agent orchestration · measurable outcomes" },
+        { label: "Sentiment", content: "AI-native builders with real products beat slide decks." },
       ],
     },
-    apiNote: hasOpenAI
-      ? "OPENAI_API_KEY detected — connect live market scan next."
-      : "Demo pulse active. Optional OPENAI_API_KEY / news APIs later for live employer and trend feeds.",
+    apiNote: "Demo mode. Live pulse uses OPENAI_API_KEY or KIMI_API_KEY.",
   };
+}
+
+type LiveJson = {
+  headline?: string;
+  summary?: string;
+  artifacts?: Array<{ label: string; content: string }>;
+  previewHtml?: string;
+  imagePrompt?: string;
+  videoBrief?: string;
+  stepDetails?: string[];
+};
+
+async function liveTextTask(task: TaskKey, brief: string): Promise<AgentRunResult> {
+  const subject = brief.trim() || "a student digital project";
+  const pack = TASKS[task];
+
+  const system = `You are the orchestrator for Pixie Dust Cheesecake, a vibe marketing platform where students showcase digital projects to hiring partners and investors.
+Coordinate these agents: ${pack.agents.map((a) => `${a.name} (${a.specialty})`).join("; ")}.
+Return ONLY valid JSON with keys:
+headline (string), summary (string), artifacts (array of {label, content}), stepDetails (array of 3 short strings, one per agent),
+previewHtml (string, only for web — a small self-contained HTML snippet),
+imagePrompt (string, only for image),
+videoBrief (string, only for video).
+Tone: warm, professional, concrete. No markdown fences.`;
+
+  const user = `Task: ${pack.title}
+Student brief: ${subject}
+Audience: hiring partners and investors.
+Produce channel-ready, actionable output.`;
+
+  const chat = await chatLLM(system, user);
+  const parsed = extractJsonObject<LiveJson>(chat.text);
+
+  return {
+    mode: "live",
+    provider: `${chat.provider}:${chat.model}`,
+    steps: baseSteps(task, subject, parsed.stepDetails),
+    output: {
+      headline: parsed.headline || subject,
+      summary: parsed.summary || `Live agents completed ${pack.title}.`,
+      artifacts: parsed.artifacts?.length
+        ? parsed.artifacts.slice(0, 6)
+        : [{ label: "Output", content: chat.text.slice(0, 1200) }],
+      previewHtml: parsed.previewHtml,
+      imagePrompt: parsed.imagePrompt,
+      videoBrief: parsed.videoBrief,
+    },
+    apiNote: `Live via ${chat.provider} (${chat.model}).`,
+  };
+}
+
+async function liveImageTask(brief: string): Promise<AgentRunResult> {
+  const subject = brief.trim() || "a student digital project";
+  const text = await liveTextTask("image", brief);
+  const prompt =
+    text.output.imagePrompt ||
+    `Editorial campaign still for student project “${subject}”, soft bakery light, rose sugar and champagne gold palette, shallow depth of field, no text overlay, premium product photography`;
+
+  if (!llmAvailability().openai) {
+    return {
+      ...text,
+      output: { ...text.output, imagePrompt: prompt },
+      apiNote: `${text.apiNote} Image pixels need OPENAI_API_KEY (DALL·E). Prompt ready.`,
+    };
+  }
+
+  try {
+    const imageUrl = await generateImageOpenAI(prompt);
+    return {
+      ...text,
+      mode: "live",
+      output: {
+        ...text.output,
+        imagePrompt: prompt,
+        imageUrl,
+        artifacts: [
+          ...(text.output.artifacts || []),
+          { label: "Generated image", content: imageUrl },
+        ],
+      },
+      apiNote: `${text.apiNote} Image generated with OpenAI DALL·E.`,
+    };
+  } catch (err) {
+    return {
+      ...text,
+      output: { ...text.output, imagePrompt: prompt },
+      apiNote: `Text agents live; image generation failed: ${
+        err instanceof Error ? err.message : "unknown error"
+      }`,
+    };
+  }
+}
+
+export async function runAgents(task: TaskKey, brief: string): Promise<AgentRunResult> {
+  const avail = llmAvailability();
+  if (!avail.any) {
+    return demoResult(task, brief);
+  }
+
+  try {
+    if (task === "image") {
+      return await liveImageTask(brief);
+    }
+    return await liveTextTask(task, brief);
+  } catch (err) {
+    const fallback = demoResult(task, brief);
+    return {
+      ...fallback,
+      apiNote: `Live providers failed (${
+        err instanceof Error ? err.message : "error"
+      }). Showing demo fallback.`,
+    };
+  }
 }
