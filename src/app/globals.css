@@ -1,31 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  /* Cool mist canvas — fresh, not dusty cream */
-  --bg: #eef8f7;
-  --bg-deep: #d7efec;
-  --ink: #0c2a32;
-  --ink-soft: #3f5c65;
-  /* Brand teal */
-  --brand: #0f9d94;
-  --brand-deep: #0a756e;
-  /* Energetic coral accent */
-  --accent: #ff5a3c;
-  --accent-deep: #e84428;
-  --accent-soft: #ffe5df;
-  --gold: #f0b429;
-  --mint: #5ec4b6;
-  --cream: #f7fcfb;
+  /* Soft ice canvas — cool and crisp, not cream or teal mist */
+  --bg: #f2f5fb;
+  --bg-deep: #e3eaf7;
+  --ink: #101828;
+  --ink-soft: #475467;
+  /* Sapphire brand — distinctive in a teal/coral-heavy cohort */
+  --brand: #1d4ed8;
+  --brand-deep: #1e3a8a;
+  /* Mango amber accent — upbeat without coral */
+  --accent: #f5a524;
+  --accent-deep: #d97706;
+  --accent-soft: #fff4d6;
+  --gold: #fbbf24;
+  --sky: #38bdf8;
+  --mint: var(--sky);
+  --cream: #f8fafc;
   --surface: #ffffff;
-  --surface-soft: rgba(255, 255, 255, 0.88);
-  /* Compat aliases used across pages */
+  --surface-soft: rgba(255, 255, 255, 0.9);
+  /* Compat aliases */
   --rose: var(--accent);
   --rose-deep: var(--accent-deep);
-  --line: rgba(12, 42, 50, 0.1);
-  --line-strong: rgba(12, 42, 50, 0.18);
-  --focus: rgba(15, 157, 148, 0.35);
-  --shadow: 0 1px 2px rgba(12, 42, 50, 0.05), 0 16px 40px rgba(15, 157, 148, 0.12);
-  --shadow-sm: 0 1px 2px rgba(12, 42, 50, 0.06);
+  --line: rgba(16, 24, 40, 0.1);
+  --line-strong: rgba(16, 24, 40, 0.18);
+  --focus: rgba(29, 78, 216, 0.35);
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.05), 0 18px 40px rgba(29, 78, 216, 0.1);
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
   --radius: 0.75rem;
   --radius-lg: 1rem;
   --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
@@ -63,10 +64,10 @@ body {
   min-height: 100vh;
   color: var(--ink);
   background:
-    radial-gradient(1000px 520px at 0% -5%, rgba(15, 157, 148, 0.22), transparent 55%),
-    radial-gradient(800px 480px at 100% 0%, rgba(255, 90, 60, 0.14), transparent 50%),
-    radial-gradient(700px 360px at 70% 100%, rgba(240, 180, 41, 0.12), transparent 55%),
-    linear-gradient(180deg, var(--cream) 0%, var(--bg) 45%, var(--bg-deep) 100%);
+    radial-gradient(980px 500px at 0% -8%, rgba(29, 78, 216, 0.16), transparent 55%),
+    radial-gradient(820px 460px at 100% 0%, rgba(245, 165, 36, 0.16), transparent 52%),
+    radial-gradient(640px 360px at 60% 100%, rgba(56, 189, 248, 0.12), transparent 55%),
+    linear-gradient(180deg, var(--cream) 0%, var(--bg) 48%, var(--bg-deep) 100%);
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.55;
@@ -80,7 +81,7 @@ a {
 }
 
 ::selection {
-  background: rgba(15, 157, 148, 0.28);
+  background: rgba(245, 165, 36, 0.35);
   color: var(--ink);
 }
 
@@ -133,16 +134,6 @@ a {
   }
 }
 
-@keyframes pulse-soft {
-  0%,
-  100% {
-    opacity: 0.55;
-  }
-  50% {
-    opacity: 0.9;
-  }
-}
-
 .animate-rise {
   animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -181,13 +172,13 @@ a {
 
 .band-brand {
   background:
-    radial-gradient(600px 280px at 10% 0%, rgba(255, 90, 60, 0.18), transparent 60%),
-    linear-gradient(135deg, var(--brand-deep) 0%, var(--brand) 55%, #14b8a6 100%);
+    radial-gradient(620px 280px at 12% 0%, rgba(245, 165, 36, 0.28), transparent 60%),
+    linear-gradient(135deg, #152a6e 0%, var(--brand-deep) 42%, var(--brand) 100%);
   color: var(--cream);
 }
 
 .band-brand .eyebrow {
-  color: rgba(247, 252, 251, 0.78);
+  color: rgba(248, 250, 252, 0.78);
 }
 
 .btn {
@@ -222,14 +213,15 @@ a:focus-visible {
 
 .btn-primary {
   background: var(--accent);
-  color: #fff;
+  color: #14213d;
   border: 1px solid var(--accent);
-  box-shadow: 0 8px 24px rgba(255, 90, 60, 0.28);
+  box-shadow: 0 8px 24px rgba(245, 165, 36, 0.35);
 }
 
 .btn-primary:hover {
   background: var(--accent-deep);
   border-color: var(--accent-deep);
+  color: #fff;
 }
 
 .btn-secondary {
@@ -247,7 +239,7 @@ a:focus-visible {
 
 .btn-ghost {
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--ink);
   backdrop-filter: blur(8px);
 }
@@ -280,7 +272,7 @@ a:focus-visible {
 }
 
 .field::placeholder {
-  color: rgba(63, 92, 101, 0.65);
+  color: rgba(71, 84, 103, 0.65);
 }
 
 .label {
@@ -294,16 +286,16 @@ a:focus-visible {
 .chip {
   display: inline-flex;
   align-items: center;
-  border: 1px solid rgba(15, 157, 148, 0.22);
+  border: 1px solid rgba(29, 78, 216, 0.2);
   border-radius: 999px;
-  background: rgba(15, 157, 148, 0.08);
+  background: rgba(29, 78, 216, 0.07);
   color: var(--ink);
   padding: 0.35rem 0.75rem;
   font-size: 0.875rem;
 }
 
 .chip-accent {
-  border-color: rgba(255, 90, 60, 0.28);
+  border-color: rgba(245, 165, 36, 0.4);
   background: var(--accent-soft);
   font-weight: 500;
 }
@@ -326,14 +318,14 @@ a:focus-visible {
 
 .tile:hover {
   transform: translateY(-2px);
-  border-color: rgba(15, 157, 148, 0.55);
+  border-color: rgba(29, 78, 216, 0.5);
   box-shadow: var(--shadow);
 }
 
 .meter {
   height: 0.4rem;
   border-radius: 999px;
-  background: rgba(12, 42, 50, 0.08);
+  background: rgba(16, 24, 40, 0.08);
   overflow: hidden;
 }
 
@@ -341,12 +333,12 @@ a:focus-visible {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--brand), var(--mint), var(--accent));
+  background: linear-gradient(90deg, var(--brand), var(--sky), var(--accent));
   transition: width 600ms ease;
 }
 
 .brand-mark {
-  color: var(--brand-deep);
+  color: var(--brand);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -31,22 +31,22 @@ export default function HomePage() {
           className="absolute inset-0 grain animate-fade"
           style={{
             backgroundImage:
-              "linear-gradient(120deg, rgba(12,42,50,0.78) 0%, rgba(10,117,110,0.62) 48%, rgba(232,68,40,0.45) 100%), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=80')",
+              "linear-gradient(118deg, rgba(16,24,40,0.82) 0%, rgba(30,58,138,0.72) 46%, rgba(245,165,36,0.5) 100%), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=80')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
         <div
-          className="pointer-events-none absolute -right-16 top-24 h-56 w-56 rounded-full bg-[rgba(255,90,60,0.35)] blur-3xl"
+          className="pointer-events-none absolute -right-12 top-20 h-60 w-60 rounded-full bg-[rgba(245,165,36,0.4)] blur-3xl"
           aria-hidden
         />
         <div
-          className="pointer-events-none absolute bottom-10 left-10 h-40 w-40 rounded-full bg-[rgba(15,157,148,0.4)] blur-3xl"
+          className="pointer-events-none absolute bottom-8 left-8 h-44 w-44 rounded-full bg-[rgba(56,189,248,0.35)] blur-3xl"
           aria-hidden
         />
         <div className="site-shell relative flex min-h-[calc(100svh-4.5rem)] flex-col justify-end pb-16 pt-28 text-[var(--cream)]">
           <h1 className="display animate-rise max-w-4xl text-5xl sm:text-7xl">
-            Pixie Dust <span className="text-[#ffe08a]">Cheesecake</span>
+            Pixie Dust <span className="text-[var(--accent)]">Cheesecake</span>
           </h1>
           <p className="animate-rise-delay mt-5 max-w-xl text-lg leading-relaxed text-white/93 sm:text-xl">
             An AI marketing platform that builds your brand, creates content, designs websites, and
@@ -120,7 +120,7 @@ export default function HomePage() {
               key={item.title}
               className="grid gap-2 py-6 sm:grid-cols-[auto_minmax(0,0.9fr)_minmax(0,1.2fr)] sm:items-start sm:gap-8"
             >
-              <span className="display text-sm font-semibold text-[var(--accent)] sm:pt-1">
+              <span className="display text-sm font-semibold text-[var(--accent-deep)] sm:pt-1">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3 className="display text-2xl text-[var(--ink)]">{item.title}</h3>
@@ -136,7 +136,7 @@ export default function HomePage() {
             className="absolute inset-0"
             style={{
               backgroundImage:
-                "linear-gradient(115deg, rgba(10,117,110,0.92), rgba(12,42,50,0.78) 55%, rgba(232,68,40,0.55)), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80')",
+                "linear-gradient(115deg, rgba(30,58,138,0.94), rgba(16,24,40,0.78) 55%, rgba(217,119,6,0.55)), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
