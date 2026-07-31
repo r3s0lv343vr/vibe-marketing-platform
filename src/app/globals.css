@@ -158,6 +158,36 @@ a {
   animation: fade-soft 0.9s ease both;
 }
 
+@keyframes slide-rtl {
+  from {
+    opacity: 0.55;
+    transform: translateX(12%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-ltr {
+  from {
+    opacity: 0.55;
+    transform: translateX(-12%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-rtl {
+  animation: slide-rtl 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-slide-ltr {
+  animation: slide-ltr 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 .shine-text {
   background: linear-gradient(
     110deg,
@@ -368,6 +398,8 @@ a:focus-visible {
   .animate-rise-delay,
   .animate-rise-delay-2,
   .animate-fade,
+  .animate-slide-rtl,
+  .animate-slide-ltr,
   .shine-text,
   .btn:hover,
   .tile:hover {
