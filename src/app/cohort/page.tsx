@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ProfileCard } from "@/components/ProfileCard";
-import { profiles } from "@/data/profiles";
+import { getRoster } from "@/lib/roster";
 
 export const metadata: Metadata = {
   title: "Cohort",
@@ -9,13 +9,15 @@ export const metadata: Metadata = {
 };
 
 export default function CohortPage() {
+  const profiles = getRoster();
+
   return (
     <div className="site-shell py-14">
-      <p className="text-xs uppercase tracking-[0.22em] text-[var(--ink-soft)]">Directory</p>
+      <p className="eyebrow">Directory</p>
       <h1 className="display mt-3 text-5xl">The cohort</h1>
       <p className="mt-4 max-w-2xl text-lg text-[var(--ink-soft)]">
-        Public by default. Opt-out profiles show as private. Roster is still filling — placeholder
-        builders are labeled clearly so partners know what is sample vs. enrolled signal.
+        Public by default. Opt-out profiles show as private. Import classmate GitHub handles to fill
+        avatars, live project homepages, and cohort PR links in bulk.
       </p>
       <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {profiles.map((profile) => (

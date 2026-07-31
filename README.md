@@ -74,6 +74,22 @@ Node 20+ recommended.
 | `npm run start` | Serve production build |
 | `npm run lint` | ESLint |
 | `npm run typecheck` | TypeScript check |
+| `npm run import:roster -- data/handles.txt --write` | Bulk-import classmates from GitHub handles |
+
+### Bulk-import classmates from GitHub
+
+1. Copy `data/handles.example.txt` → `data/handles.txt`
+2. Add one handle per line (or `github,Name,Campus`)
+3. Run:
+
+```bash
+GITHUB_TOKEN=ghp_xxx npm run import:roster -- data/handles.txt --write
+```
+
+This fetches **name, avatar, public repos, homepage URLs, and PRs** authored in
+`rogerSuperBuilderAlpha/hult-cohort-program` (override with `COHORT_REPO=owner/repo`),
+then writes `src/data/profiles.generated.json`. The site merges that file with
+`src/data/profiles.ts`. Live homepages appear in the **Partners** project slider.
 
 ---
 

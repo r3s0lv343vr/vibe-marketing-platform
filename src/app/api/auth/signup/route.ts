@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
-import { encodeSession, sessionCookieOptions } from "@/lib/auth";
+import { encodeSession, sessionCookieOptions, type UserRole } from "@/lib/auth";
 
 export async function POST(request: Request) {
-  let body: { name?: string; email?: string; password?: string };
+  let body: { name?: string; email?: string; password?: string; role?: string };
   try {
     body = await request.json();
   } catch {
@@ -12,6 +12,7 @@ export async function POST(request: Request) {
   const name = body.name?.trim();
   const email = body.email?.trim().toLowerCase();
   const password = body.password?.trim();
+  const role: UserRole = body.role === "partner" ? "partner" : "student";
 
   if (!name || !email || !password || password.length < 6) {
     return NextResponse.json(
@@ -21,8 +22,8 @@ export async function POST(request: Request) {
   }
 
   // MVP: cookie session only (no external auth API / database required).
-  const token = encodeSession({ name, email });
-  const response = NextResponse.json({ ok: true, user: { name, email } });
+  const token = encodeSession({ name, email, role });
+  const response = NextResponse.json({ ok: true, user: { name, email, role } });
   response.cookies.set(sessionCookieOptions(token));
   return response;
 }

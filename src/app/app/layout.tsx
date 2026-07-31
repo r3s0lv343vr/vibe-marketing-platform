@@ -6,6 +6,7 @@ import { getSession } from "@/lib/auth";
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const session = await getSession();
   if (!session) redirect("/login?next=/app");
+  if (session.role === "partner") redirect("/partners/home");
 
   return (
     <div className="site-shell py-10">

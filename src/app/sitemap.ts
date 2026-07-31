@@ -1,15 +1,23 @@
 import type { MetadataRoute } from "next";
-import { profiles } from "@/data/profiles";
+import { getRoster } from "@/lib/roster";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = process.env.NEXT_PUBLIC_SITE_URL || "https://pixie-dust-cheesecake.vercel.app";
-  const staticRoutes = ["", "/cohort", "/partners", "/studio", "/status"].map((path) => ({
+  const staticRoutes = [
+    "",
+    "/cohort",
+    "/partners",
+    "/partners/login",
+    "/partners/signup",
+    "/studio",
+    "/status",
+  ].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),
   }));
-  const profileRoutes = profiles.map((p) => ({
+  const profileRoutes = getRoster().map((p) => ({
     url: `${base}/profiles/${p.slug}`,
     lastModified: new Date(),
   }));

@@ -5,17 +5,22 @@ import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 
 type Mode = "login" | "signup";
+type Audience = "student" | "partner";
 
 export function AuthForm({
   mode,
-  nextPath = "/app/profile",
+  audience = "student",
+  nextPath,
 }: {
   mode: Mode;
+  audience?: Audience;
   nextPath?: string;
 }) {
   const router = useRouter();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const resolvedNext =
+    nextPath || (audience === "partner" ? "/partners/home" : "/app/profile");
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -26,6 +31,7 @@ export function AuthForm({
       name: String(form.get("name") || ""),
       email: String(form.get("email") || ""),
       password: String(form.get("password") || ""),
+      role: audience,
     };
 
     try {
@@ -36,7 +42,7 @@ export function AuthForm({
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Request failed");
-      router.push(nextPath);
+      router.push(resolvedNext);
       router.refresh();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong");
@@ -44,23 +50,40 @@ export function AuthForm({
     }
   }
 
+  const isPartner = audience === "partner";
+
   return (
     <form onSubmit={onSubmit} className="panel-solid mx-auto w-full max-w-md p-7 sm:p-9">
-      <p className="eyebrow">Pixie Dust Cheesecake</p>
+      <p className="eyebrow">{isPartner ? "Partners" : "Pixie Dust Cheesecake"}</p>
       <h1 className="display mt-3 text-4xl">
-        {mode === "signup" ? "Create your account" : "Welcome back"}
-      </h1>
-      <p className="mt-3 text-[var(--ink-soft)] leading-relaxed">
         {mode === "signup"
-          ? "Start building brands, pages, images, and campaigns with AI agents."
-          : "Log in to open your AI agent workspace."}
+          ? isPartner
+            ? "Create a partner account"
+            : "Create your account"
+          : isPartner
+            ? "Partner sign in"
+            : "Welcome back"}
+      </h1>
+      <p className="mt-3 leading-relaxed text-[var(--ink-soft)]">
+        {isPartner
+          ? mode === "signup"
+            ? "Access the cohort showcase — live projects, builders, and evidence for hiring or investing."
+            : "Sign in to open the Partners showcase feed."
+          : mode === "signup"
+            ? "Start building brands, pages, images, and campaigns with AI agents."
+            : "Log in to open your AI agent workspace."}
       </p>
 
       <div className="mt-8 grid gap-4">
         {mode === "signup" ? (
           <label className="label">
             <span>Name</span>
-            <input required name="name" className="field" placeholder="Jordan Lee" />
+            <input
+              required
+              name="name"
+              className="field"
+              placeholder={isPartner ? "Alex Partner" : "Jordan Lee"}
+            />
           </label>
         ) : null}
         <label className="label">
@@ -70,7 +93,7 @@ export function AuthForm({
             type="email"
             name="email"
             className="field"
-            placeholder="you@brand.com"
+            placeholder={isPartner ? "you@company.com" : "you@brand.com"}
           />
         </label>
         <label className="label">
@@ -101,7 +124,29 @@ export function AuthForm({
       </button>
 
       <p className="mt-6 text-center text-sm text-[var(--ink-soft)]">
-        {mode === "signup" ? (
+        {isPartner ? (
+          mode === "signup" ? (
+            <>
+              Already a partner?{" "}
+              <Link
+                href="/partners/login"
+                className="font-semibold text-[var(--ink)] underline underline-offset-2"
+              >
+                Sign in
+              </Link>
+            </>
+          ) : (
+            <>
+              New partner?{" "}
+              <Link
+                href="/partners/signup"
+                className="font-semibold text-[var(--ink)] underline underline-offset-2"
+              >
+                Create account
+              </Link>
+            </>
+          )
+        ) : mode === "signup" ? (
           <>
             Already have an account?{" "}
             <Link href="/login" className="font-semibold text-[var(--ink)] underline underline-offset-2">

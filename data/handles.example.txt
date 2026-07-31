@@ -1,0 +1,6 @@
+# One GitHub handle per line.
+# Optional CSV: github,Display Name,Campus
+#
+# Example:
+r3s0lv343vr,Craig Ferguson,Boston
+# classmate-handle,Ada Builder,London

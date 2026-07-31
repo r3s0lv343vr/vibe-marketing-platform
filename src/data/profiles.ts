@@ -1,7 +1,7 @@
 export type PortfolioLink = {
   label: string;
   href: string;
-  kind: "pm" | "comms" | "showcase" | "other";
+  kind: "pm" | "comms" | "showcase" | "repo" | "pr" | "other";
 };
 
 export type CohortProfile = {
@@ -13,7 +13,14 @@ export type CohortProfile = {
   skills: string[];
   bio: string;
   public: boolean;
+  /** Fallback when avatarUrl is missing */
   photoGradient: string;
+  /** GitHub avatar or other portrait URL */
+  avatarUrl?: string;
+  /** Cohort / project pull request URLs */
+  prUrls?: string[];
+  /** Live project homepage URLs (Vercel, custom domains, etc.) */
+  homepageUrls?: string[];
   portfolio: PortfolioLink[];
   highlight?: string;
 };
@@ -29,8 +36,17 @@ export const profiles: CohortProfile[] = [
     skills: ["Next.js", "TypeScript", "Firebase", "Prisma", "Vercel"],
     bio: "Shipping production cohort tools with agent-assisted velocity. Built Forth (PM), Lnq (comms), and Pixie Dust Cheesecake (showcase) — each deployed, reviewed, and wired for ecosystem unification.",
     public: true,
+    avatarUrl: "https://avatars.githubusercontent.com/r3s0lv343vr",
     photoGradient: "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
     highlight: "Operator of Pixie Dust Cheesecake",
+    homepageUrls: [
+      "https://forth-bice.vercel.app",
+      "https://lnq-eight.vercel.app",
+      "https://pixie-dust-cheesecake.vercel.app",
+    ],
+    prUrls: [
+      "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/185",
+    ],
     portfolio: [
       {
         label: "Forth · PM platform",
@@ -40,7 +56,7 @@ export const profiles: CohortProfile[] = [
       {
         label: "PM build repo",
         href: "https://github.com/r3s0lv343vr/pm-r3s0lv343vr",
-        kind: "pm",
+        kind: "repo",
       },
       {
         label: "Lnq · Comms",
@@ -51,6 +67,11 @@ export const profiles: CohortProfile[] = [
         label: "Pixie Dust Cheesecake",
         href: "https://pixie-dust-cheesecake.vercel.app",
         kind: "showcase",
+      },
+      {
+        label: "Project 3 submission PR",
+        href: "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/185",
+        kind: "pr",
       },
     ],
   },
@@ -139,3 +160,14 @@ export function getProfile(slug: string) {
 export function publicProfiles() {
   return profiles.filter((p) => p.public);
 }
+
+export type ShowcaseSlide = {
+  id: string;
+  title: string;
+  href: string;
+  builderName: string;
+  builderSlug: string;
+  github: string;
+  avatarUrl?: string;
+  kind: PortfolioLink["kind"];
+};
