@@ -188,6 +188,23 @@ a {
   animation: slide-ltr 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* Hide the vertical scrollbar inside project preview iframes */
+.slider-preview-clip {
+  overflow: hidden;
+}
+
+.slider-preview-frame {
+  overflow: hidden !important;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.slider-preview-frame::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
 .shine-text {
   background: linear-gradient(
     110deg,

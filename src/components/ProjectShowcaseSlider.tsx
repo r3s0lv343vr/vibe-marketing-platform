@@ -143,15 +143,22 @@ export function ProjectShowcaseSlider({
         <span className="h-2.5 w-2.5 rounded-full bg-[var(--mint)]" />
         <span className="ml-2 truncate">{slide.href}</span>
       </div>
-      <div key={animKey} className={`absolute inset-0 top-9 ${slideAnim}`}>
+      <div key={animKey} className={`slider-preview-clip absolute inset-0 top-9 ${slideAnim}`}>
         <iframe
           title={`${slide.title} preview`}
           src={slide.href}
-          className="h-full w-full border-0 bg-white"
+          className="slider-preview-frame h-full w-full border-0 bg-white"
           loading="lazy"
+          scrolling="no"
+          tabIndex={-1}
           sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
         />
       </div>
+      {/* Cover cross-origin iframe vertical scrollbar (north→south bar). */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-y-9 right-0 z-10 w-3.5 bg-white"
+      />
     </div>
   );
 
