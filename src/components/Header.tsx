@@ -8,8 +8,8 @@ const links = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-[var(--line)] bg-[rgba(248,250,252,0.92)] backdrop-blur-md">
-      <div className="h-1 w-full bg-[linear-gradient(90deg,var(--brand-deep),var(--brand),var(--sky),var(--accent))]" />
+    <header className="sticky top-0 z-40 border-b border-[var(--line)] bg-[rgba(255,248,244,0.9)] backdrop-blur-md">
+      <div className="h-1 w-full bg-[linear-gradient(90deg,var(--rose-deep),var(--rose),var(--gold),var(--mint))]" />
       <div className="site-shell flex items-center justify-between gap-4 py-3.5">
         <Link href="/" className="display text-lg font-semibold tracking-tight sm:text-xl">
           Pixie Dust <span className="brand-mark">Cheesecake</span>
@@ -19,7 +19,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors hover:text-[var(--brand)]"
+              className="transition-colors hover:text-[var(--rose-deep)]"
             >
               {link.label}
             </Link>
@@ -34,7 +34,7 @@ export function Header() {
           <Link
             key={link.href}
             href={link.href}
-            className="whitespace-nowrap transition-colors hover:text-[var(--brand)]"
+            className="whitespace-nowrap transition-colors hover:text-[var(--rose-deep)]"
           >
             {link.label}
           </Link>

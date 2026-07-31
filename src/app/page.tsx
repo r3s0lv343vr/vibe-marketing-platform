@@ -31,24 +31,16 @@ export default function HomePage() {
           className="absolute inset-0 grain animate-fade"
           style={{
             backgroundImage:
-              "linear-gradient(118deg, rgba(16,24,40,0.82) 0%, rgba(30,58,138,0.72) 46%, rgba(245,165,36,0.5) 100%), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=80')",
+              "linear-gradient(120deg, rgba(43,36,32,0.55), rgba(196,93,120,0.32)), url('https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=2000&q=80')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
-        <div
-          className="pointer-events-none absolute -right-12 top-20 h-60 w-60 rounded-full bg-[rgba(245,165,36,0.4)] blur-3xl"
-          aria-hidden
-        />
-        <div
-          className="pointer-events-none absolute bottom-8 left-8 h-44 w-44 rounded-full bg-[rgba(56,189,248,0.35)] blur-3xl"
-          aria-hidden
-        />
         <div className="site-shell relative flex min-h-[calc(100svh-4.5rem)] flex-col justify-end pb-16 pt-28 text-[var(--cream)]">
           <h1 className="display animate-rise max-w-4xl text-5xl sm:text-7xl">
-            Pixie Dust <span className="text-[var(--accent)]">Cheesecake</span>
+            <span className="shine-text">Pixie Dust Cheesecake</span>
           </h1>
-          <p className="animate-rise-delay mt-5 max-w-xl text-lg leading-relaxed text-white/93 sm:text-xl">
+          <p className="animate-rise-delay mt-5 max-w-xl rounded-[var(--radius-lg)] bg-[rgba(255,248,244,0.92)] px-4 py-3 text-lg text-[#3a2a28] sm:text-xl">
             An AI marketing platform that builds your brand, creates content, designs websites, and
             launches campaigns — from one conversation.
           </p>
@@ -79,7 +71,7 @@ export default function HomePage() {
               workspace to build assets, polish social profiles, and track what the market wants —
               so every project is easier to hire for or invest in.
             </p>
-            <p className="display text-2xl font-semibold text-[var(--brand-deep)] sm:text-3xl">
+            <p className="display text-2xl font-semibold text-[var(--rose-deep)] sm:text-3xl">
               Create. Launch. Grow.
             </p>
           </div>
@@ -90,7 +82,7 @@ export default function HomePage() {
         <div className="band-brand">
           <div className="site-shell py-14 sm:py-16">
             <p className="eyebrow">Why teams stay</p>
-            <h2 className="display mt-3 max-w-2xl text-4xl text-white sm:text-5xl">
+            <h2 className="display mt-3 max-w-2xl text-4xl text-[var(--cream)] sm:text-5xl">
               Bright tools. Clear workflow. Real momentum.
             </h2>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/88">
@@ -120,7 +112,7 @@ export default function HomePage() {
               key={item.title}
               className="grid gap-2 py-6 sm:grid-cols-[auto_minmax(0,0.9fr)_minmax(0,1.2fr)] sm:items-start sm:gap-8"
             >
-              <span className="display text-sm font-semibold text-[var(--accent-deep)] sm:pt-1">
+              <span className="display text-sm font-semibold text-[var(--gold)] sm:pt-1">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3 className="display text-2xl text-[var(--ink)]">{item.title}</h3>
@@ -136,7 +128,7 @@ export default function HomePage() {
             className="absolute inset-0"
             style={{
               backgroundImage:
-                "linear-gradient(115deg, rgba(30,58,138,0.94), rgba(16,24,40,0.78) 55%, rgba(217,119,6,0.55)), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80')",
+                "linear-gradient(105deg, rgba(43,36,32,0.78), rgba(196,93,120,0.45)), url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1600&q=80')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -146,7 +138,7 @@ export default function HomePage() {
             <p className="mt-4 leading-relaxed text-white/90">
               Create an account, open your agent workspace, and choose what to market today.
             </p>
-            <Link href="/signup" className="btn btn-primary mt-8">
+            <Link href="/signup" className="btn btn-secondary mt-8">
               Sign up free
             </Link>
           </div>
