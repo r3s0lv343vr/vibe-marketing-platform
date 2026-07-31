@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="mt-24 border-t border-[var(--line)] bg-[rgba(15,157,148,0.06)]">
+    <footer className="mt-24 border-t border-[var(--line)] bg-[rgba(29,78,216,0.05)]">
       <div className="site-shell flex flex-col gap-8 py-12 text-sm text-[var(--ink-soft)] sm:flex-row sm:items-start sm:justify-between">
         <div>
           <p className="display text-2xl text-[var(--ink)]">
