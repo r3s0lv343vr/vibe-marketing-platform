@@ -1,22 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f6f3f0;
-  --bg-deep: #ebe4dd;
-  --ink: #1c1917;
-  --ink-soft: #57534e;
-  --rose: #c97b8e;
-  --rose-deep: #9a455c;
-  --gold: #b8954a;
-  --mint: #5f9688;
-  --cream: #faf8f6;
+  /* Cool mist canvas — fresh, not dusty cream */
+  --bg: #eef8f7;
+  --bg-deep: #d7efec;
+  --ink: #0c2a32;
+  --ink-soft: #3f5c65;
+  /* Brand teal */
+  --brand: #0f9d94;
+  --brand-deep: #0a756e;
+  /* Energetic coral accent */
+  --accent: #ff5a3c;
+  --accent-deep: #e84428;
+  --accent-soft: #ffe5df;
+  --gold: #f0b429;
+  --mint: #5ec4b6;
+  --cream: #f7fcfb;
   --surface: #ffffff;
-  --surface-soft: rgba(255, 255, 255, 0.82);
-  --line: rgba(28, 25, 23, 0.1);
-  --line-strong: rgba(28, 25, 23, 0.16);
-  --focus: rgba(154, 69, 92, 0.35);
-  --shadow: 0 1px 2px rgba(28, 25, 23, 0.04), 0 14px 36px rgba(28, 25, 23, 0.07);
-  --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.05);
+  --surface-soft: rgba(255, 255, 255, 0.88);
+  /* Compat aliases used across pages */
+  --rose: var(--accent);
+  --rose-deep: var(--accent-deep);
+  --line: rgba(12, 42, 50, 0.1);
+  --line-strong: rgba(12, 42, 50, 0.18);
+  --focus: rgba(15, 157, 148, 0.35);
+  --shadow: 0 1px 2px rgba(12, 42, 50, 0.05), 0 16px 40px rgba(15, 157, 148, 0.12);
+  --shadow-sm: 0 1px 2px rgba(12, 42, 50, 0.06);
   --radius: 0.75rem;
   --radius-lg: 1rem;
   --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
@@ -28,6 +37,10 @@
   --color-bg-deep: var(--bg-deep);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
   --color-rose: var(--rose);
   --color-rose-deep: var(--rose-deep);
   --color-gold: var(--gold);
@@ -50,9 +63,10 @@ body {
   min-height: 100vh;
   color: var(--ink);
   background:
-    radial-gradient(900px 420px at 8% -8%, rgba(201, 123, 142, 0.14), transparent 55%),
-    radial-gradient(700px 380px at 96% 0%, rgba(95, 150, 136, 0.1), transparent 50%),
-    linear-gradient(180deg, var(--cream) 0%, var(--bg) 42%, var(--bg-deep) 100%);
+    radial-gradient(1000px 520px at 0% -5%, rgba(15, 157, 148, 0.22), transparent 55%),
+    radial-gradient(800px 480px at 100% 0%, rgba(255, 90, 60, 0.14), transparent 50%),
+    radial-gradient(700px 360px at 70% 100%, rgba(240, 180, 41, 0.12), transparent 55%),
+    linear-gradient(180deg, var(--cream) 0%, var(--bg) 45%, var(--bg-deep) 100%);
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.55;
@@ -66,7 +80,7 @@ a {
 }
 
 ::selection {
-  background: rgba(201, 123, 142, 0.35);
+  background: rgba(15, 157, 148, 0.28);
   color: var(--ink);
 }
 
@@ -79,10 +93,10 @@ a {
 
 .eyebrow {
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--brand-deep);
 }
 
 .grain {
@@ -94,7 +108,7 @@ a {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  opacity: 0.05;
+  opacity: 0.045;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   mix-blend-mode: multiply;
 }
@@ -116,6 +130,16 @@ a {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 0.9;
   }
 }
 
@@ -155,6 +179,17 @@ a {
   box-shadow: var(--shadow-sm);
 }
 
+.band-brand {
+  background:
+    radial-gradient(600px 280px at 10% 0%, rgba(255, 90, 60, 0.18), transparent 60%),
+    linear-gradient(135deg, var(--brand-deep) 0%, var(--brand) 55%, #14b8a6 100%);
+  color: var(--cream);
+}
+
+.band-brand .eyebrow {
+  color: rgba(247, 252, 251, 0.78);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -186,38 +221,41 @@ a:focus-visible {
 }
 
 .btn-primary {
-  background: var(--ink);
-  color: var(--cream);
-  border: 1px solid var(--ink);
-  box-shadow: var(--shadow-sm);
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+  box-shadow: 0 8px 24px rgba(255, 90, 60, 0.28);
 }
 
 .btn-primary:hover {
-  background: var(--rose-deep);
-  border-color: var(--rose-deep);
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
 }
 
 .btn-secondary {
   background: var(--surface);
   color: var(--ink);
   border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
   background: var(--cream);
-  border-color: var(--ink);
+  border-color: var(--brand);
+  color: var(--brand-deep);
 }
 
 .btn-ghost {
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.7);
   color: var(--ink);
   backdrop-filter: blur(8px);
 }
 
 .btn-ghost:hover {
   background: var(--surface);
-  border-color: var(--line-strong);
+  border-color: var(--brand);
+  color: var(--brand-deep);
 }
 
 .field {
@@ -236,13 +274,13 @@ a:focus-visible {
 }
 
 .field:focus {
-  border-color: var(--rose-deep);
+  border-color: var(--brand);
   box-shadow: 0 0 0 3px var(--focus);
   outline: none;
 }
 
 .field::placeholder {
-  color: rgba(87, 83, 78, 0.7);
+  color: rgba(63, 92, 101, 0.65);
 }
 
 .label {
@@ -256,17 +294,17 @@ a:focus-visible {
 .chip {
   display: inline-flex;
   align-items: center;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(15, 157, 148, 0.22);
   border-radius: 999px;
-  background: var(--cream);
+  background: rgba(15, 157, 148, 0.08);
   color: var(--ink);
   padding: 0.35rem 0.75rem;
   font-size: 0.875rem;
 }
 
 .chip-accent {
-  border-color: rgba(154, 69, 92, 0.28);
-  background: var(--surface);
+  border-color: rgba(255, 90, 60, 0.28);
+  background: var(--accent-soft);
   font-weight: 500;
 }
 
@@ -288,14 +326,14 @@ a:focus-visible {
 
 .tile:hover {
   transform: translateY(-2px);
-  border-color: rgba(154, 69, 92, 0.45);
+  border-color: rgba(15, 157, 148, 0.55);
   box-shadow: var(--shadow);
 }
 
 .meter {
   height: 0.4rem;
   border-radius: 999px;
-  background: rgba(28, 25, 23, 0.08);
+  background: rgba(12, 42, 50, 0.08);
   overflow: hidden;
 }
 
@@ -303,8 +341,12 @@ a:focus-visible {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--mint), var(--rose), var(--gold));
+  background: linear-gradient(90deg, var(--brand), var(--mint), var(--accent));
   transition: width 600ms ease;
+}
+
+.brand-mark {
+  color: var(--brand-deep);
 }
 
 @media (prefers-reduced-motion: reduce) {

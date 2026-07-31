@@ -31,16 +31,24 @@ export default function HomePage() {
           className="absolute inset-0 grain animate-fade"
           style={{
             backgroundImage:
-              "linear-gradient(115deg, rgba(28,25,23,0.72), rgba(154,69,92,0.38) 55%, rgba(28,25,23,0.55)), url('https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=2000&q=80')",
+              "linear-gradient(120deg, rgba(12,42,50,0.78) 0%, rgba(10,117,110,0.62) 48%, rgba(232,68,40,0.45) 100%), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=80')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
+        <div
+          className="pointer-events-none absolute -right-16 top-24 h-56 w-56 rounded-full bg-[rgba(255,90,60,0.35)] blur-3xl"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute bottom-10 left-10 h-40 w-40 rounded-full bg-[rgba(15,157,148,0.4)] blur-3xl"
+          aria-hidden
+        />
         <div className="site-shell relative flex min-h-[calc(100svh-4.5rem)] flex-col justify-end pb-16 pt-28 text-[var(--cream)]">
           <h1 className="display animate-rise max-w-4xl text-5xl sm:text-7xl">
-            Pixie Dust Cheesecake
+            Pixie Dust <span className="text-[#ffe08a]">Cheesecake</span>
           </h1>
-          <p className="animate-rise-delay mt-5 max-w-xl text-lg leading-relaxed text-white/92 sm:text-xl">
+          <p className="animate-rise-delay mt-5 max-w-xl text-lg leading-relaxed text-white/93 sm:text-xl">
             An AI marketing platform that builds your brand, creates content, designs websites, and
             launches campaigns — from one conversation.
           </p>
@@ -71,8 +79,23 @@ export default function HomePage() {
               workspace to build assets, polish social profiles, and track what the market wants —
               so every project is easier to hire for or invest in.
             </p>
-            <p className="display text-2xl font-semibold text-[var(--ink)] sm:text-3xl">
+            <p className="display text-2xl font-semibold text-[var(--brand-deep)] sm:text-3xl">
               Create. Launch. Grow.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-24">
+        <div className="band-brand">
+          <div className="site-shell py-14 sm:py-16">
+            <p className="eyebrow">Why teams stay</p>
+            <h2 className="display mt-3 max-w-2xl text-4xl text-white sm:text-5xl">
+              Bright tools. Clear workflow. Real momentum.
+            </h2>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/88">
+              From first brief to polished assets, agents keep the energy high and the process
+              professional — so builders keep shipping instead of switching tabs.
             </p>
           </div>
         </div>
@@ -92,13 +115,16 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="mt-10 divide-y divide-[var(--line)] border-y border-[var(--line)]">
-          {capabilities.map((item) => (
+          {capabilities.map((item, index) => (
             <div
               key={item.title}
-              className="grid gap-2 py-6 sm:grid-cols-[minmax(0,0.9fr)_minmax(0,1.2fr)] sm:gap-10"
+              className="grid gap-2 py-6 sm:grid-cols-[auto_minmax(0,0.9fr)_minmax(0,1.2fr)] sm:items-start sm:gap-8"
             >
-              <h3 className="display text-2xl">{item.title}</h3>
-              <p className="text-[var(--ink-soft)] leading-relaxed">{item.body}</p>
+              <span className="display text-sm font-semibold text-[var(--accent)] sm:pt-1">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3 className="display text-2xl text-[var(--ink)]">{item.title}</h3>
+              <p className="leading-relaxed text-[var(--ink-soft)]">{item.body}</p>
             </div>
           ))}
         </div>
@@ -110,17 +136,17 @@ export default function HomePage() {
             className="absolute inset-0"
             style={{
               backgroundImage:
-                "linear-gradient(105deg, rgba(28,25,23,0.88), rgba(28,25,23,0.55)), url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1600&q=80')",
+                "linear-gradient(115deg, rgba(10,117,110,0.92), rgba(12,42,50,0.78) 55%, rgba(232,68,40,0.55)), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           />
           <div className="relative max-w-xl px-8 py-14 text-[var(--cream)] sm:px-12 sm:py-16">
             <h2 className="display text-4xl">Ready when you are</h2>
-            <p className="mt-4 text-white/88 leading-relaxed">
+            <p className="mt-4 leading-relaxed text-white/90">
               Create an account, open your agent workspace, and choose what to market today.
             </p>
-            <Link href="/signup" className="btn btn-secondary mt-8">
+            <Link href="/signup" className="btn btn-primary mt-8">
               Sign up free
             </Link>
           </div>

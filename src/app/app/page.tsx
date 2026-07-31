@@ -22,7 +22,7 @@ function TileGrid({
         <Link key={tile.slug} href={tile.href} className="tile group">
           <div>
             <p className="eyebrow">Agent task</p>
-            <h2 className="display mt-3 text-3xl transition-colors group-hover:text-[var(--rose-deep)]">
+            <h2 className="display mt-3 text-3xl transition-colors group-hover:text-[var(--brand-deep)]">
               {tile.title}
             </h2>
             <p className="mt-3 text-[var(--ink-soft)] leading-relaxed">{tile.blurb}</p>

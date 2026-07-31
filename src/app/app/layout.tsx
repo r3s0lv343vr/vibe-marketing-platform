@@ -9,7 +9,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
 
   return (
     <div className="site-shell py-10">
-      <div className="mb-10 flex flex-wrap items-center justify-between gap-3 border-b border-[var(--line)] pb-5">
+      <div className="mb-10 flex flex-wrap items-center justify-between gap-3 rounded-[var(--radius-lg)] border border-[var(--line)] bg-white px-4 py-4 shadow-[var(--shadow-sm)]">
         <div>
           <p className="eyebrow">Workspace</p>
           <p className="mt-1 text-lg font-semibold text-[var(--ink)]">Hi, {session.name}</p>
