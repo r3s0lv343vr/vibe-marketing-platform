@@ -27,63 +27,17 @@ const capabilities = [
 
 export default function HomePage() {
   const slides = getRosterShowcaseSlides();
-  const primarySlides = slides;
-  const secondarySlides = [...slides].reverse();
 
   return (
     <>
-      <section className="relative min-h-[calc(100svh-4.5rem)] overflow-hidden">
-        <div
-          className="absolute inset-0 grain animate-fade"
-          style={{
-            backgroundImage:
-              "linear-gradient(120deg, rgba(43,36,32,0.55), rgba(196,93,120,0.32)), url('https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=2000&q=80')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        <div className="site-shell relative flex min-h-[calc(100svh-4.5rem)] flex-col justify-end pb-16 pt-28 text-[var(--cream)]">
-          <h1 className="display animate-rise max-w-4xl text-5xl sm:text-7xl">
-            <span className="shine-text">Pixie Dust Cheesecake</span>
-          </h1>
-          <p className="animate-rise-delay mt-5 max-w-xl rounded-[var(--radius-lg)] bg-[rgba(255,248,244,0.92)] px-4 py-3 text-lg text-[#3a2a28] sm:text-xl">
-            An AI marketing platform that builds your brand, creates content, designs websites, and
-            launches campaigns — from one conversation.
-          </p>
-          <div className="animate-rise-delay-2 mt-8 flex flex-wrap gap-3">
-            <Link href="/signup" className="btn btn-primary">
-              Student sign up
-            </Link>
-            <Link href="/partners" className="btn btn-secondary">
-              Partners
-            </Link>
-            <Link href="/login" className="btn btn-ghost !bg-white/20 !text-[var(--cream)] !border-white/40">
-              Student log in
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section id="showcase" className="site-shell mt-8">
+      <section id="showcase" className="site-shell mt-6">
         <ProjectShowcaseSlider
-          slides={primarySlides}
+          slides={slides}
           variant="stacked"
           detailsPosition="bottom"
           size="large"
         />
       </section>
-
-      {secondarySlides.length > 1 ? (
-        <section className="site-shell mt-10">
-          <ProjectShowcaseSlider
-            slides={secondarySlides}
-            variant="stacked"
-            detailsPosition="top"
-            size="large"
-            autoPlayMs={8000}
-          />
-        </section>
-      ) : null}
 
       <section id="marketing" className="site-shell mt-24">
         <div className="max-w-3xl">
