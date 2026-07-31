@@ -64,14 +64,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="showcase" className="site-shell mt-16">
-        <div className="mb-5 max-w-2xl">
-          <p className="eyebrow">Cohort builds</p>
-          <h2 className="display mt-3 text-4xl sm:text-5xl">Project homepage slider</h2>
-          <p className="mt-3 text-[var(--ink-soft)]">
-            Bigger previews with builder name and GitHub handle under each slide.
-          </p>
-        </div>
+      <section id="showcase" className="site-shell mt-8">
         <ProjectShowcaseSlider
           slides={primarySlides}
           variant="stacked"
@@ -81,11 +74,7 @@ export default function HomePage() {
       </section>
 
       {secondarySlides.length > 1 ? (
-        <section className="site-shell mt-16">
-          <div className="mb-5 max-w-2xl">
-            <p className="eyebrow">More live work</p>
-            <h2 className="display mt-3 text-4xl">Another pass through the cohort</h2>
-          </div>
+        <section className="site-shell mt-10">
           <ProjectShowcaseSlider
             slides={secondarySlides}
             variant="stacked"
