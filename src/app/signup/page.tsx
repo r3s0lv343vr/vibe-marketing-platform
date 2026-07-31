@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function SignupPage() {
   return (
     <div className="site-shell py-16">
-      <AuthForm mode="signup" />
+      <AuthForm mode="signup" nextPath="/app/profile" />
     </div>
   );
 }

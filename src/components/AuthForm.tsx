@@ -8,7 +8,7 @@ type Mode = "login" | "signup";
 
 export function AuthForm({
   mode,
-  nextPath = "/app",
+  nextPath = "/app/profile",
 }: {
   mode: Mode;
   nextPath?: string;
