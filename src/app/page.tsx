@@ -48,12 +48,13 @@ export default function HomePage() {
             <p>Stop juggling tools.</p>
             <p>
               <strong className="font-semibold text-[var(--ink)]">Pixie Dust Cheesecake</strong> is
-              an AI marketing platform that builds your brand, creates your content, designs your
-              website, and launches campaigns—all from a simple conversation.
+              a vibe marketing platform where students list and showcase digital projects — then use
+              AI agents to optimize how hiring partners and investors discover them.
             </p>
             <p>
-              Powered by intelligent AI agents, it helps businesses create consistent,
-              high-performing marketing faster than ever before.
+              Stakeholders get a forward-facing showcase of real work. The cohort gets a private
+              workspace to build assets, polish social profiles, and track what the market wants —
+              so every project is easier to hire for or invest in.
             </p>
             <p className="display text-2xl font-semibold text-[var(--ink)] sm:text-3xl">
               Create. Launch. Grow.
@@ -74,19 +75,27 @@ export default function HomePage() {
             Sign up to begin
           </Link>
         </div>
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
+        <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {[
             {
               title: "AI Web Page Creation",
-              body: "Brand Strategist, Copywriter, and Layout Architect draft a live page preview from your brief.",
+              body: "Draft project showcase pages hiring partners and investors can inspect in minutes.",
             },
             {
               title: "AI Image Generation",
-              body: "Art Director, Prompt Engineer, and Style Critic produce generation-ready campaign visuals.",
+              body: "Campaign visuals and social stills that support your project story.",
             },
             {
               title: "AI Video Creation",
-              body: "Scriptwriter, Shot Planner, and Motion Director align a launch clip you can produce next.",
+              body: "Demo scripts and shot lists that make your build easy to share.",
+            },
+            {
+              title: "Social Profile Studio",
+              body: "Professionally manage Facebook, Instagram, and LinkedIn for hireability.",
+            },
+            {
+              title: "Employer & Market Pulse",
+              body: "Buzzwords, project themes, and sentiment — what employers are looking for now.",
             },
           ].map((card) => (
             <article

@@ -16,8 +16,11 @@ export async function POST(request: Request) {
   }
 
   const task = body.task as TaskKey;
-  if (!task || !["web", "image", "video"].includes(task)) {
-    return NextResponse.json({ error: "task must be web, image, or video." }, { status: 400 });
+  if (!task || !["web", "image", "video", "social", "market"].includes(task)) {
+    return NextResponse.json(
+      { error: "task must be web, image, video, social, or market." },
+      { status: 400 },
+    );
   }
 
   const result = runAgents(task, body.brief || "");

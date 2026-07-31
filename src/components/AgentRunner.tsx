@@ -9,7 +9,7 @@ export function AgentRunner({
   agents,
   placeholder,
 }: {
-  task: "web" | "image" | "video";
+  task: "web" | "image" | "video" | "social" | "market";
   title: string;
   agents: AgentRole[];
   placeholder: string;
