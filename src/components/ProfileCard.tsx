@@ -29,7 +29,7 @@ export function ProfileCard({ profile }: { profile: CohortProfile }) {
           .join("")}
       </div>
       <p className="eyebrow">{profile.campus}</p>
-      <h3 className="display mt-1 text-2xl group-hover:text-[var(--rose-deep)]">{profile.name}</h3>
+      <h3 className="display mt-1 text-2xl group-hover:text-[var(--brand-deep)]">{profile.name}</h3>
       <p className="mt-1 text-sm text-[var(--ink-soft)]">{profile.role}</p>
       <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-[var(--ink-soft)]">{profile.bio}</p>
       <ul className="mt-4 flex flex-wrap gap-2">

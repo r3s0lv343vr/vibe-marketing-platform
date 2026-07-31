@@ -335,7 +335,7 @@ export function ProfileBuilder({
                   <button
                     type="button"
                     onClick={() => removeProject(project.id)}
-                    className="text-sm font-medium text-[var(--rose-deep)]"
+                    className="text-sm font-medium text-[var(--accent-deep)]"
                   >
                     Remove
                   </button>
