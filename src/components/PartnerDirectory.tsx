@@ -168,7 +168,7 @@ function DirectoryTile({ person }: { person: DirectoryParticipant }) {
   return (
     <Link
       href={`/partners/directory/${person.slug}`}
-      className="tile group h-full !min-h-[260px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--rose-deep)]"
+      className="tile tile-student group h-full !min-h-[260px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--aurora)]"
     >
       <div>
         {person.avatarUrl ? (
@@ -180,7 +180,7 @@ function DirectoryTile({ person }: { person: DirectoryParticipant }) {
           />
         ) : (
           <div
-            className="flex h-16 w-16 items-center justify-center rounded-full text-lg font-semibold"
+            className="flex h-16 w-16 items-center justify-center rounded-full text-lg font-semibold text-black"
             style={{ background: person.photoGradient }}
             aria-hidden
           >
@@ -191,11 +191,11 @@ function DirectoryTile({ person }: { person: DirectoryParticipant }) {
               .join("")}
           </div>
         )}
-        <h2 className="display mt-4 text-2xl group-hover:text-[var(--rose-deep)]">
+        <h2 className="display mt-4 text-2xl text-black">
           {person.name}
         </h2>
-        <p className="mt-1 text-sm text-[var(--ink-soft)]">@{person.github}</p>
-        <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-[var(--ink-soft)]">
+        <p className="mt-1 text-sm text-black">@{person.github}</p>
+        <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-black">
           {featured
             ? featured.name
             : "No public projects listed yet."}
@@ -203,16 +203,16 @@ function DirectoryTile({ person }: { person: DirectoryParticipant }) {
         {techPreview.length ? (
           <ul className="mt-4 flex flex-wrap gap-1.5">
             {techPreview.map((tech) => (
-              <li key={tech} className="chip !px-2 !py-1 text-xs">
+              <li key={tech} className="chip !px-2 !py-1 text-xs text-black">
                 {tech}
               </li>
             ))}
           </ul>
         ) : (
-          <p className="mt-4 text-xs text-[var(--ink-soft)]">Technologies unavailable</p>
+          <p className="mt-4 text-xs text-black">Technologies unavailable</p>
         )}
       </div>
-      <p className="mt-6 text-sm font-semibold text-[var(--ink)]">
+      <p className="mt-6 text-sm font-semibold text-black">
         View profile →
       </p>
     </Link>

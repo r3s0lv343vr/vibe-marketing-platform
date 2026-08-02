@@ -3,44 +3,51 @@
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
+import { PROFILE_STORAGE_KEY, type StudentProfile } from "@/lib/profile";
 
 type Mode = "login" | "signup";
 type Audience = "student" | "partner";
+type Identity = "github" | "email";
 
 export function AuthForm({
   mode,
   audience = "student",
+  identity,
   nextPath,
 }: {
   mode: Mode;
   audience?: Audience;
+  identity?: Identity;
   nextPath?: string;
 }) {
   const router = useRouter();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const isPartner = audience === "partner";
+  const useEmail = isPartner || identity === "email";
   const resolvedNext =
-    nextPath || (audience === "partner" ? "/partners/home" : "/app/profile");
+    nextPath || (isPartner ? "/partners/home" : "/app/profile");
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setLoading(true);
     setError("");
     const form = new FormData(event.currentTarget);
-    const payload =
-      audience === "student"
-        ? {
-            name: String(form.get("name") || ""),
-            github: String(form.get("github") || ""),
-            password: String(form.get("password") || ""),
-            role: audience,
-          }
-        : {
-            name: String(form.get("name") || ""),
-            email: String(form.get("email") || ""),
-            password: String(form.get("password") || ""),
-            role: audience,
-          };
+    const payload = useEmail
+      ? {
+          name: String(form.get("name") || ""),
+          email: String(form.get("email") || ""),
+          password: String(form.get("password") || ""),
+          role: audience,
+          identity: "email" as const,
+        }
+      : {
+          name: String(form.get("name") || ""),
+          github: String(form.get("github") || ""),
+          password: String(form.get("password") || ""),
+          role: audience,
+          identity: "github" as const,
+        };
 
     try {
       const res = await fetch(`/api/auth/${mode}`, {
@@ -50,6 +57,21 @@ export function AuthForm({
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Request failed");
+
+      // Seed Profile Builder with the same GitHub/roster fields returned by auth.
+      if (data.profile && typeof window !== "undefined") {
+        try {
+          localStorage.setItem(
+            PROFILE_STORAGE_KEY,
+            JSON.stringify(data.profile as StudentProfile),
+          );
+          sessionStorage.setItem("pixie_profile_linked", data.linked ? "1" : "0");
+          if (data.fromRoster) sessionStorage.setItem("pixie_profile_from_roster", "1");
+        } catch {
+          // localStorage may be unavailable; builder can still re-fetch from GitHub.
+        }
+      }
+
       router.push(data.next || resolvedNext);
       router.refresh();
     } catch (err) {
@@ -58,8 +80,6 @@ export function AuthForm({
     }
   }
 
-  const isPartner = audience === "partner";
-
   return (
     <form onSubmit={onSubmit} className="panel-solid mx-auto w-full max-w-md p-7 sm:p-9">
       <p className="eyebrow">{isPartner ? "Partners" : "NextMove"}</p>
@@ -67,7 +87,9 @@ export function AuthForm({
         {mode === "signup"
           ? isPartner
             ? "Create a partner account"
-            : "Create your student account"
+            : useEmail
+              ? "Create your student account"
+              : "Create your student account"
           : isPartner
             ? "Partner sign in"
             : "Welcome back"}
@@ -77,38 +99,30 @@ export function AuthForm({
           ? mode === "signup"
             ? "Access the cohort showcase — live projects, builders, and evidence for hiring or investing."
             : "Sign in to open the Partners showcase feed."
-          : mode === "signup"
-            ? "Use your GitHub handle to enroll. We’ll download your public GitHub profile into the Profile Builder so you can develop it for partners."
-            : "Sign in with your GitHub handle to open your profile builder and AI agent workspace."}
+          : useEmail
+            ? mode === "signup"
+              ? "Sign up with email to open your profile builder and AI agent workspace."
+              : "Log in with email to open your profile builder and AI agent workspace."
+            : mode === "signup"
+              ? "Use your GitHub handle to enroll. We’ll download your public GitHub profile into the Profile Builder so you can develop it for partners."
+              : "Sign in with your GitHub handle to open your profile builder and AI agent workspace."}
       </p>
 
       <div className="mt-8 grid gap-4">
-        {mode === "signup" && isPartner ? (
+        {mode === "signup" ? (
           <label className="label">
-            <span>Name</span>
+            <span>{useEmail ? "Name" : "Display name (optional)"}</span>
             <input
-              required
+              required={useEmail}
               name="name"
               className="field"
-              placeholder="Alex Partner"
+              placeholder={isPartner ? "Alex Partner" : "Jordan Lee"}
               autoComplete="name"
             />
           </label>
         ) : null}
 
-        {mode === "signup" && !isPartner ? (
-          <label className="label">
-            <span>Display name (optional)</span>
-            <input
-              name="name"
-              className="field"
-              placeholder="Jordan Lee"
-              autoComplete="name"
-            />
-          </label>
-        ) : null}
-
-        {isPartner ? (
+        {useEmail ? (
           <label className="label">
             <span>Email</span>
             <input
@@ -116,7 +130,7 @@ export function AuthForm({
               type="email"
               name="email"
               className="field"
-              placeholder="you@company.com"
+              placeholder={isPartner ? "you@company.com" : "you@school.edu"}
               autoComplete="email"
             />
           </label>
@@ -166,8 +180,10 @@ export function AuthForm({
         {loading
           ? "Working…"
           : mode === "signup"
-            ? isPartner
-              ? "Sign up"
+            ? useEmail
+              ? isPartner
+                ? "Sign up as partner"
+                : "Sign up as student"
               : "Sign up with GitHub handle"
             : "Log in"}
       </button>
@@ -198,15 +214,46 @@ export function AuthForm({
         ) : mode === "signup" ? (
           <>
             Already have an account?{" "}
-            <Link href="/login" className="font-semibold text-[var(--ink)] underline underline-offset-2">
-              Log in with GitHub handle
+            <Link
+              href={useEmail ? "/login?method=email" : "/login"}
+              className="font-semibold text-[var(--ink)] underline underline-offset-2"
+            >
+              Log in
             </Link>
+            {!useEmail ? (
+              <>
+                {" · "}
+                <Link
+                  href="/signup/email"
+                  className="font-semibold text-[var(--ink)] underline underline-offset-2"
+                >
+                  Sign up with email
+                </Link>
+              </>
+            ) : (
+              <>
+                {" · "}
+                <Link
+                  href="/signup"
+                  className="font-semibold text-[var(--ink)] underline underline-offset-2"
+                >
+                  Use GitHub handle
+                </Link>
+              </>
+            )}
           </>
         ) : (
           <>
             New here?{" "}
             <Link href="/signup" className="font-semibold text-[var(--ink)] underline underline-offset-2">
               Sign up with GitHub handle
+            </Link>
+            {" · "}
+            <Link
+              href="/signup/email"
+              className="font-semibold text-[var(--ink)] underline underline-offset-2"
+            >
+              Sign up with email
             </Link>
           </>
         )}

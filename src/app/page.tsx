@@ -26,29 +26,34 @@ const capabilities = [
 export default function HomePage() {
   return (
     <>
-      <section className="site-shell relative min-h-[78vh] pt-16 pb-20 sm:pt-24">
-        <div className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-[rgba(62,255,176,0.12)] blur-3xl animate-fade" />
-        <div className="pointer-events-none absolute right-0 top-32 h-72 w-72 rounded-full bg-[rgba(56,189,248,0.1)] blur-3xl animate-fade" />
+      <section className="band-hero">
+        <div className="site-shell relative min-h-[78vh] pt-16 pb-20 sm:pt-24">
+          <div className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-[rgba(62,255,176,0.12)] blur-3xl animate-fade" />
+          <div className="pointer-events-none absolute right-0 top-32 h-72 w-72 rounded-full bg-[rgba(56,189,248,0.1)] blur-3xl animate-fade" />
 
-        <p className="eyebrow animate-rise">Hult Cohort Summer Pilot</p>
-        <h1 className="display mt-4 max-w-4xl text-6xl tracking-tight text-[var(--ink)] sm:text-7xl lg:text-8xl animate-rise-delay">
-          Next<span className="brand-mark shine-text">Move</span>
-        </h1>
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--ink-soft)] sm:text-xl animate-rise-delay-2">
-          Showcase shipped work. Let GitHub tell the story. Help hiring partners move on evidence —
-          not résumés.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-3 animate-rise-delay-2">
-          <Link href="/signup" className="btn btn-primary">
-            Sign up with GitHub
-          </Link>
-          <Link href="/partners/directory" className="btn btn-ghost">
-            Browse directory
-          </Link>
+          <p className="eyebrow animate-rise">Hult Cohort Summer Pilot</p>
+          <h1 className="display mt-4 max-w-4xl text-6xl tracking-tight text-[var(--ink)] sm:text-7xl lg:text-8xl animate-rise-delay">
+            Next<span className="brand-mark shine-text">Move</span>
+          </h1>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--ink-soft)] sm:text-xl animate-rise-delay-2">
+            Showcase shipped work. Let GitHub tell the story. Help hiring partners move on evidence —
+            not résumés.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-3 animate-rise-delay-2">
+            <Link href="/signup" className="btn btn-primary">
+              Sign up with GitHub
+            </Link>
+            <Link href="/signup/email" className="btn btn-secondary">
+              Sign up with email
+            </Link>
+            <Link href="/partners/directory" className="btn btn-ghost">
+              Browse directory
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section id="marketing" className="site-shell mt-6">
+      <section id="marketing" className="site-shell mt-16">
         <div className="max-w-3xl">
           <p className="eyebrow">Product</p>
           <h2 className="display mt-3 text-4xl sm:text-5xl">Marketing, redesigned.</h2>

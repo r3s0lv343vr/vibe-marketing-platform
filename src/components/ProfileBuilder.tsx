@@ -49,10 +49,14 @@ export function ProfileBuilder({
   defaultName,
   email,
   github,
+  linked = false,
+  immediateAiAccess = false,
 }: {
   defaultName: string;
   email: string;
   github?: string;
+  linked?: boolean;
+  immediateAiAccess?: boolean;
 }) {
   const router = useRouter();
   const [profile, setProfile] = useState<StudentProfile>(() => emptyProfile(defaultName));
@@ -63,6 +67,7 @@ export function ProfileBuilder({
   const [saving, setSaving] = useState(false);
   const [importing, setImporting] = useState(false);
   const [hydrated, setHydrated] = useState(false);
+  const githubLinked = Boolean(github && (linked || immediateAiAccess));
 
   function applyImportedProfile(next: StudentProfile, sourceLabel: string) {
     setProfile(next);
@@ -110,6 +115,46 @@ export function ProfileBuilder({
     let cancelled = false;
     (async () => {
       const local = loadLocal(defaultName);
+      const forceLink = githubLinked && typeof window !== "undefined"
+        ? sessionStorage.getItem("pixie_profile_linked") === "1" || linked
+        : linked;
+
+      // Fresh GitHub signup/login: prefer the auth-seeded profile, then refresh from GitHub.
+      if (github && forceLink) {
+        if (local && !isBlankProfile(local)) {
+          if (cancelled) return;
+          setProfile(local);
+          setSkillsInput(local.skills.join(", "));
+          setUniInput(local.universities.join(", "));
+          setNotice(
+            `GitHub @${github} is linked to this form. Edit any field, keep it as-is, or open AI tools now.`,
+          );
+          setHydrated(true);
+          // Persist index/cookies for the seeded profile without blocking UI.
+          void fetch("/api/profile", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ profile: local }),
+          });
+          return;
+        }
+
+        const ok = await downloadFromGithub({ silent: true });
+        if (cancelled) return;
+        if (!ok) {
+          const fallback = emptyProfile(defaultName);
+          setProfile(fallback);
+          setSkillsInput("");
+          setUniInput("");
+        } else {
+          setNotice(
+            `GitHub @${github} is linked to this form. Edit any field, keep it as-is, or open AI tools now.`,
+          );
+        }
+        setHydrated(true);
+        return;
+      }
+
       if (local && !isBlankProfile(local)) {
         if (cancelled) return;
         setProfile(local);
@@ -144,7 +189,7 @@ export function ProfileBuilder({
     };
     // Intentionally run once on mount for this signed-in student.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [defaultName, github]);
+  }, [defaultName, github, linked, githubLinked]);
 
   const complete = useMemo(() => isProfileComplete(profile), [profile]);
 
@@ -242,12 +287,12 @@ export function ProfileBuilder({
     }
   }
 
-  async function continueAnyway() {
-    setSaving(true);
-    setError("");
-    const next: StudentProfile = {
+  function buildCurrentProfile(opts?: { requireName?: boolean }): StudentProfile {
+    return {
       ...profile,
-      displayName: profile.displayName.trim() || defaultName,
+      displayName:
+        profile.displayName.trim() ||
+        (opts?.requireName === false ? defaultName : profile.displayName.trim() || defaultName),
       bio: profile.bio.trim(),
       skills: splitTags(skillsInput),
       universities: splitTags(uniInput),
@@ -259,6 +304,13 @@ export function ProfileBuilder({
       })),
       updatedAt: new Date().toISOString(),
     };
+  }
+
+  async function openAiTools(mode: "keep" | "skip" | "save") {
+    setSaving(true);
+    setError("");
+    const next = buildCurrentProfile({ requireName: false });
+    setProfile(next);
     try {
       localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(next));
       const res = await fetch("/api/profile", {
@@ -267,20 +319,33 @@ export function ProfileBuilder({
         body: JSON.stringify({ profile: next }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Could not continue");
-      router.push("/app");
+      if (!res.ok) throw new Error(data.error || "Could not open AI tools");
+      if (mode === "keep") {
+        setNotice("Profile kept as linked. Opening AI tools…");
+      }
+      router.push(data.next || "/app");
       router.refresh();
     } catch (err) {
+      // AI access cookies are already granted at GitHub auth — still allow entry.
+      if (immediateAiAccess || githubLinked) {
+        router.push("/app");
+        router.refresh();
+        return;
+      }
       setError(err instanceof Error ? err.message : "Could not continue");
       setSaving(false);
     }
+  }
+
+  async function continueAnyway() {
+    await openAiTools("skip");
   }
 
   if (!hydrated) {
     return (
       <div className="panel p-8 text-[var(--ink-soft)]">
         {importing
-          ? "Downloading your public GitHub profile into the builder…"
+          ? "Linking your GitHub profile into the builder…"
           : "Loading your profile builder…"}
       </div>
     );
@@ -289,17 +354,48 @@ export function ProfileBuilder({
   return (
     <form onSubmit={onSubmit} className="space-y-8">
       <header className="max-w-3xl">
-        <p className="eyebrow">Profile builder</p>
-        <h1 className="display mt-3 text-4xl sm:text-5xl">Build your student profile</h1>
+        <p className="eyebrow">{githubLinked ? "GitHub linked" : "Profile builder"}</p>
+        <h1 className="display mt-3 text-4xl sm:text-5xl">
+          {githubLinked ? "Your profile is ready" : "Build your student profile"}
+        </h1>
         <p className="mt-4 text-lg leading-relaxed text-[var(--ink-soft)]">
-          We pull the same public GitHub data used for the Partners directory — name, avatar, bio,
-          skills, repos, and live project links — so you can develop your forward-facing profile.
-          Edit anything, then continue to{" "}
-          <strong className="text-[var(--ink)]">What do you want to do today?</strong>
+          {githubLinked ? (
+            <>
+              We mapped your public GitHub data into this form — name, avatar, bio, universities,
+              skills, repos, and live project links (same parameters partners see in the directory).
+              Alter anything you want, keep it as-is, or skip.{" "}
+              <strong className="text-[var(--ink)]">AI tools are available immediately.</strong>
+            </>
+          ) : (
+            <>
+              Add bio, universities, skills, and projects. You can save a partial profile or skip
+              straight to{" "}
+              <strong className="text-[var(--ink)]">What do you want to do today?</strong>
+            </>
+          )}
         </p>
         <p className="mt-2 text-sm text-[var(--ink-soft)]">
           Signed in as {github ? `@${github}` : email}
+          {immediateAiAccess || githubLinked ? " · AI workspace unlocked" : ""}
         </p>
+
+        {(immediateAiAccess || githubLinked) && (
+          <div className="panel-solid mt-6 flex flex-wrap items-center gap-3 p-4">
+            <button
+              type="button"
+              className="btn btn-primary"
+              disabled={saving || importing}
+              onClick={() => openAiTools("keep")}
+            >
+              {saving ? "Opening…" : "Open AI tools now"}
+            </button>
+            <p className="text-sm text-[var(--ink-soft)]">
+              Keep this linked profile or edit below first — either way you can enter the agent
+              workspace immediately.
+            </p>
+          </div>
+        )}
+
         {github ? (
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <button
@@ -308,15 +404,15 @@ export function ProfileBuilder({
               disabled={importing || saving}
               onClick={() => downloadFromGithub()}
             >
-              {importing ? "Downloading…" : "Re-download from GitHub"}
+              {importing ? "Downloading…" : "Re-sync from GitHub"}
             </button>
             <span className="text-sm text-[var(--ink-soft)]">
-              Overwrites the builder with a fresh public GitHub pull.
+              Refresh the form fields from your public GitHub profile / cohort roster.
             </span>
           </div>
         ) : null}
         {notice ? (
-          <p className="mt-3 text-sm font-medium text-[var(--rose-deep)]" role="status">
+          <p className="mt-3 text-sm font-medium text-[var(--aurora)]" role="status">
             {notice}
           </p>
         ) : null}
@@ -521,20 +617,28 @@ export function ProfileBuilder({
 
       <div className="flex flex-wrap items-center gap-3 border-t border-[var(--line)] pt-6">
         <button type="submit" disabled={saving} className="btn btn-primary disabled:opacity-60">
-          {saving ? "Saving…" : "Save & continue to agents"}
+          {saving ? "Saving…" : "Save changes & open AI tools"}
+        </button>
+        <button
+          type="button"
+          disabled={saving}
+          onClick={() => openAiTools("keep")}
+          className="btn btn-secondary disabled:opacity-60"
+        >
+          Keep profile & open AI tools
         </button>
         <button
           type="button"
           disabled={saving}
           onClick={continueAnyway}
-          className="btn btn-secondary disabled:opacity-60"
+          className="btn btn-ghost disabled:opacity-60"
         >
-          Skip for now
+          Skip profile setup
         </button>
         <p className="text-sm text-[var(--ink-soft)]">
           {complete
-            ? "Profile looks complete."
-            : "Partial profiles are allowed during testing."}
+            ? "Profile looks complete — AI tools are unlocked."
+            : "Skip or keep a partial profile — AI tools stay available either way."}
         </p>
       </div>
     </form>
