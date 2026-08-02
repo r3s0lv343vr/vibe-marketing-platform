@@ -516,6 +516,44 @@ a:focus-visible {
   box-shadow: var(--shadow);
 }
 
+/* Student / cohort tiles: frosted white surface, black type */
+.tile-student {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #0a0a0a;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.tile-student,
+.tile-student h1,
+.tile-student h2,
+.tile-student h3,
+.tile-student h4,
+.tile-student p,
+.tile-student span,
+.tile-student li,
+.tile-student .eyebrow,
+.tile-student .display {
+  color: #0a0a0a;
+}
+
+.tile-student:hover {
+  border-color: rgba(10, 10, 10, 0.28);
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.tile-student .chip {
+  border-color: rgba(10, 10, 10, 0.16);
+  background: rgba(255, 255, 255, 0.7);
+  color: #0a0a0a;
+}
+
+.tile-student:hover .display,
+.tile-student.group:hover .display {
+  color: #064e3b;
+}
+
 .meter {
   height: 0.4rem;
   border-radius: 999px;
