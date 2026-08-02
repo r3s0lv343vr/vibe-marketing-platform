@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { ProjectShowcaseSlider } from "@/components/ProjectShowcaseSlider";
-import { getRosterShowcaseSlides } from "@/lib/roster";
 
 const capabilities = [
   {
@@ -26,20 +24,9 @@ const capabilities = [
 ];
 
 export default function HomePage() {
-  const slides = getRosterShowcaseSlides();
-
   return (
     <>
-      <section id="showcase" className="site-shell mt-6">
-        <ProjectShowcaseSlider
-          slides={slides}
-          variant="stacked"
-          detailsPosition="bottom"
-          size="large"
-        />
-      </section>
-
-      <section id="marketing" className="site-shell mt-24">
+      <section id="marketing" className="site-shell mt-14">
         <div className="max-w-3xl">
           <p className="eyebrow">Product</p>
           <h2 className="display mt-3 text-4xl sm:text-5xl">Marketing, redesigned.</h2>
