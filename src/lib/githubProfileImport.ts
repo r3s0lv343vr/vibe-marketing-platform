@@ -170,7 +170,7 @@ async function fetchGithubApiDraft(handle: string): Promise<StudentProfile> {
   const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
   const headers: HeadersInit = {
     Accept: "application/vnd.github+json",
-    "User-Agent": "pixie-dust-cheesecake-student-import",
+    "User-Agent": "nextmove-student-import",
     "X-GitHub-Api-Version": "2022-11-28",
     ...(token ? { Authorization: `Bearer ${token}` } : {}),
   };

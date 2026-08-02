@@ -4,7 +4,7 @@
 
 ## Production URL
 
-**https://pixie-dust-cheesecake.vercel.app**
+**https://nextmove-hult.vercel.app**
 
 - Build repo: https://github.com/r3s0lv343vr/vibe-marketing-platform (`main`)
 - Partner-facing README: https://github.com/r3s0lv343vr/vibe-marketing-platform/blob/main/README.md
@@ -14,9 +14,9 @@
 
 Roster still filling — placeholders included:
 
-- https://pixie-dust-cheesecake.vercel.app/profiles/r3s0lv343vr
-- https://pixie-dust-cheesecake.vercel.app/profiles/maya-sugarveil
-- https://pixie-dust-cheesecake.vercel.app/profiles/jordan-crumbtrail
+- https://nextmove-hult.vercel.app/profiles/r3s0lv343vr
+- https://nextmove-hult.vercel.app/profiles/maya-sugarveil
+- https://nextmove-hult.vercel.app/profiles/jordan-crumbtrail
 
 Additional samples: `/profiles/aisha-glaze` · opt-out demo: `/profiles/private-opt-out`
 
@@ -62,7 +62,7 @@ Public showcase + vibe marketing studio:
 | Partner section | Fee summary + hire pathway |
 | Request intro | `POST /api/request-intro` (logs + optional webhook) |
 | SEO | Title, description, Open Graph, sitemap, robots |
-| Deployment | Vercel HTTPS: https://pixie-dust-cheesecake.vercel.app |
+| Deployment | Vercel HTTPS: https://nextmove-hult.vercel.app |
 
 ## Setup (fresh clone)
 
@@ -84,7 +84,7 @@ npm run dev
 
 - **Research:** Project 3 curriculum (public showcase requirements, partner pipeline), prior @r3s0lv343vr submissions, peer Project 3 PR pattern
 - **Dev:** Next.js App Router platform branded Pixie Dust Cheesecake — profiles, partners, studio, PM snapshot, partner README
-- **QA:** `npm run build`; production smoke on https://pixie-dust-cheesecake.vercel.app (home, profiles, studio, partners, request-intro API)
+- **QA:** `npm run build`; production smoke on https://nextmove-hult.vercel.app (home, profiles, studio, partners, request-intro API)
 
 ## Known limitations
 

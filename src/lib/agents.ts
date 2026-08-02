@@ -131,7 +131,7 @@ function demoResult(task: TaskKey, brief: string): AgentRunResult {
           { label: "CTA", content: "View live demo · Inspect GitHub · Request intro" },
           { label: "Sections", content: "Problem → Build → Proof links → Skills → Ask" },
         ],
-        previewHtml: `<section style="font-family:Georgia,serif;padding:2rem;background:linear-gradient(160deg,#f7b6c8,#f3d9a4);color:#2b2420"><p style="letter-spacing:.16em;text-transform:uppercase;font-size:.7rem">Pixie Dust · Demo</p><h1 style="font-size:2rem;margin:.5rem 0 1rem">${subject}</h1><p>Student project showcase preview.</p></section>`,
+        previewHtml: `<section style="font-family:Georgia,serif;padding:2rem;background:linear-gradient(160deg,#f7b6c8,#f3d9a4);color:#2b2420"><p style="letter-spacing:.16em;text-transform:uppercase;font-size:.7rem">NextMove · Demo</p><h1 style="font-size:2rem;margin:.5rem 0 1rem">${subject}</h1><p>Student project showcase preview.</p></section>`,
       },
       apiNote: avail.any
         ? "Live keys found but demo fallback used."
@@ -221,7 +221,7 @@ async function liveTextTask(task: TaskKey, brief: string): Promise<AgentRunResul
   const subject = brief.trim() || "a student digital project";
   const pack = TASKS[task];
 
-  const system = `You are the orchestrator for Pixie Dust Cheesecake, a vibe marketing platform where students showcase digital projects to hiring partners and investors.
+  const system = `You are the orchestrator for NextMove, a vibe marketing platform where students showcase digital projects to hiring partners and investors.
 Coordinate these agents: ${pack.agents.map((a) => `${a.name} (${a.specialty})`).join("; ")}.
 Return ONLY valid JSON with keys:
 headline (string), summary (string), artifacts (array of {label, content}), stepDetails (array of 3 short strings, one per agent),

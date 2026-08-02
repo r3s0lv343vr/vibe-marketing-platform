@@ -1,16 +1,16 @@
 ## Summary
-Pixie Dust Cheesecake — vibe marketing platform for the Hult Cohort Summer Pilot 2026. Ships cohort profiles, partner intro flow, PM status snapshot, and an AI Brand Designer studio. Build repo: https://github.com/r3s0lv343vr/vibe-marketing-platform
+NextMove — vibe marketing platform for the Hult Cohort Summer Pilot 2026. Ships cohort profiles, partner intro flow, PM status snapshot, and an AI Brand Designer studio. Build repo: https://github.com/r3s0lv343vr/vibe-marketing-platform
 
 ## Production URL
-https://pixie-dust-cheesecake.vercel.app
+https://nextmove-hult.vercel.app
 
 ## Sample profile URLs
-- https://pixie-dust-cheesecake.vercel.app/profiles/r3s0lv343vr
-- https://pixie-dust-cheesecake.vercel.app/profiles/maya-sugarveil
-- https://pixie-dust-cheesecake.vercel.app/profiles/jordan-crumbtrail
+- https://nextmove-hult.vercel.app/profiles/r3s0lv343vr
+- https://nextmove-hult.vercel.app/profiles/maya-sugarveil
+- https://nextmove-hult.vercel.app/profiles/jordan-crumbtrail
 
 ## Vibe / positioning notes
-**One-liner:** Pixie Dust Cheesecake plates cohort proof for hiring partners — Brand DNA, live profiles, and intros you can taste.
+**One-liner:** NextMove plates cohort proof for hiring partners — Brand DNA, live profiles, and intros you can taste.
 
 **Tone:** Warm, sensorial, lightly magical (rose sugar, champagne gold, mint frosting) without soft standards — partners skim for GitHub-visible evidence, not hype.
 
@@ -24,7 +24,7 @@ https://github.com/r3s0lv343vr/vibe-marketing-platform/blob/main/README.md
 ## Agent usage
 - Research: Project 3 public-showcase curriculum, hiring-partner docs, prior @r3s0lv343vr submissions
 - Dev: Next.js App Router platform (profiles, partners, studio, PM snapshot, partner README)
-- QA: `npm run typecheck` / `npm run build`; production smoke on https://pixie-dust-cheesecake.vercel.app
+- QA: `npm run typecheck` / `npm run build`; production smoke on https://nextmove-hult.vercel.app
 
 ## Test plan
 - [x] Production URL loads over HTTPS with no auth wall

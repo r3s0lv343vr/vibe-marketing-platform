@@ -5,7 +5,7 @@ import { getRoster } from "@/lib/roster";
 export const metadata: Metadata = {
   title: "Cohort",
   description:
-    "Browse Hult Cohort Summer Pilot 2026 builders on Pixie Dust Cheesecake — public profiles with GitHub and portfolio links.",
+    "Browse Hult Cohort Summer Pilot 2026 builders on NextMove — public profiles with GitHub and portfolio links.",
 };
 
 export default function CohortPage() {

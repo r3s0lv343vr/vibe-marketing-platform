@@ -1,13 +1,13 @@
-# Deploy — Pixie Dust Cheesecake
+# Deploy — NextMove
 
 ## Vercel (preferred)
 
 1. Authenticate CLI: `npx vercel login`
-2. From repo root: `npx vercel --prod --yes --name pixie-dust-cheesecake`
+2. From repo root: `npx vercel --prod --yes --name nextmove`
 3. Set env (optional): `NEXT_PUBLIC_SITE_URL`, `PLACEMENT_LEAD_EMAIL`, `INTRO_WEBHOOK_URL`
-4. Production alias target: **https://pixie-dust-cheesecake.vercel.app**
+4. Production alias target: **https://nextmove-hult.vercel.app**
 
-Or import https://github.com/r3s0lv343vr/vibe-marketing-platform in the Vercel dashboard and set the project name to `pixie-dust-cheesecake`.
+Or import https://github.com/r3s0lv343vr/vibe-marketing-platform in the Vercel dashboard and set the project name to `nextmove`.
 
 ## GitHub Pages (fallback)
 
@@ -22,5 +22,5 @@ The `gh-pages` branch is already published from a static export. Partner intro u
 As `@r3s0lv343vr`:
 
 ```bash
-PROD_URL=https://pixie-dust-cheesecake.vercel.app ./scripts/open-cohort-pr.sh
+PROD_URL=https://nextmove-hult.vercel.app ./scripts/open-cohort-pr.sh
 ```

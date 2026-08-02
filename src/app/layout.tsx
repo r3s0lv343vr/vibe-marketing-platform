@@ -16,28 +16,28 @@ const figtree = Figtree({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://pixie-dust-cheesecake.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://nextmove-hult.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Pixie Dust Cheesecake · Hult Cohort Showcase",
-    template: "%s · Pixie Dust Cheesecake",
+    default: "NextMove · Hult Cohort Showcase",
+    template: "%s · NextMove",
   },
   description:
-    "Pixie Dust Cheesecake is the vibe marketing platform for the Hult Cohort Developer Program Summer Pilot 2026 — cohort profiles, partner intros, and an AI brand studio with energy that attracts hiring partners.",
+    "NextMove is the vibe marketing platform for the Hult Cohort Developer Program Summer Pilot 2026 — cohort profiles, partner intros, and an AI brand studio that helps hiring partners move on evidence.",
   openGraph: {
-    title: "Pixie Dust Cheesecake · Hult Cohort Showcase",
+    title: "NextMove · Hult Cohort Showcase",
     description:
-      "Don't trust our word — inspect their GitHub. Browse builders, request intros, and taste the brand studio.",
+      "Don't trust our word — inspect their GitHub. Browse builders, request intros, and open the brand studio.",
     url: siteUrl,
-    siteName: "Pixie Dust Cheesecake",
+    siteName: "NextMove",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pixie Dust Cheesecake",
+    title: "NextMove",
     description:
       "Vibe marketing for the Hult Cohort Summer Pilot 2026 — profiles, partners, and Brand DNA studio.",
   },

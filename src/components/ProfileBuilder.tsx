@@ -465,7 +465,7 @@ export function ProfileBuilder({
                     value={project.title}
                     onChange={(e) => updateProject(project.id, { title: e.target.value })}
                     className="field"
-                    placeholder="Pixie Dust Cheesecake"
+                    placeholder="NextMove"
                   />
                 </label>
                 <label className="label">

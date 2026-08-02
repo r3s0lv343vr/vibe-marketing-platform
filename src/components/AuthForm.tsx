@@ -62,7 +62,7 @@ export function AuthForm({
 
   return (
     <form onSubmit={onSubmit} className="panel-solid mx-auto w-full max-w-md p-7 sm:p-9">
-      <p className="eyebrow">{isPartner ? "Partners" : "Pixie Dust Cheesecake"}</p>
+      <p className="eyebrow">{isPartner ? "Partners" : "NextMove"}</p>
       <h1 className="display mt-3 text-4xl">
         {mode === "signup"
           ? isPartner

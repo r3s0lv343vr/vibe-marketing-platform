@@ -67,7 +67,7 @@ async function gh(path, query = "") {
   const res = await fetch(url, {
     headers: {
       Accept: "application/vnd.github+json",
-      "User-Agent": "pixie-dust-cheesecake-roster-import",
+      "User-Agent": "nextmove-roster-import",
       ...(token ? { Authorization: `Bearer ${token}` } : {}),
       "X-GitHub-Api-Version": "2022-11-28",
     },

@@ -10,18 +10,18 @@ const links = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-[var(--line)] bg-[rgba(255,248,244,0.9)] backdrop-blur-md">
-      <div className="h-1 w-full bg-[linear-gradient(90deg,var(--rose-deep),var(--rose),var(--gold),var(--mint))]" />
+    <header className="sticky top-0 z-40 border-b border-[var(--line)] bg-[rgba(4,18,37,0.82)] backdrop-blur-md">
+      <div className="h-1 w-full bg-[linear-gradient(90deg,var(--aurora-deep),var(--aurora),var(--sky),var(--aurora-soft))]" />
       <div className="site-shell flex items-center justify-between gap-4 py-3.5">
         <Link href="/" className="display text-lg font-semibold tracking-tight sm:text-xl">
-          Pixie Dust <span className="brand-mark">Cheesecake</span>
+          Next<span className="brand-mark">Move</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--ink-soft)] lg:flex">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors hover:text-[var(--rose-deep)]"
+              className="transition-colors hover:text-[var(--aurora)]"
             >
               {link.label}
             </Link>
@@ -36,7 +36,7 @@ export function Header() {
           <Link
             key={link.href}
             href={link.href}
-            className="whitespace-nowrap transition-colors hover:text-[var(--rose-deep)]"
+            className="whitespace-nowrap transition-colors hover:text-[var(--aurora)]"
           >
             {link.label}
           </Link>
