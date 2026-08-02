@@ -7,6 +7,8 @@ export type SessionUser = {
   email: string;
   name: string;
   role: UserRole;
+  /** Present for students who signed in with a GitHub handle. */
+  github?: string;
 };
 
 const COOKIE = "pixie_session";
@@ -37,6 +39,7 @@ export function decodeSession(token: string | undefined | null): SessionUser | n
     if (!user?.email || !user?.name) return null;
     return {
       ...user,
+      github: user.github?.trim() || undefined,
       role: user.role === "partner" ? "partner" : "student",
     };
   } catch {

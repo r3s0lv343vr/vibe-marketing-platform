@@ -3,7 +3,8 @@ import { AuthForm } from "@/components/AuthForm";
 
 export const metadata: Metadata = {
   title: "Sign up",
-  description: "Create a Pixie Dust Cheesecake account and start marketing with AI agents.",
+  description:
+    "Create a student account with your GitHub handle and download your public profile into the Profile Builder.",
 };
 
 export default function SignupPage() {

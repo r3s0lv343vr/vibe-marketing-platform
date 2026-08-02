@@ -13,6 +13,10 @@ export default async function ProfileBuilderPage() {
   if (!session) redirect("/login?next=/app/profile");
 
   return (
-    <ProfileBuilder defaultName={session.name} email={session.email} />
+    <ProfileBuilder
+      defaultName={session.name}
+      email={session.email}
+      github={session.github}
+    />
   );
 }
