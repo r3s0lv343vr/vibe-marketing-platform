@@ -1,84 +1,20 @@
 {
   "generatedAt": "2026-08-02T13:49:12.333Z",
-  "cohortRepo": "rogerSuperBuilderAlpha/hult-cohort-program",
   "count": 30,
-  "profiles": [
+  "participants": [
     {
       "slug": "arjun-singh2127",
       "name": "Arjun Singh",
       "github": "arjun-singh2127",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/241372456?v=4",
+      "bio": "Arjun Singh — Hult Cohort builder (@arjun-singh2127).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "JavaScript",
         "CSS",
         "HTML",
         "PLpgSQL"
-      ],
-      "bio": "Arjun Singh — Hult Cohort builder (@arjun-singh2127).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/241372456?v=4",
-      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
-      "homepageUrls": [
-        "https://helm-web-neon.vercel.app/",
-        "https://my-portfolio-plum-beta-10.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/114",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/77"
-      ],
-      "portfolio": [
-        {
-          "label": "helm",
-          "href": "https://github.com/arjun-singh2127/helm",
-          "kind": "repo"
-        },
-        {
-          "label": "helm · live",
-          "href": "https://helm-web-neon.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "my-portfolio",
-          "href": "https://github.com/arjun-singh2127/my-portfolio",
-          "kind": "repo"
-        },
-        {
-          "label": "my-portfolio · live",
-          "href": "https://my-portfolio-plum-beta-10.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "Good-Vibes",
-          "href": "https://github.com/arjun-singh2127/Good-Vibes",
-          "kind": "repo"
-        },
-        {
-          "label": "comms-arjun-singh2127",
-          "href": "https://github.com/arjun-singh2127/comms-arjun-singh2127",
-          "kind": "repo"
-        },
-        {
-          "label": "Link-up",
-          "href": "https://github.com/arjun-singh2127/Link-up",
-          "kind": "repo"
-        },
-        {
-          "label": "my-first-repo",
-          "href": "https://github.com/arjun-singh2127/my-first-repo",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/114",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/77",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -152,22 +88,16 @@
           "location": "github.com/arjun-singh2127/my-first-repo"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "JavaScript",
-        "CSS",
-        "HTML",
-        "PLpgSQL"
-      ],
-      "highlight": "Live: https://helm-web-neon.vercel.app/"
+      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)"
     },
     {
       "slug": "artira",
       "name": "Arti Ramanathan",
       "github": "artira",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/21232614?v=4",
+      "bio": "Arti Ramanathan — Hult Cohort builder (@artira).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "CSS",
         "JavaScript",
@@ -175,93 +105,6 @@
         "Python",
         "Shell",
         "Makefile"
-      ],
-      "bio": "Arti Ramanathan — Hult Cohort builder (@artira).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/21232614?v=4",
-      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)",
-      "homepageUrls": [
-        "https://cohort-showcase-pearl.vercel.app/",
-        "https://cohort-comms-rho.vercel.app/",
-        "https://pm-artira-azure.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/194",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/107",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/53",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/51"
-      ],
-      "portfolio": [
-        {
-          "label": "cohort-showcase",
-          "href": "https://github.com/artira/cohort-showcase",
-          "kind": "repo"
-        },
-        {
-          "label": "cohort-showcase · live",
-          "href": "https://cohort-showcase-pearl.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "cohort-comms",
-          "href": "https://github.com/artira/cohort-comms",
-          "kind": "repo"
-        },
-        {
-          "label": "cohort-comms · live",
-          "href": "https://cohort-comms-rho.vercel.app/",
-          "kind": "comms"
-        },
-        {
-          "label": "pm-artira",
-          "href": "https://github.com/artira/pm-artira",
-          "kind": "repo"
-        },
-        {
-          "label": "pm-artira · live",
-          "href": "https://pm-artira-azure.vercel.app/",
-          "kind": "pm"
-        },
-        {
-          "label": "mnl-learning",
-          "href": "https://github.com/artira/mnl-learning",
-          "kind": "repo"
-        },
-        {
-          "label": "accountant-ai",
-          "href": "https://github.com/artira/accountant-ai",
-          "kind": "repo"
-        },
-        {
-          "label": "datasciencecoursera",
-          "href": "https://github.com/artira/datasciencecoursera",
-          "kind": "repo"
-        },
-        {
-          "label": "test-repo",
-          "href": "https://github.com/artira/test-repo",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/194",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/107",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/53",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/51",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -351,82 +194,20 @@
           "location": "github.com/artira/test-repo"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "CSS",
-        "JavaScript",
-        "PLpgSQL",
-        "Python",
-        "Shell",
-        "Makefile"
-      ],
-      "highlight": "Live: https://cohort-showcase-pearl.vercel.app/"
+      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)"
     },
     {
       "slug": "celiciakitty-creator",
       "name": "celiciakitty-creator",
       "github": "celiciakitty-creator",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/293418490?v=4",
+      "bio": "celiciakitty-creator — Hult Cohort builder (@celiciakitty-creator).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "PLpgSQL",
         "CSS",
         "JavaScript"
-      ],
-      "bio": "celiciakitty-creator — Hult Cohort builder (@celiciakitty-creator).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/293418490?v=4",
-      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
-      "homepageUrls": [
-        "https://cohort-in-bloom.vercel.app/",
-        "https://anovia.vercel.app/",
-        "https://my-portfolio-plum-nine-25.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/38"
-      ],
-      "portfolio": [
-        {
-          "label": "cohort-in-bloom",
-          "href": "https://github.com/celiciakitty-creator/cohort-in-bloom",
-          "kind": "repo"
-        },
-        {
-          "label": "cohort-in-bloom · live",
-          "href": "https://cohort-in-bloom.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "anovia",
-          "href": "https://github.com/celiciakitty-creator/anovia",
-          "kind": "repo"
-        },
-        {
-          "label": "anovia · live",
-          "href": "https://anovia.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "my-portfolio",
-          "href": "https://github.com/celiciakitty-creator/my-portfolio",
-          "kind": "repo"
-        },
-        {
-          "label": "my-portfolio · live",
-          "href": "https://my-portfolio-plum-nine-25.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "my-first-repo",
-          "href": "https://github.com/celiciakitty-creator/my-first-repo",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/38",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -483,21 +264,16 @@
           "location": "github.com/celiciakitty-creator/my-first-repo"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "PLpgSQL",
-        "CSS",
-        "JavaScript"
-      ],
-      "highlight": "Live: https://cohort-in-bloom.vercel.app/"
+      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)"
     },
     {
       "slug": "codingwcal",
       "name": "Calvin V.",
       "github": "CodingWCal",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/200448977?v=4",
+      "bio": "Hey! My name is Calvin and I'm a Developer Advocate and full-stack software engineer with an AI focus in Resilient Coders and 100Devs.",
       "campus": "Boston, MA",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "PLpgSQL",
         "JavaScript",
@@ -505,129 +281,6 @@
         "Python",
         "HTML",
         "RouterOS Script"
-      ],
-      "bio": "Hey! My name is Calvin and I'm a Developer Advocate and full-stack software engineer with an AI focus in Resilient Coders and 100Devs.",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/200448977?v=4",
-      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
-      "homepageUrls": [
-        "https://calvinvancreations.com/",
-        "https://liaison-mvp.vercel.app/",
-        "https://cursor-boston-showcase.vercel.app/",
-        "https://forth-bice.vercel.app/",
-        "https://odyssey-trips.vercel.app/",
-        "https://molab.marimo.io/notebooks/nb_BjxT4fWi3DtMSNFA7kVXk7/app",
-        "https://frutiger-flocus.vercel.app/",
-        "https://chakrax-generator.vercel.app/",
-        "https://dc-comic-cover-generator.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/184",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/119",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/103",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/45"
-      ],
-      "portfolio": [
-        {
-          "label": "liaison-mvp",
-          "href": "https://github.com/CodingWCal/liaison-mvp",
-          "kind": "repo"
-        },
-        {
-          "label": "liaison-mvp · live",
-          "href": "https://liaison-mvp.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "cursor-boston-showcase",
-          "href": "https://github.com/CodingWCal/cursor-boston-showcase",
-          "kind": "repo"
-        },
-        {
-          "label": "cursor-boston-showcase · live",
-          "href": "https://cursor-boston-showcase.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "forth",
-          "href": "https://github.com/CodingWCal/forth",
-          "kind": "repo"
-        },
-        {
-          "label": "forth · live",
-          "href": "https://forth-bice.vercel.app/",
-          "kind": "pm"
-        },
-        {
-          "label": "odyssey",
-          "href": "https://github.com/CodingWCal/odyssey",
-          "kind": "repo"
-        },
-        {
-          "label": "odyssey · live",
-          "href": "https://odyssey-trips.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "attention-sink-playground",
-          "href": "https://github.com/CodingWCal/attention-sink-playground",
-          "kind": "repo"
-        },
-        {
-          "label": "attention-sink-playground · live",
-          "href": "https://molab.marimo.io/notebooks/nb_BjxT4fWi3DtMSNFA7kVXk7/app",
-          "kind": "showcase"
-        },
-        {
-          "label": "frutiger-flocus",
-          "href": "https://github.com/CodingWCal/frutiger-flocus",
-          "kind": "repo"
-        },
-        {
-          "label": "frutiger-flocus · live",
-          "href": "https://frutiger-flocus.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "chakrax-image-model",
-          "href": "https://github.com/CodingWCal/chakrax-image-model",
-          "kind": "repo"
-        },
-        {
-          "label": "chakrax-image-model · live",
-          "href": "https://chakrax-generator.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "dc-comic-cover-generator",
-          "href": "https://github.com/CodingWCal/dc-comic-cover-generator",
-          "kind": "repo"
-        },
-        {
-          "label": "dc-comic-cover-generator · live",
-          "href": "https://dc-comic-cover-generator.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/184",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/119",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/103",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/45",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -745,24 +398,16 @@
           "location": "dc-comic-cover-generator.vercel.app"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "PLpgSQL",
-        "JavaScript",
-        "CSS",
-        "Python",
-        "HTML",
-        "RouterOS Script"
-      ],
-      "highlight": "Live: https://calvinvancreations.com/"
+      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)"
     },
     {
       "slug": "divyaprakash04",
       "name": "Divya Prakash",
       "github": "DivyaPrakash04",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/171474297?v=4",
+      "bio": "Divya Prakash — Hult Cohort builder (@DivyaPrakash04).",
       "campus": "Boston",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "CSS",
         "JavaScript",
@@ -773,80 +418,6 @@
         "C#",
         "Jupyter Notebook",
         "Shell"
-      ],
-      "bio": "Divya Prakash — Hult Cohort builder (@DivyaPrakash04).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/171474297?v=4",
-      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
-      "homepageUrls": [
-        "https://ourvelocity.vercel.app/",
-        "https://partiful.com/e/UaCivuHqb00uIv1YO6qZ"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/171",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/55"
-      ],
-      "portfolio": [
-        {
-          "label": "ourvelocity",
-          "href": "https://github.com/DivyaPrakash04/ourvelocity",
-          "kind": "repo"
-        },
-        {
-          "label": "ourvelocity · live",
-          "href": "https://ourvelocity.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "MyTwinAgent-rasa-bos-hackathon-2026",
-          "href": "https://github.com/DivyaPrakash04/MyTwinAgent-rasa-bos-hackathon-2026",
-          "kind": "repo"
-        },
-        {
-          "label": "MyTwinAgent-rasa-bos-hackathon-2026 · live",
-          "href": "https://partiful.com/e/UaCivuHqb00uIv1YO6qZ",
-          "kind": "showcase"
-        },
-        {
-          "label": "diffsense",
-          "href": "https://github.com/DivyaPrakash04/diffsense",
-          "kind": "repo"
-        },
-        {
-          "label": "Mythosguard",
-          "href": "https://github.com/DivyaPrakash04/Mythosguard",
-          "kind": "repo"
-        },
-        {
-          "label": "Northeastern-TwelveLabs-Voxel-CV-vLLM-Hackathon",
-          "href": "https://github.com/DivyaPrakash04/Northeastern-TwelveLabs-Voxel-CV-vLLM-Hackathon",
-          "kind": "repo"
-        },
-        {
-          "label": "Support-ticket-AI-agent-framework-microsoft-dev-day-Jan2026",
-          "href": "https://github.com/DivyaPrakash04/Support-ticket-AI-agent-framework-microsoft-dev-day-Jan2026",
-          "kind": "repo"
-        },
-        {
-          "label": "skills-getting-started-with-github-copilot-Cert",
-          "href": "https://github.com/DivyaPrakash04/skills-getting-started-with-github-copilot-Cert",
-          "kind": "repo"
-        },
-        {
-          "label": "MyRecipeFinder",
-          "href": "https://github.com/DivyaPrakash04/MyRecipeFinder",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/171",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/55",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -955,112 +526,21 @@
           "location": "github.com/DivyaPrakash04/MyRecipeFinder"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "CSS",
-        "JavaScript",
-        "Python",
-        "PowerShell",
-        "Makefile",
-        "HTML",
-        "C#",
-        "Jupyter Notebook",
-        "Shell"
-      ],
-      "highlight": "Live: https://ourvelocity.vercel.app/"
+      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)"
     },
     {
       "slug": "frankgomezdev",
       "name": "Franklin Gomez",
       "github": "frankgomezdev",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/78661719?v=4",
+      "bio": "Franklin Gomez — Hult Cohort builder (@frankgomezdev).",
       "campus": "Boston, MA",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "TypeScript",
         "Python"
-      ],
-      "bio": "Franklin Gomez — Hult Cohort builder (@frankgomezdev).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/78661719?v=4",
-      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)",
-      "homepageUrls": [
-        "https://enough-edh-dashboard.netlify.app/",
-        "https://mtg-high-or-low.vercel.app/",
-        "https://eye-lasers.netlify.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/54",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/52"
-      ],
-      "portfolio": [
-        {
-          "label": "edh-dashboard",
-          "href": "https://github.com/frankgomezdev/edh-dashboard",
-          "kind": "repo"
-        },
-        {
-          "label": "edh-dashboard · live",
-          "href": "https://enough-edh-dashboard.netlify.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "mtg-high-or-low",
-          "href": "https://github.com/frankgomezdev/mtg-high-or-low",
-          "kind": "repo"
-        },
-        {
-          "label": "mtg-high-or-low · live",
-          "href": "https://mtg-high-or-low.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "eye-lasers",
-          "href": "https://github.com/frankgomezdev/eye-lasers",
-          "kind": "repo"
-        },
-        {
-          "label": "eye-lasers · live",
-          "href": "https://eye-lasers.netlify.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "ai-agent",
-          "href": "https://github.com/frankgomezdev/ai-agent",
-          "kind": "repo"
-        },
-        {
-          "label": "fullstackopen",
-          "href": "https://github.com/frankgomezdev/fullstackopen",
-          "kind": "repo"
-        },
-        {
-          "label": "asteroids",
-          "href": "https://github.com/frankgomezdev/asteroids",
-          "kind": "repo"
-        },
-        {
-          "label": "top10-hackernews",
-          "href": "https://github.com/frankgomezdev/top10-hackernews",
-          "kind": "repo"
-        },
-        {
-          "label": "pkmn",
-          "href": "https://github.com/frankgomezdev/pkmn",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/54",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/52",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -1169,22 +649,16 @@
           "location": "github.com/frankgomezdev/pkmn"
         }
       ],
-      "technologies": [
-        "JavaScript",
-        "CSS",
-        "HTML",
-        "TypeScript",
-        "Python"
-      ],
-      "highlight": "Live: https://enough-edh-dashboard.netlify.app/"
+      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)"
     },
     {
       "slug": "godwinkamau",
       "name": "Godwin Kamau",
       "github": "godwinKamau",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/229975188?v=4",
+      "bio": "Godwin Kamau — Hult Cohort builder (@godwinKamau).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "CSS",
         "JavaScript",
@@ -1192,117 +666,6 @@
         "Python",
         "Shell",
         "EJS"
-      ],
-      "bio": "Godwin Kamau — Hult Cohort builder (@godwinKamau).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/229975188?v=4",
-      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
-      "homepageUrls": [
-        "https://godwinkamau.github.io/",
-        "https://top-tier-app-lemon.vercel.app/",
-        "https://hult-cohort-comms.vercel.app/",
-        "https://layouts4taytay.vercel.app/",
-        "https://hult-cohort-pm-project.vercel.app/",
-        "https://sharn-map.vercel.app/",
-        "https://alameda-county-asset-based-scaffold.vercel.app/",
-        "https://evaluation-suite.vercel.app/",
-        "https://secretkeys.onrender.com/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/121",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/76"
-      ],
-      "portfolio": [
-        {
-          "label": "top-tier-app",
-          "href": "https://github.com/godwinKamau/top-tier-app",
-          "kind": "repo"
-        },
-        {
-          "label": "top-tier-app · live",
-          "href": "https://top-tier-app-lemon.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "hult-cohort-comms",
-          "href": "https://github.com/godwinKamau/hult-cohort-comms",
-          "kind": "repo"
-        },
-        {
-          "label": "hult-cohort-comms · live",
-          "href": "https://hult-cohort-comms.vercel.app/",
-          "kind": "comms"
-        },
-        {
-          "label": "layouts4taytay",
-          "href": "https://github.com/godwinKamau/layouts4taytay",
-          "kind": "repo"
-        },
-        {
-          "label": "layouts4taytay · live",
-          "href": "https://layouts4taytay.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "hult-cohort-PM-Project",
-          "href": "https://github.com/godwinKamau/hult-cohort-PM-Project",
-          "kind": "repo"
-        },
-        {
-          "label": "hult-cohort-PM-Project · live",
-          "href": "https://hult-cohort-pm-project.vercel.app/",
-          "kind": "pm"
-        },
-        {
-          "label": "Sharn-Map",
-          "href": "https://github.com/godwinKamau/Sharn-Map",
-          "kind": "repo"
-        },
-        {
-          "label": "Sharn-Map · live",
-          "href": "https://sharn-map.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "alameda-county-asset-based-scaffold",
-          "href": "https://github.com/godwinKamau/alameda-county-asset-based-scaffold",
-          "kind": "repo"
-        },
-        {
-          "label": "alameda-county-asset-based-scaffold · live",
-          "href": "https://alameda-county-asset-based-scaffold.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "evaluation-suite",
-          "href": "https://github.com/godwinKamau/evaluation-suite",
-          "kind": "repo"
-        },
-        {
-          "label": "evaluation-suite · live",
-          "href": "https://evaluation-suite.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "secretKeys",
-          "href": "https://github.com/godwinKamau/secretKeys",
-          "kind": "repo"
-        },
-        {
-          "label": "secretKeys · live",
-          "href": "https://secretkeys.onrender.com/",
-          "kind": "showcase"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/121",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/76",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -1421,65 +784,19 @@
           "location": "secretkeys.onrender.com"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "CSS",
-        "JavaScript",
-        "HTML",
-        "Python",
-        "Shell",
-        "EJS"
-      ],
-      "highlight": "Live: https://godwinkamau.github.io/"
+      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)"
     },
     {
       "slug": "jayyyw34",
       "name": "Jayden Phillip",
       "github": "jayyyW34",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/296315793?v=4",
+      "bio": "Jayden Phillip — Hult Cohort builder (@jayyyW34).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "CSS",
         "JavaScript",
         "HTML"
-      ],
-      "bio": "Jayden Phillip — Hult Cohort builder (@jayyyW34).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/296315793?v=4",
-      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
-      "homepageUrls": [
-        "https://my-portfolio-jayden15.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/31",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/26"
-      ],
-      "portfolio": [
-        {
-          "label": "my-portfolio",
-          "href": "https://github.com/jayyyW34/my-portfolio",
-          "kind": "repo"
-        },
-        {
-          "label": "my-portfolio · live",
-          "href": "https://my-portfolio-jayden15.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "my-first-repo",
-          "href": "https://github.com/jayyyW34/my-first-repo",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/31",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/26",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -1506,20 +823,16 @@
           "location": "github.com/jayyyW34/my-first-repo"
         }
       ],
-      "technologies": [
-        "CSS",
-        "JavaScript",
-        "HTML"
-      ],
-      "highlight": "Live: https://my-portfolio-jayden15.vercel.app/"
+      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)"
     },
     {
       "slug": "jiaxinaspenlin-dotcom",
       "name": "jiaxinaspenlin-dotcom",
       "github": "jiaxinaspenlin-dotcom",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/252278128?v=4",
+      "bio": "jiaxinaspenlin-dotcom — Hult Cohort builder (@jiaxinaspenlin-dotcom).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "CSS",
         "JavaScript",
@@ -1531,110 +844,6 @@
         "Makefile",
         "Shell",
         "Jupyter Notebook"
-      ],
-      "bio": "jiaxinaspenlin-dotcom — Hult Cohort builder (@jiaxinaspenlin-dotcom).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/252278128?v=4",
-      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
-      "homepageUrls": [
-        "https://signal-atlas-omega.vercel.app/",
-        "https://ember-ohio.onrender.com/",
-        "https://grow-sprout.vercel.app/",
-        "https://trajectory-tan.vercel.app/",
-        "https://mbta-real-time-transfer-helper.vercel.app/",
-        "https://smart-gate-dashboard-orpin.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/202",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/106",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/79"
-      ],
-      "portfolio": [
-        {
-          "label": "signal-atlas",
-          "href": "https://github.com/jiaxinaspenlin-dotcom/signal-atlas",
-          "kind": "repo"
-        },
-        {
-          "label": "signal-atlas · live",
-          "href": "https://signal-atlas-omega.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "Ember",
-          "href": "https://github.com/jiaxinaspenlin-dotcom/Ember",
-          "kind": "repo"
-        },
-        {
-          "label": "Ember · live",
-          "href": "https://ember-ohio.onrender.com/",
-          "kind": "showcase"
-        },
-        {
-          "label": "grow-sprout",
-          "href": "https://github.com/jiaxinaspenlin-dotcom/grow-sprout",
-          "kind": "repo"
-        },
-        {
-          "label": "grow-sprout · live",
-          "href": "https://grow-sprout.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "Trajectory",
-          "href": "https://github.com/jiaxinaspenlin-dotcom/Trajectory",
-          "kind": "repo"
-        },
-        {
-          "label": "Trajectory · live",
-          "href": "https://trajectory-tan.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "mbta-real-time-transfer-helper",
-          "href": "https://github.com/jiaxinaspenlin-dotcom/mbta-real-time-transfer-helper",
-          "kind": "repo"
-        },
-        {
-          "label": "mbta-real-time-transfer-helper · live",
-          "href": "https://mbta-real-time-transfer-helper.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "smart-gate-dashboard",
-          "href": "https://github.com/jiaxinaspenlin-dotcom/smart-gate-dashboard",
-          "kind": "repo"
-        },
-        {
-          "label": "smart-gate-dashboard · live",
-          "href": "https://smart-gate-dashboard-orpin.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "portfolio-optimization-pyomo",
-          "href": "https://github.com/jiaxinaspenlin-dotcom/portfolio-optimization-pyomo",
-          "kind": "repo"
-        },
-        {
-          "label": "employee-burnout-turnover",
-          "href": "https://github.com/jiaxinaspenlin-dotcom/employee-burnout-turnover",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/202",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/106",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/79",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -1752,28 +961,16 @@
           "location": "github.com/jiaxinaspenlin-dotcom/employee-burnout-turnover"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "CSS",
-        "JavaScript",
-        "Python",
-        "HTML",
-        "Dockerfile",
-        "Mako",
-        "Procfile",
-        "Makefile",
-        "Shell",
-        "Jupyter Notebook"
-      ],
-      "highlight": "Live: https://signal-atlas-omega.vercel.app/"
+      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)"
     },
     {
       "slug": "jj-javascript",
       "name": "Justin Jimenez",
       "github": "jj-javascript",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/217978382?v=4",
+      "bio": "Software Engineer @ Resilient Coders",
       "campus": "Boston, MA",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "JavaScript",
         "CSS",
@@ -1782,74 +979,6 @@
         "Shell",
         "EJS",
         "Procfile"
-      ],
-      "bio": "Software Engineer @ Resilient Coders",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/217978382?v=4",
-      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)",
-      "homepageUrls": [
-        "https://archivist-blue.vercel.app/",
-        "https://ideata-b2-b.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/133"
-      ],
-      "portfolio": [
-        {
-          "label": "Archivist",
-          "href": "https://github.com/jj-javascript/Archivist",
-          "kind": "repo"
-        },
-        {
-          "label": "Archivist · live",
-          "href": "https://archivist-blue.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "Ideata_B2B",
-          "href": "https://github.com/jj-javascript/Ideata_B2B",
-          "kind": "repo"
-        },
-        {
-          "label": "Ideata_B2B · live",
-          "href": "https://ideata-b2-b.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "Youniverses",
-          "href": "https://github.com/jj-javascript/Youniverses",
-          "kind": "repo"
-        },
-        {
-          "label": "FinishLineApp",
-          "href": "https://github.com/jj-javascript/FinishLineApp",
-          "kind": "repo"
-        },
-        {
-          "label": "NeetCodes",
-          "href": "https://github.com/jj-javascript/NeetCodes",
-          "kind": "repo"
-        },
-        {
-          "label": "todolistredux",
-          "href": "https://github.com/jj-javascript/todolistredux",
-          "kind": "repo"
-        },
-        {
-          "label": "Compilr",
-          "href": "https://github.com/jj-javascript/Compilr",
-          "kind": "repo"
-        },
-        {
-          "label": "Compilr-Draft",
-          "href": "https://github.com/jj-javascript/Compilr-Draft",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/133",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -1954,25 +1083,16 @@
           "location": "github.com/jj-javascript/Compilr-Draft"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "JavaScript",
-        "CSS",
-        "Dockerfile",
-        "HTML",
-        "Shell",
-        "EJS",
-        "Procfile"
-      ],
-      "highlight": "Live: https://archivist-blue.vercel.app/"
+      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)"
     },
     {
       "slug": "joes9987",
       "name": "Joseph Singh",
       "github": "joes9987",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/46075221?v=4",
+      "bio": "Joseph Singh — Hult Cohort builder (@joes9987).",
       "campus": "Trinidad and Tobago",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "PLpgSQL",
         "CSS",
@@ -1986,100 +1106,6 @@
         "C",
         "Kotlin",
         "Objective-C"
-      ],
-      "bio": "Joseph Singh — Hult Cohort builder (@joes9987).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/46075221?v=4",
-      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
-      "homepageUrls": [
-        "https://pm-joes9987.vercel.app/",
-        "https://comms-joes9987.vercel.app/",
-        "https://showcase-joes9987.vercel.app/",
-        "https://creator-assistant.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/187",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/100",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/56",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/37",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/25"
-      ],
-      "portfolio": [
-        {
-          "label": "pm-joes9987",
-          "href": "https://github.com/joes9987/pm-joes9987",
-          "kind": "repo"
-        },
-        {
-          "label": "pm-joes9987 · live",
-          "href": "https://pm-joes9987.vercel.app/",
-          "kind": "pm"
-        },
-        {
-          "label": "comms-joes9987",
-          "href": "https://github.com/joes9987/comms-joes9987",
-          "kind": "repo"
-        },
-        {
-          "label": "comms-joes9987 · live",
-          "href": "https://comms-joes9987.vercel.app/",
-          "kind": "comms"
-        },
-        {
-          "label": "showcase-joes9987",
-          "href": "https://github.com/joes9987/showcase-joes9987",
-          "kind": "repo"
-        },
-        {
-          "label": "showcase-joes9987 · live",
-          "href": "https://showcase-joes9987.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "CreatorAssistant",
-          "href": "https://github.com/joes9987/CreatorAssistant",
-          "kind": "repo"
-        },
-        {
-          "label": "CreatorAssistant · live",
-          "href": "https://creator-assistant.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "RadioAppGen",
-          "href": "https://github.com/joes9987/RadioAppGen",
-          "kind": "repo"
-        },
-        {
-          "label": "CRadioApp",
-          "href": "https://github.com/joes9987/CRadioApp",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/187",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/100",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/56",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/37",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/25",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -2178,63 +1204,17 @@
           "location": "github.com/joes9987/CRadioApp"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "PLpgSQL",
-        "CSS",
-        "JavaScript",
-        "Python",
-        "HTML",
-        "Dart",
-        "C++",
-        "CMake",
-        "Swift",
-        "C",
-        "Kotlin",
-        "Objective-C"
-      ],
-      "highlight": "Live: https://pm-joes9987.vercel.app/"
+      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)"
     },
     {
       "slug": "josie-ctrl",
       "name": "Josie-ctrl",
       "github": "Josie-ctrl",
-      "campus": "TBD",
-      "role": "Builder",
-      "skills": [
-        "JavaScript"
-      ],
-      "bio": "Josie-ctrl — Hult Cohort builder (@Josie-ctrl).",
-      "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/60654514?v=4",
-      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
-      "homepageUrls": [
-        "https://projectmanagement-josie11.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/75"
-      ],
-      "portfolio": [
-        {
-          "label": "projectmanagament",
-          "href": "https://github.com/Josie-ctrl/projectmanagament",
-          "kind": "repo"
-        },
-        {
-          "label": "projectmanagament · live",
-          "href": "https://projectmanagement-josie11.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "my-first-repo",
-          "href": "https://github.com/Josie-ctrl/my-first-repo",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/75",
-          "kind": "pr"
-        }
+      "bio": "Josie-ctrl — Hult Cohort builder (@Josie-ctrl).",
+      "campus": "TBD",
+      "technologies": [
+        "JavaScript"
       ],
       "projects": [
         {
@@ -2259,76 +1239,19 @@
           "location": "github.com/Josie-ctrl/my-first-repo"
         }
       ],
-      "technologies": [
-        "JavaScript"
-      ],
-      "highlight": "Live: https://projectmanagement-josie11.vercel.app/"
+      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)"
     },
     {
       "slug": "kiaracaesar5627",
       "name": "kiaracaesar5627",
       "github": "kiaracaesar5627",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/298455749?v=4",
+      "bio": "kiaracaesar5627 — Hult Cohort builder (@kiaracaesar5627).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "CSS",
         "JavaScript"
-      ],
-      "bio": "kiaracaesar5627 — Hult Cohort builder (@kiaracaesar5627).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/298455749?v=4",
-      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
-      "homepageUrls": [
-        "https://my-portfolio-snowy-seven-rorcsx6ve6.vercel.app/",
-        "https://personal-portfolio-kc.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/113",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/64",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/36"
-      ],
-      "portfolio": [
-        {
-          "label": "my-portfolio",
-          "href": "https://github.com/kiaracaesar5627/my-portfolio",
-          "kind": "repo"
-        },
-        {
-          "label": "my-portfolio · live",
-          "href": "https://my-portfolio-snowy-seven-rorcsx6ve6.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "personal-portfolio-kc",
-          "href": "https://github.com/kiaracaesar5627/personal-portfolio-kc",
-          "kind": "repo"
-        },
-        {
-          "label": "personal-portfolio-kc · live",
-          "href": "https://personal-portfolio-kc.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "my-first-repo",
-          "href": "https://github.com/kiaracaesar5627/my-first-repo",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/113",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/64",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/36",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -2369,136 +1292,21 @@
           "location": "github.com/kiaracaesar5627/my-first-repo"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "CSS",
-        "JavaScript"
-      ],
-      "highlight": "Live: https://my-portfolio-snowy-seven-rorcsx6ve6.vercel.app/"
+      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)"
     },
     {
       "slug": "kperpignant",
       "name": "Karlee Perpignant",
       "github": "kperpignant",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/227412781?v=4",
+      "bio": "Software Engineer @ResilientCoders, QA Professional, Game Developer",
       "campus": "Boston",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "CSS",
         "JavaScript",
         "HTML",
         "EJS"
-      ],
-      "bio": "Software Engineer @ResilientCoders, QA Professional, Game Developer",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/227412781?v=4",
-      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)",
-      "homepageUrls": [
-        "https://trigger-limit.itch.io/",
-        "https://buddywire.vercel.app/",
-        "https://dora-mfpa.onrender.com/",
-        "https://nidora-one.vercel.app/",
-        "https://meetup-tool.onrender.com/",
-        "https://memorymatch-sepia.vercel.app/",
-        "https://kperpignant.github.io/",
-        "https://help-desk-sepia.vercel.app/",
-        "https://alphatest-208q.onrender.com/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/149",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/47"
-      ],
-      "portfolio": [
-        {
-          "label": "buddywire",
-          "href": "https://github.com/kperpignant/buddywire",
-          "kind": "repo"
-        },
-        {
-          "label": "buddywire · live",
-          "href": "https://buddywire.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "DORA",
-          "href": "https://github.com/kperpignant/DORA",
-          "kind": "repo"
-        },
-        {
-          "label": "DORA · live",
-          "href": "https://dora-mfpa.onrender.com/",
-          "kind": "pm"
-        },
-        {
-          "label": "NIDORA",
-          "href": "https://github.com/kperpignant/NIDORA",
-          "kind": "repo"
-        },
-        {
-          "label": "NIDORA · live",
-          "href": "https://nidora-one.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "MeetUp-Tool",
-          "href": "https://github.com/kperpignant/MeetUp-Tool",
-          "kind": "repo"
-        },
-        {
-          "label": "MeetUp-Tool · live",
-          "href": "https://meetup-tool.onrender.com/",
-          "kind": "showcase"
-        },
-        {
-          "label": "MemoryMatch",
-          "href": "https://github.com/kperpignant/MemoryMatch",
-          "kind": "repo"
-        },
-        {
-          "label": "MemoryMatch · live",
-          "href": "https://memorymatch-sepia.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "kperpignant.github.io",
-          "href": "https://github.com/kperpignant/kperpignant.github.io",
-          "kind": "repo"
-        },
-        {
-          "label": "kperpignant.github.io · live",
-          "href": "https://kperpignant.github.io/",
-          "kind": "showcase"
-        },
-        {
-          "label": "HelpDesk",
-          "href": "https://github.com/kperpignant/HelpDesk",
-          "kind": "repo"
-        },
-        {
-          "label": "HelpDesk · live",
-          "href": "https://help-desk-sepia.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "AlphaTest",
-          "href": "https://github.com/kperpignant/AlphaTest",
-          "kind": "repo"
-        },
-        {
-          "label": "AlphaTest · live",
-          "href": "https://alphatest-208q.onrender.com/",
-          "kind": "showcase"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/149",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/47",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -2619,115 +1427,22 @@
           "location": "alphatest-208q.onrender.com"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "CSS",
-        "JavaScript",
-        "HTML",
-        "EJS"
-      ],
-      "highlight": "Live: https://trigger-limit.itch.io/"
+      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)"
     },
     {
       "slug": "kureen-cyber",
       "name": "kureen-cyber",
       "github": "kureen-cyber",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/295988929?v=4",
+      "bio": "kureen-cyber — Hult Cohort builder (@kureen-cyber).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "CSS",
         "JavaScript",
         "PLpgSQL",
         "Vim Snippet",
         "HTML"
-      ],
-      "bio": "kureen-cyber — Hult Cohort builder (@kureen-cyber).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/295988929?v=4",
-      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
-      "homepageUrls": [
-        "https://banterfolio.vercel.app/",
-        "https://banter-kureen-cyber.vercel.app/",
-        "https://pm-tool-hult-cohort-4.vercel.app/",
-        "https://my-portfolio-alpha-murex-77.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/191",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/98",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/42"
-      ],
-      "portfolio": [
-        {
-          "label": "Banterfolio",
-          "href": "https://github.com/kureen-cyber/Banterfolio",
-          "kind": "repo"
-        },
-        {
-          "label": "Banterfolio · live",
-          "href": "https://banterfolio.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "Banter",
-          "href": "https://github.com/kureen-cyber/Banter",
-          "kind": "repo"
-        },
-        {
-          "label": "Banter · live",
-          "href": "https://banter-kureen-cyber.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "PM-tool-Hult-Cohort-4",
-          "href": "https://github.com/kureen-cyber/PM-tool-Hult-Cohort-4",
-          "kind": "repo"
-        },
-        {
-          "label": "PM-tool-Hult-Cohort-4 · live",
-          "href": "https://pm-tool-hult-cohort-4.vercel.app/",
-          "kind": "pm"
-        },
-        {
-          "label": "my-portfolio",
-          "href": "https://github.com/kureen-cyber/my-portfolio",
-          "kind": "repo"
-        },
-        {
-          "label": "my-portfolio · live",
-          "href": "https://my-portfolio-alpha-murex-77.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "my-first-repo",
-          "href": "https://github.com/kureen-cyber/my-first-repo",
-          "kind": "repo"
-        },
-        {
-          "label": "my-first-repository",
-          "href": "https://github.com/kureen-cyber/my-first-repository",
-          "kind": "repo"
-        },
-        {
-          "label": "turbo-giggle",
-          "href": "https://github.com/kureen-cyber/turbo-giggle",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/191",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/98",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/42",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -2816,69 +1531,16 @@
           "location": "github.com/kureen-cyber/turbo-giggle"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "CSS",
-        "JavaScript",
-        "PLpgSQL",
-        "Vim Snippet",
-        "HTML"
-      ],
-      "highlight": "Live: https://banterfolio.vercel.app/"
+      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)"
     },
     {
       "slug": "lorra-v",
       "name": "Lorraine Villaroel",
       "github": "Lorra-V",
-      "campus": "TBD",
-      "role": "Builder",
-      "skills": [],
-      "bio": "Lorraine Villaroel — Hult Cohort builder (@Lorra-V).",
-      "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/216057099?v=4",
-      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
-      "homepageUrls": [
-        "https://www.webblyweb.com/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/198",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/108",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/65",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/61",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/46"
-      ],
-      "portfolio": [
-        {
-          "label": "ai-engineering-showcase",
-          "href": "https://github.com/Lorra-V/ai-engineering-showcase",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/198",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/108",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/65",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/61",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/46",
-          "kind": "pr"
-        }
-      ],
+      "bio": "Lorraine Villaroel — Hult Cohort builder (@Lorra-V).",
+      "campus": "TBD",
+      "technologies": [],
       "projects": [
         {
           "id": "lorra-v-ai-engineering-showcase",
@@ -2890,74 +1552,21 @@
           "location": "github.com/Lorra-V/ai-engineering-showcase"
         }
       ],
-      "technologies": [],
-      "highlight": "Live: https://www.webblyweb.com/"
+      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)"
     },
     {
       "slug": "lvcasmadeit",
       "name": "Lucas Brandao",
       "github": "lvcasmadeit",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/109086409?v=4",
+      "bio": "Lucas Brandao — Hult Cohort builder (@lvcasmadeit).",
       "campus": "Lowell, Massachusetts",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "CSS",
         "JavaScript",
         "PLpgSQL",
         "HTML"
-      ],
-      "bio": "Lucas Brandao — Hult Cohort builder (@lvcasmadeit).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/109086409?v=4",
-      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
-      "homepageUrls": [
-        "https://mast-six.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/95",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/67"
-      ],
-      "portfolio": [
-        {
-          "label": "Mast",
-          "href": "https://github.com/lvcasmadeit/Mast",
-          "kind": "repo"
-        },
-        {
-          "label": "Mast · live",
-          "href": "https://mast-six.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "teamwrk",
-          "href": "https://github.com/lvcasmadeit/teamwrk",
-          "kind": "repo"
-        },
-        {
-          "label": "lvcasmadeit",
-          "href": "https://github.com/lvcasmadeit/lvcasmadeit",
-          "kind": "repo"
-        },
-        {
-          "label": "AI-ML-Webpage",
-          "href": "https://github.com/lvcasmadeit/AI-ML-Webpage",
-          "kind": "repo"
-        },
-        {
-          "label": "UML-AI-ML-Club",
-          "href": "https://github.com/lvcasmadeit/UML-AI-ML-Club",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/95",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/67",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -3024,60 +1633,17 @@
           "location": "github.com/lvcasmadeit/UML-AI-ML-Club"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "CSS",
-        "JavaScript",
-        "PLpgSQL",
-        "HTML"
-      ],
-      "highlight": "Live: https://mast-six.vercel.app/"
+      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)"
     },
     {
       "slug": "mitchelldante99-create",
       "name": "Dante Mitchell",
       "github": "mitchelldante99-create",
-      "campus": "TBD",
-      "role": "Builder",
-      "skills": [
-        "HTML"
-      ],
-      "bio": "Dante Mitchell — Hult Cohort builder (@mitchelldante99-create).",
-      "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/222322612?v=4",
-      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)",
-      "homepageUrls": [],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/190",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/109",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/39"
-      ],
-      "portfolio": [
-        {
-          "label": "Week-2-comms",
-          "href": "https://github.com/mitchelldante99-create/Week-2-comms",
-          "kind": "repo"
-        },
-        {
-          "label": "my-first-repo",
-          "href": "https://github.com/mitchelldante99-create/my-first-repo",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/190",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/109",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/39",
-          "kind": "pr"
-        }
+      "bio": "Dante Mitchell — Hult Cohort builder (@mitchelldante99-create).",
+      "campus": "TBD",
+      "technologies": [
+        "HTML"
       ],
       "projects": [
         {
@@ -3103,17 +1669,16 @@
           "location": "github.com/mitchelldante99-create/my-first-repo"
         }
       ],
-      "technologies": [
-        "HTML"
-      ]
+      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)"
     },
     {
       "slug": "nikjain15",
       "name": "Nik Jain",
       "github": "nikjain15",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/161231855?v=4",
+      "bio": "I re-architect trillion-dollar financial systems into AI-native platforms, and build AI-first products from zero. 3x founder · IIT-Bombay · Forbes 30U30",
       "campus": "New Hampshire",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "Python",
         "TypeScript",
         "CSS",
@@ -3123,117 +1688,6 @@
         "Astro",
         "HTML",
         "Dockerfile"
-      ],
-      "bio": "I re-architect trillion-dollar financial systems into AI-native platforms, and build AI-first products from zero. 3x founder · IIT-Bombay · Forbes 30U30",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/161231855?v=4",
-      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
-      "homepageUrls": [
-        "https://nikjain15.github.io/",
-        "https://nikjain15.github.io/build-os/",
-        "https://rally-nikjain15.vercel.app/",
-        "https://founderfirst.one/",
-        "https://pm-nikjain15.vercel.app/",
-        "https://roleos.fyi/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/81",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/63",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/62",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/48",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/41"
-      ],
-      "portfolio": [
-        {
-          "label": "build-os",
-          "href": "https://github.com/nikjain15/build-os",
-          "kind": "repo"
-        },
-        {
-          "label": "build-os · live",
-          "href": "https://nikjain15.github.io/build-os/",
-          "kind": "showcase"
-        },
-        {
-          "label": "rally",
-          "href": "https://github.com/nikjain15/rally",
-          "kind": "repo"
-        },
-        {
-          "label": "rally · live",
-          "href": "https://rally-nikjain15.vercel.app/",
-          "kind": "comms"
-        },
-        {
-          "label": "founderfirst.one",
-          "href": "https://github.com/nikjain15/founderfirst.one",
-          "kind": "repo"
-        },
-        {
-          "label": "founderfirst.one · live",
-          "href": "https://founderfirst.one/",
-          "kind": "showcase"
-        },
-        {
-          "label": "pulse",
-          "href": "https://github.com/nikjain15/pulse",
-          "kind": "repo"
-        },
-        {
-          "label": "pulse · live",
-          "href": "https://pm-nikjain15.vercel.app/",
-          "kind": "pm"
-        },
-        {
-          "label": "roleos-site",
-          "href": "https://github.com/nikjain15/roleos-site",
-          "kind": "repo"
-        },
-        {
-          "label": "roleos-site · live",
-          "href": "https://roleos.fyi/",
-          "kind": "comms"
-        },
-        {
-          "label": "conduit",
-          "href": "https://github.com/nikjain15/conduit",
-          "kind": "repo"
-        },
-        {
-          "label": "roleos-app",
-          "href": "https://github.com/nikjain15/roleos-app",
-          "kind": "repo"
-        },
-        {
-          "label": "nikjain15.github.io",
-          "href": "https://github.com/nikjain15/nikjain15.github.io",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/81",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/63",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/62",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/48",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/41",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -3347,26 +1801,16 @@
           "location": "github.com/nikjain15/nikjain15.github.io"
         }
       ],
-      "technologies": [
-        "Python",
-        "TypeScript",
-        "CSS",
-        "JavaScript",
-        "Shell",
-        "PLpgSQL",
-        "Astro",
-        "HTML",
-        "Dockerfile"
-      ],
-      "highlight": "Live: https://nikjain15.github.io/"
+      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)"
     },
     {
       "slug": "paramjeet-singh-neu",
       "name": "Param",
       "github": "Paramjeet-singh-neu",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/181403125?v=4",
+      "bio": "AI/ML Engineer, Building production LLM systems, RAG pipelines, and agentic workflows",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "JavaScript",
         "PLpgSQL",
         "HTML",
@@ -3376,99 +1820,6 @@
         "Makefile",
         "Shell",
         "Bru"
-      ],
-      "bio": "AI/ML Engineer, Building production LLM systems, RAG pipelines, and agentic workflows",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/181403125?v=4",
-      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
-      "homepageUrls": [
-        "https://www.paramjeetsingh.me/",
-        "https://ship-vote-three.vercel.app/",
-        "https://quick-quiz-seven-coral.vercel.app/",
-        "https://job-copilot-six.vercel.app/",
-        "https://cornerman.streamlit.app/",
-        "https://web-rust-alpha-21.vercel.app/",
-        "https://3-d-portfolio-one-lilac.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/50"
-      ],
-      "portfolio": [
-        {
-          "label": "ShipVote",
-          "href": "https://github.com/Paramjeet-singh-neu/ShipVote",
-          "kind": "repo"
-        },
-        {
-          "label": "ShipVote · live",
-          "href": "https://ship-vote-three.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "QuickQuiz",
-          "href": "https://github.com/Paramjeet-singh-neu/QuickQuiz",
-          "kind": "repo"
-        },
-        {
-          "label": "QuickQuiz · live",
-          "href": "https://quick-quiz-seven-coral.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "JobCopilot",
-          "href": "https://github.com/Paramjeet-singh-neu/JobCopilot",
-          "kind": "repo"
-        },
-        {
-          "label": "JobCopilot · live",
-          "href": "https://job-copilot-six.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "Cornerman",
-          "href": "https://github.com/Paramjeet-singh-neu/Cornerman",
-          "kind": "repo"
-        },
-        {
-          "label": "Cornerman · live",
-          "href": "https://cornerman.streamlit.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "WorkLog",
-          "href": "https://github.com/Paramjeet-singh-neu/WorkLog",
-          "kind": "repo"
-        },
-        {
-          "label": "WorkLog · live",
-          "href": "https://web-rust-alpha-21.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "3D-Portfolio",
-          "href": "https://github.com/Paramjeet-singh-neu/3D-Portfolio",
-          "kind": "repo"
-        },
-        {
-          "label": "3D-Portfolio · live",
-          "href": "https://3-d-portfolio-one-lilac.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "SpecHunt",
-          "href": "https://github.com/Paramjeet-singh-neu/SpecHunt",
-          "kind": "repo"
-        },
-        {
-          "label": "Paramjeet-event-talks-app",
-          "href": "https://github.com/Paramjeet-singh-neu/Paramjeet-event-talks-app",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/50",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -3588,26 +1939,16 @@
           "location": "github.com/Paramjeet-singh-neu/Paramjeet-event-talks-app"
         }
       ],
-      "technologies": [
-        "JavaScript",
-        "PLpgSQL",
-        "HTML",
-        "TypeScript",
-        "Python",
-        "CSS",
-        "Makefile",
-        "Shell",
-        "Bru"
-      ],
-      "highlight": "Live: https://www.paramjeetsingh.me/"
+      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)"
     },
     {
       "slug": "priyanshshahh",
       "name": "Priyansh Shah",
       "github": "priyanshshahh",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/113941045?v=4",
+      "bio": "Data Scientist & Blockchain Developer | Stony Brook AMS Major | AI, NLP & Trading Enthusiast | Python, SQL, Tableau",
       "campus": "New York",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "CSS",
         "JavaScript",
@@ -3616,129 +1957,6 @@
         "HTML",
         "Dockerfile",
         "Shell"
-      ],
-      "bio": "Data Scientist & Blockchain Developer | Stony Brook AMS Major | AI, NLP & Trading Enthusiast | Python, SQL, Tableau",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/113941045?v=4",
-      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
-      "homepageUrls": [
-        "https://shiplog-snowy.vercel.app/",
-        "https://cohort-comms-phi.vercel.app/",
-        "https://crypto-price-prediction-ten.vercel.app/",
-        "https://keel-pm.vercel.app/",
-        "https://athlix-ai.vercel.app/",
-        "https://poly-agent.fly.dev/",
-        "https://fusionscope.vercel.app/",
-        "https://v0-personal-portfolio-website-eight-theta.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/197",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/161",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/122",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/120",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/118"
-      ],
-      "portfolio": [
-        {
-          "label": "shiplog",
-          "href": "https://github.com/priyanshshahh/shiplog",
-          "kind": "repo"
-        },
-        {
-          "label": "shiplog · live",
-          "href": "https://shiplog-snowy.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "cohort-comms",
-          "href": "https://github.com/priyanshshahh/cohort-comms",
-          "kind": "repo"
-        },
-        {
-          "label": "cohort-comms · live",
-          "href": "https://cohort-comms-phi.vercel.app/",
-          "kind": "comms"
-        },
-        {
-          "label": "Crypto-Price-Prediction",
-          "href": "https://github.com/priyanshshahh/Crypto-Price-Prediction",
-          "kind": "repo"
-        },
-        {
-          "label": "Crypto-Price-Prediction · live",
-          "href": "https://crypto-price-prediction-ten.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "keel-pm",
-          "href": "https://github.com/priyanshshahh/keel-pm",
-          "kind": "repo"
-        },
-        {
-          "label": "keel-pm · live",
-          "href": "https://keel-pm.vercel.app/",
-          "kind": "pm"
-        },
-        {
-          "label": "athlix-ai",
-          "href": "https://github.com/priyanshshahh/athlix-ai",
-          "kind": "repo"
-        },
-        {
-          "label": "athlix-ai · live",
-          "href": "https://athlix-ai.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "polymarket-sentiment-agent",
-          "href": "https://github.com/priyanshshahh/polymarket-sentiment-agent",
-          "kind": "repo"
-        },
-        {
-          "label": "polymarket-sentiment-agent · live",
-          "href": "https://poly-agent.fly.dev/",
-          "kind": "showcase"
-        },
-        {
-          "label": "fusionscope",
-          "href": "https://github.com/priyanshshahh/fusionscope",
-          "kind": "repo"
-        },
-        {
-          "label": "fusionscope · live",
-          "href": "https://fusionscope.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "fraud-job-detection-pipeline",
-          "href": "https://github.com/priyanshshahh/fraud-job-detection-pipeline",
-          "kind": "repo"
-        },
-        {
-          "label": "fraud-job-detection-pipeline · live",
-          "href": "https://v0-personal-portfolio-website-eight-theta.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/197",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/161",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/122",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/120",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -3862,105 +2080,20 @@
           "location": "v0-personal-portfolio-website-eight-theta.vercel.app"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "CSS",
-        "JavaScript",
-        "PLpgSQL",
-        "Python",
-        "HTML",
-        "Dockerfile",
-        "Shell"
-      ],
-      "highlight": "Live: https://shiplog-snowy.vercel.app/"
+      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)"
     },
     {
       "slug": "r3s0lv343vr",
       "name": "r3s0lv343vr",
       "github": "r3s0lv343vr",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/297017555?v=4",
+      "bio": "r3s0lv343vr — Hult Cohort builder (@r3s0lv343vr).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "CSS",
         "Shell",
         "JavaScript"
-      ],
-      "bio": "r3s0lv343vr — Hult Cohort builder (@r3s0lv343vr).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/297017555?v=4",
-      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)",
-      "homepageUrls": [
-        "https://lnq-eight.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/185",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/123",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/70",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/68",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/44"
-      ],
-      "portfolio": [
-        {
-          "label": "lnq",
-          "href": "https://github.com/r3s0lv343vr/lnq",
-          "kind": "repo"
-        },
-        {
-          "label": "lnq · live",
-          "href": "https://lnq-eight.vercel.app/",
-          "kind": "comms"
-        },
-        {
-          "label": "vibe-marketing-platform",
-          "href": "https://github.com/r3s0lv343vr/vibe-marketing-platform",
-          "kind": "repo"
-        },
-        {
-          "label": "MessageMe",
-          "href": "https://github.com/r3s0lv343vr/MessageMe",
-          "kind": "repo"
-        },
-        {
-          "label": "pm-r3s0lv343vr",
-          "href": "https://github.com/r3s0lv343vr/pm-r3s0lv343vr",
-          "kind": "repo"
-        },
-        {
-          "label": "portfolio",
-          "href": "https://github.com/r3s0lv343vr/portfolio",
-          "kind": "repo"
-        },
-        {
-          "label": "my-first-repo",
-          "href": "https://github.com/r3s0lv343vr/my-first-repo",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/185",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/123",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/70",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/68",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/44",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -4038,84 +2171,19 @@
           "location": "github.com/r3s0lv343vr/my-first-repo"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "CSS",
-        "Shell",
-        "JavaScript"
-      ],
-      "highlight": "Live: https://lnq-eight.vercel.app/"
+      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)"
     },
     {
       "slug": "ramyatolety",
       "name": "RamyaTolety",
       "github": "RamyaTolety",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/57016501?v=4",
+      "bio": "RamyaTolety — Hult Cohort builder (@RamyaTolety).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "JavaScript",
         "CSS"
-      ],
-      "bio": "RamyaTolety — Hult Cohort builder (@RamyaTolety).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/57016501?v=4",
-      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
-      "homepageUrls": [
-        "https://beacon-ramyatolety.vercel.app/",
-        "https://pm-ramyatolety.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/189",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/105",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/49"
-      ],
-      "portfolio": [
-        {
-          "label": "beacon-ramyatolety",
-          "href": "https://github.com/RamyaTolety/beacon-ramyatolety",
-          "kind": "repo"
-        },
-        {
-          "label": "beacon-ramyatolety · live",
-          "href": "https://beacon-ramyatolety.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "pm-ramyatolety",
-          "href": "https://github.com/RamyaTolety/pm-ramyatolety",
-          "kind": "repo"
-        },
-        {
-          "label": "pm-ramyatolety · live",
-          "href": "https://pm-ramyatolety.vercel.app/",
-          "kind": "pm"
-        },
-        {
-          "label": "lighthouse-ramyatolety",
-          "href": "https://github.com/RamyaTolety/lighthouse-ramyatolety",
-          "kind": "repo"
-        },
-        {
-          "label": "week-1-onboarding",
-          "href": "https://github.com/RamyaTolety/week-1-onboarding",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/189",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/105",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/49",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -4169,20 +2237,16 @@
           "location": "github.com/RamyaTolety/week-1-onboarding"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "JavaScript",
-        "CSS"
-      ],
-      "highlight": "Live: https://beacon-ramyatolety.vercel.app/"
+      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)"
     },
     {
       "slug": "raven-dubgub",
       "name": "RAVEN-dubgub",
       "github": "RAVEN-dubgub",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/181426915?v=4",
+      "bio": "RAVEN-dubgub — Hult Cohort builder (@RAVEN-dubgub).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "CSS",
         "JavaScript",
@@ -4190,77 +2254,6 @@
         "Batchfile",
         "Python",
         "HTML"
-      ],
-      "bio": "RAVEN-dubgub — Hult Cohort builder (@RAVEN-dubgub).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/181426915?v=4",
-      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
-      "homepageUrls": [
-        "https://showcase-raven-dubgub.vercel.app/",
-        "https://pm-raven-dubgub.vercel.app/",
-        "https://comms-raven-dubgub.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/183",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/101",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/57"
-      ],
-      "portfolio": [
-        {
-          "label": "showcase-raven-dubgub",
-          "href": "https://github.com/RAVEN-dubgub/showcase-raven-dubgub",
-          "kind": "repo"
-        },
-        {
-          "label": "showcase-raven-dubgub · live",
-          "href": "https://showcase-raven-dubgub.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "pm-RAVEN-dubgub",
-          "href": "https://github.com/RAVEN-dubgub/pm-RAVEN-dubgub",
-          "kind": "repo"
-        },
-        {
-          "label": "pm-RAVEN-dubgub · live",
-          "href": "https://pm-raven-dubgub.vercel.app/",
-          "kind": "pm"
-        },
-        {
-          "label": "comms-raven-dubgub",
-          "href": "https://github.com/RAVEN-dubgub/comms-raven-dubgub",
-          "kind": "repo"
-        },
-        {
-          "label": "comms-raven-dubgub · live",
-          "href": "https://comms-raven-dubgub.vercel.app/",
-          "kind": "comms"
-        },
-        {
-          "label": "my-portfolio",
-          "href": "https://github.com/RAVEN-dubgub/my-portfolio",
-          "kind": "repo"
-        },
-        {
-          "label": "my-first-repo",
-          "href": "https://github.com/RAVEN-dubgub/my-first-repo",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/183",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/101",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/57",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -4332,55 +2325,17 @@
           "location": "github.com/RAVEN-dubgub/my-first-repo"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "CSS",
-        "JavaScript",
-        "PowerShell",
-        "Batchfile",
-        "Python",
-        "HTML"
-      ],
-      "highlight": "Live: https://showcase-raven-dubgub.vercel.app/"
+      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)"
     },
     {
       "slug": "rebekah-dev",
       "name": "Rebekah Wigton",
       "github": "rebekah-dev",
-      "campus": "TBD",
-      "role": "Builder",
-      "skills": [
-        "Python"
-      ],
-      "bio": "Rebekah Wigton — Hult Cohort builder (@rebekah-dev).",
-      "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/57730012?v=4",
-      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
-      "homepageUrls": [],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/80"
-      ],
-      "portfolio": [
-        {
-          "label": "Snyk",
-          "href": "https://github.com/rebekah-dev/Snyk",
-          "kind": "repo"
-        },
-        {
-          "label": "Spinal-code",
-          "href": "https://github.com/rebekah-dev/Spinal-code",
-          "kind": "repo"
-        },
-        {
-          "label": "test",
-          "href": "https://github.com/rebekah-dev/test",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/80",
-          "kind": "pr"
-        }
+      "bio": "Rebekah Wigton — Hult Cohort builder (@rebekah-dev).",
+      "campus": "TBD",
+      "technologies": [
+        "Python"
       ],
       "projects": [
         {
@@ -4413,43 +2368,16 @@
           "location": "github.com/rebekah-dev/test"
         }
       ],
-      "technologies": [
-        "Python"
-      ]
+      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)"
     },
     {
       "slug": "ryanroper79-alt",
       "name": "CEAL Green",
       "github": "ryanroper79-alt",
-      "campus": "TBD",
-      "role": "Builder",
-      "skills": [],
-      "bio": "Building energy efficiency and renewable energy solutions",
-      "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/249829727?v=4",
-      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)",
-      "homepageUrls": [],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/201",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/186"
-      ],
-      "portfolio": [
-        {
-          "label": "my-first-repo",
-          "href": "https://github.com/ryanroper79-alt/my-first-repo",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/201",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/186",
-          "kind": "pr"
-        }
-      ],
+      "bio": "Building energy efficiency and renewable energy solutions",
+      "campus": "TBD",
+      "technologies": [],
       "projects": [
         {
           "id": "ryanroper79-alt-my-first-repo",
@@ -4461,50 +2389,19 @@
           "location": "github.com/ryanroper79-alt/my-first-repo"
         }
       ],
-      "technologies": []
+      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)"
     },
     {
       "slug": "solzco1",
       "name": "solzco1",
       "github": "solzco1",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/297009782?v=4",
+      "bio": "solzco1 — Hult Cohort builder (@solzco1).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "CSS",
         "JavaScript"
-      ],
-      "bio": "solzco1 — Hult Cohort builder (@solzco1).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/297009782?v=4",
-      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
-      "homepageUrls": [
-        "https://my-portfolio-eight-smoky-76.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/104"
-      ],
-      "portfolio": [
-        {
-          "label": "my-portfolio",
-          "href": "https://github.com/solzco1/my-portfolio",
-          "kind": "repo"
-        },
-        {
-          "label": "my-portfolio · live",
-          "href": "https://my-portfolio-eight-smoky-76.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "my-first-repo",
-          "href": "https://github.com/solzco1/my-first-repo",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/104",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -4531,95 +2428,19 @@
           "location": "github.com/solzco1/my-first-repo"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "CSS",
-        "JavaScript"
-      ],
-      "highlight": "Live: https://my-portfolio-eight-smoky-76.vercel.app/"
+      "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)"
     },
     {
       "slug": "studmuffin01",
       "name": "Studmuffin01",
       "github": "Studmuffin01",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/294016067?v=4",
+      "bio": "Studmuffin01 — Hult Cohort builder (@Studmuffin01).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "JavaScript",
         "CSS"
-      ],
-      "bio": "Studmuffin01 — Hult Cohort builder (@Studmuffin01).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/294016067?v=4",
-      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
-      "homepageUrls": [
-        "https://initiara.vercel.app/",
-        "https://my-portfolio-rawle.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/193",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/182",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/181",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/165",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/112"
-      ],
-      "portfolio": [
-        {
-          "label": "Project-Management-Build",
-          "href": "https://github.com/Studmuffin01/Project-Management-Build",
-          "kind": "repo"
-        },
-        {
-          "label": "Project-Management-Build · live",
-          "href": "https://initiara.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "my-portfolio",
-          "href": "https://github.com/Studmuffin01/my-portfolio",
-          "kind": "repo"
-        },
-        {
-          "label": "my-portfolio · live",
-          "href": "https://my-portfolio-rawle.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "initiara",
-          "href": "https://github.com/Studmuffin01/initiara",
-          "kind": "repo"
-        },
-        {
-          "label": "my-first-repo",
-          "href": "https://github.com/Studmuffin01/my-first-repo",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/193",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/182",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/181",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/165",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/112",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -4673,59 +2494,20 @@
           "location": "github.com/Studmuffin01/my-first-repo"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "JavaScript",
-        "CSS"
-      ],
-      "highlight": "Live: https://initiara.vercel.app/"
+      "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)"
     },
     {
       "slug": "supercuda",
       "name": "SuperCUDA",
       "github": "SuperCUDA",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/7886329?v=4",
+      "bio": "SuperCUDA — Hult Cohort builder (@SuperCUDA).",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "JavaScript",
         "CSS",
         "HTML"
-      ],
-      "bio": "SuperCUDA — Hult Cohort builder (@SuperCUDA).",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/7886329?v=4",
-      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
-      "homepageUrls": [],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/71"
-      ],
-      "portfolio": [
-        {
-          "label": "mergeboard",
-          "href": "https://github.com/SuperCUDA/mergeboard",
-          "kind": "repo"
-        },
-        {
-          "label": "nidusdeck",
-          "href": "https://github.com/SuperCUDA/nidusdeck",
-          "kind": "repo"
-        },
-        {
-          "label": "SpineCare",
-          "href": "https://github.com/SuperCUDA/SpineCare",
-          "kind": "repo"
-        },
-        {
-          "label": "SpineSurgeryCost",
-          "href": "https://github.com/SuperCUDA/SpineSurgeryCost",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/71",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -4775,20 +2557,16 @@
           "location": "github.com/SuperCUDA/SpineSurgeryCost"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "JavaScript",
-        "CSS",
-        "HTML"
-      ]
+      "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)"
     },
     {
       "slug": "zukhriddingit",
       "name": "Zukhriddin Fakhriddinov",
       "github": "zukhriddingit",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/60740313?v=4",
+      "bio": "ML Engineer | Data Scientist | Python Master",
       "campus": "TBD",
-      "role": "Builder",
-      "skills": [
+      "technologies": [
         "TypeScript",
         "PLpgSQL",
         "JavaScript",
@@ -4798,92 +2576,6 @@
         "Python",
         "HTML",
         "Makefile"
-      ],
-      "bio": "ML Engineer | Data Scientist | Python Master",
-      "public": true,
-      "avatarUrl": "https://avatars.githubusercontent.com/u/60740313?v=4",
-      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)",
-      "homepageUrls": [
-        "https://momentum-bay-two.vercel.app/",
-        "https://formation-mu-beryl.vercel.app/"
-      ],
-      "prUrls": [
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/102",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/69",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/60",
-        "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/43"
-      ],
-      "portfolio": [
-        {
-          "label": "Momentum",
-          "href": "https://github.com/zukhriddingit/Momentum",
-          "kind": "repo"
-        },
-        {
-          "label": "Momentum · live",
-          "href": "https://momentum-bay-two.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "Formation",
-          "href": "https://github.com/zukhriddingit/Formation",
-          "kind": "repo"
-        },
-        {
-          "label": "Formation · live",
-          "href": "https://formation-mu-beryl.vercel.app/",
-          "kind": "showcase"
-        },
-        {
-          "label": "VeraAI",
-          "href": "https://github.com/zukhriddingit/VeraAI",
-          "kind": "repo"
-        },
-        {
-          "label": "VeraMove",
-          "href": "https://github.com/zukhriddingit/VeraMove",
-          "kind": "repo"
-        },
-        {
-          "label": "CoachLens",
-          "href": "https://github.com/zukhriddingit/CoachLens",
-          "kind": "repo"
-        },
-        {
-          "label": "ai-chess-arena",
-          "href": "https://github.com/zukhriddingit/ai-chess-arena",
-          "kind": "repo"
-        },
-        {
-          "label": "LabOps",
-          "href": "https://github.com/zukhriddingit/LabOps",
-          "kind": "repo"
-        },
-        {
-          "label": "ResearchAI",
-          "href": "https://github.com/zukhriddingit/ResearchAI",
-          "kind": "repo"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/102",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/69",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/60",
-          "kind": "pr"
-        },
-        {
-          "label": "Cohort submission PR",
-          "href": "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/43",
-          "kind": "pr"
-        }
       ],
       "projects": [
         {
@@ -5007,18 +2699,7 @@
           "location": "github.com/zukhriddingit/ResearchAI"
         }
       ],
-      "technologies": [
-        "TypeScript",
-        "PLpgSQL",
-        "JavaScript",
-        "CSS",
-        "Shell",
-        "Dockerfile",
-        "Python",
-        "HTML",
-        "Makefile"
-      ],
-      "highlight": "Live: https://momentum-bay-two.vercel.app/"
+      "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)"
     }
   ]
 }
