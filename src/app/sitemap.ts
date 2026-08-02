@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getDirectoryParticipants } from "@/lib/directory";
 import { getRoster } from "@/lib/roster";
 
 export const dynamic = "force-static";
@@ -9,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/cohort",
     "/partners",
+    "/partners/directory",
     "/partners/login",
     "/partners/signup",
     "/studio",
@@ -21,5 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${base}/profiles/${p.slug}`,
     lastModified: new Date(),
   }));
-  return [...staticRoutes, ...profileRoutes];
+  const directoryRoutes = getDirectoryParticipants().map((p) => ({
+    url: `${base}/partners/directory/${p.slug}`,
+    lastModified: new Date(),
+  }));
+  return [...staticRoutes, ...profileRoutes, ...directoryRoutes];
 }

@@ -1,7 +1,4 @@
-# Copy to data/handles.txt or use this file directly:
-#   GITHUB_TOKEN=xxx npm run import:roster -- data/handles.example.txt --write
-#
-# One GitHub handle per line (optional CSV: github,Name,Campus)
+# Cohort GitHub handles — Summer Pilot 2026
 arjun-singh2127
 artira
 celiciakitty-creator

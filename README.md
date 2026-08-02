@@ -74,7 +74,7 @@ Node 20+ recommended.
 | `npm run start` | Serve production build |
 | `npm run lint` | ESLint |
 | `npm run typecheck` | TypeScript check |
-| `npm run import:roster -- data/handles.txt --write` | Bulk-import classmates from GitHub handles |
+| `npm run import:roster -- data/handles.txt --write` | Bulk-import classmates from GitHub handles into the Partners directory |
 
 ### Bulk-import classmates from GitHub
 

@@ -32,6 +32,9 @@ export default async function PartnersHomePage() {
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
+            <Link href="/partners/directory" className="btn btn-primary !py-2">
+              Directory
+            </Link>
             <Link href="/cohort" className="btn btn-ghost !py-2">
               Cohort
             </Link>

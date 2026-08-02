@@ -23,28 +23,29 @@ export default async function PartnersPage() {
         Hire and invest on evidence — not résumés.
       </h1>
       <p className="mt-5 max-w-2xl text-lg text-[var(--ink-soft)]">
-        The Partners side is for hiring partners, employers, and investors. Sign in to open the full
-        showcase feed: a large project slider up top, then a dense portal of builders and live work.
+        The Partners side is for hiring partners, employers, and investors. Start with the searchable
+        cohort directory — names, GitHub handles, technologies, repositories, and live Vercel
+        projects.
       </p>
 
       <div className="mt-8 flex flex-wrap gap-3">
+        <Link href="/partners/directory" className="btn btn-primary">
+          Open directory
+        </Link>
         {isPartner ? (
-          <Link href="/partners/home" className="btn btn-primary">
-            Open Partners home
+          <Link href="/partners/home" className="btn btn-secondary">
+            Partners home
           </Link>
         ) : (
           <>
-            <Link href="/partners/signup" className="btn btn-primary">
+            <Link href="/partners/signup" className="btn btn-secondary">
               Partner sign up
             </Link>
-            <Link href="/partners/login" className="btn btn-secondary">
+            <Link href="/partners/login" className="btn btn-ghost">
               Partner log in
             </Link>
           </>
         )}
-        <Link href="/cohort" className="btn btn-ghost">
-          Browse cohort
-        </Link>
       </div>
 
       <section id="showcase" className="mt-14">
