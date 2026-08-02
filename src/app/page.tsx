@@ -77,7 +77,7 @@ export default function HomePage() {
             </p>
           </div>
           <Link href="/signup" className="btn btn-ghost">
-            Sign up to begin
+            Sign up with GitHub
           </Link>
         </div>
         <div className="mt-10 divide-y divide-[var(--line)] border-y border-[var(--line)]">
