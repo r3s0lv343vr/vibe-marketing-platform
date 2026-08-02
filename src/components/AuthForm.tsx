@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
+import { PROFILE_STORAGE_KEY, type StudentProfile } from "@/lib/profile";
 
 type Mode = "login" | "signup";
 type Audience = "student" | "partner";
@@ -56,6 +57,21 @@ export function AuthForm({
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Request failed");
+
+      // Seed Profile Builder with the same GitHub/roster fields returned by auth.
+      if (data.profile && typeof window !== "undefined") {
+        try {
+          localStorage.setItem(
+            PROFILE_STORAGE_KEY,
+            JSON.stringify(data.profile as StudentProfile),
+          );
+          sessionStorage.setItem("pixie_profile_linked", data.linked ? "1" : "0");
+          if (data.fromRoster) sessionStorage.setItem("pixie_profile_from_roster", "1");
+        } catch {
+          // localStorage may be unavailable; builder can still re-fetch from GitHub.
+        }
+      }
+
       router.push(data.next || resolvedNext);
       router.refresh();
     } catch (err) {

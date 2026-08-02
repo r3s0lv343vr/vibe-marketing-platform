@@ -1,7 +1,13 @@
 import { NextResponse } from "next/server";
 import { encodeSession, sessionCookieOptions, type UserRole } from "@/lib/auth";
 import { githubIdentityEmail, normalizeGithubHandle } from "@/lib/githubHandle";
-import { downloadGithubStudentProfile, getRosterByGithub } from "@/lib/githubProfileImport";
+import {
+  downloadGithubStudentProfile,
+  getRosterByGithub,
+  studentProfileFromRoster,
+} from "@/lib/githubProfileImport";
+import { emptyProfile } from "@/lib/profile";
+import { grantAiAccessCookies } from "@/lib/profileAccess";
 
 function looksLikeEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
@@ -24,7 +30,8 @@ export async function POST(request: Request) {
 
   const password = body.password?.trim();
   const role: UserRole = body.role === "partner" ? "partner" : "student";
-  const preferEmail = body.identity === "email" || (!body.github && looksLikeEmail(body.email || ""));
+  const preferEmail =
+    body.identity === "email" || (!body.github && looksLikeEmail(body.email || ""));
 
   if (!password || password.length < 6) {
     return NextResponse.json(
@@ -42,17 +49,29 @@ export async function POST(request: Request) {
       );
     }
 
+    let importedProfile = emptyProfile(body.name?.trim() || handle);
     let name = body.name?.trim() || "";
-    const roster = getRosterByGithub(handle);
-    if (roster?.name) name = roster.name;
+    let fromRoster = false;
 
-    if (!name) {
-      try {
-        const imported = await downloadGithubStudentProfile(handle);
-        name = imported.name;
-      } catch {
-        name = handle;
+    try {
+      const imported = await downloadGithubStudentProfile(handle);
+      importedProfile = imported.profile;
+      name = imported.name || name || handle;
+      fromRoster = imported.fromRoster;
+    } catch {
+      const roster = getRosterByGithub(handle);
+      if (roster) {
+        importedProfile = studentProfileFromRoster(roster);
+        name = roster.name;
+        fromRoster = true;
+      } else {
+        name = name || handle;
+        importedProfile = emptyProfile(name);
       }
+    }
+
+    if (!importedProfile.displayName) {
+      importedProfile.displayName = name;
     }
 
     const email = githubIdentityEmail(handle);
@@ -60,9 +79,15 @@ export async function POST(request: Request) {
     const response = NextResponse.json({
       ok: true,
       user: { name, email, role, github: handle },
-      next: "/app/profile",
+      profile: importedProfile,
+      fromRoster,
+      linked: true,
+      aiAccess: true,
+      // Land on linked profile form; AI tools are already unlocked.
+      next: "/app/profile?linked=1",
     });
     response.cookies.set(sessionCookieOptions(token));
+    grantAiAccessCookies(response, email, importedProfile);
     return response;
   }
 
@@ -76,11 +101,17 @@ export async function POST(request: Request) {
   }
 
   const token = encodeSession({ name, email, role });
+  const seed = emptyProfile(name);
   const response = NextResponse.json({
     ok: true,
     user: { name, email, role },
+    profile: role === "student" ? seed : undefined,
+    aiAccess: role === "student",
     next: role === "partner" ? "/partners/home" : "/app/profile",
   });
   response.cookies.set(sessionCookieOptions(token));
+  if (role === "student") {
+    grantAiAccessCookies(response, email, seed);
+  }
   return response;
 }

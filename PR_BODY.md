@@ -10,7 +10,7 @@ https://nextmove-hult.vercel.app
 - https://nextmove-hult.vercel.app/profiles/jordan-crumbtrail
 
 ## Vibe / positioning notes
-**One-liner:** NextMove plates cohort proof for hiring partners — Brand DNA, live profiles, and intros you can taste.
+**One-liner:** NextMove plates cohort proof for hiring partners — Brand DNA, live profiles, GitHub-linked student AI tools, and intros you can taste.
 
 **Tone:** Warm, sensorial, lightly magical (rose sugar, champagne gold, mint frosting) without soft standards — partners skim for GitHub-visible evidence, not hype.
 
