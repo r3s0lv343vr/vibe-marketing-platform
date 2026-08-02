@@ -17,7 +17,7 @@ export default function PartnerDirectoryPage() {
       : null;
 
   return (
-    <div className="site-shell py-12">
+    <div className="site-shell !w-[min(1280px,calc(100%-2rem))] py-12">
       <nav aria-label="Breadcrumb" className="text-sm text-[var(--ink-soft)]">
         <Link href="/partners" className="hover:text-[var(--rose-deep)]">
           Partners

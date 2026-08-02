@@ -53,7 +53,7 @@ export function PartnerDirectory({ participants, initialError = null }: Props) {
       <div className="panel-solid p-8" aria-busy="true" aria-live="polite">
         <p className="eyebrow">Directory</p>
         <p className="mt-3 text-[var(--ink-soft)]">Loading cohort builders…</p>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {Array.from({ length: 8 }).map((_, i) => (
             <div
               key={i}
@@ -148,9 +148,9 @@ export function PartnerDirectory({ participants, initialError = null }: Props) {
           </p>
         </div>
       ) : (
-        <ul className="mt-6 grid list-none gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <ul className="mt-6 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {results.map((person) => (
-            <li key={person.slug}>
+            <li key={person.slug} className="min-w-0">
               <DirectoryTile person={person} />
             </li>
           ))}
@@ -168,7 +168,7 @@ function DirectoryTile({ person }: { person: DirectoryParticipant }) {
   return (
     <Link
       href={`/partners/directory/${person.slug}`}
-      className="tile group !min-h-[280px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--rose-deep)]"
+      className="tile group h-full !min-h-[260px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--rose-deep)]"
     >
       <div>
         {person.avatarUrl ? (
