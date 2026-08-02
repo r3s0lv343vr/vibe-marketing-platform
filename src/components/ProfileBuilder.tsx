@@ -13,11 +13,11 @@ import {
   type StudentProject,
 } from "@/lib/profile";
 
-function loadLocal(defaultName: string): StudentProfile {
-  if (typeof window === "undefined") return emptyProfile(defaultName);
+function loadLocal(defaultName: string): StudentProfile | null {
+  if (typeof window === "undefined") return null;
   try {
     const raw = localStorage.getItem(PROFILE_STORAGE_KEY);
-    if (!raw) return emptyProfile(defaultName);
+    if (!raw) return null;
     const parsed = JSON.parse(raw) as StudentProfile;
     return {
       ...emptyProfile(defaultName),
@@ -29,32 +29,122 @@ function loadLocal(defaultName: string): StudentProfile {
           : emptyProfile(defaultName).projects,
     };
   } catch {
-    return emptyProfile(defaultName);
+    return null;
   }
+}
+
+function isBlankProfile(profile: StudentProfile) {
+  return (
+    !profile.bio.trim() &&
+    profile.skills.length === 0 &&
+    profile.universities.length === 0 &&
+    !profile.avatarDataUrl &&
+    !profile.projects.some(
+      (p) => p.title.trim() || p.websiteUrl.trim() || p.githubUrl.trim(),
+    )
+  );
 }
 
 export function ProfileBuilder({
   defaultName,
   email,
+  github,
 }: {
   defaultName: string;
   email: string;
+  github?: string;
 }) {
   const router = useRouter();
   const [profile, setProfile] = useState<StudentProfile>(() => emptyProfile(defaultName));
   const [skillsInput, setSkillsInput] = useState("");
   const [uniInput, setUniInput] = useState("");
   const [error, setError] = useState("");
+  const [notice, setNotice] = useState("");
   const [saving, setSaving] = useState(false);
+  const [importing, setImporting] = useState(false);
   const [hydrated, setHydrated] = useState(false);
 
+  function applyImportedProfile(next: StudentProfile, sourceLabel: string) {
+    setProfile(next);
+    setSkillsInput(next.skills.join(", "));
+    setUniInput(next.universities.join(", "));
+    localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(next));
+    setNotice(sourceLabel);
+  }
+
+  async function downloadFromGithub(opts?: { silent?: boolean }) {
+    if (!github) {
+      if (!opts?.silent) {
+        setError("This account has no GitHub handle. Sign up again with your GitHub username.");
+      }
+      return false;
+    }
+    setImporting(true);
+    setError("");
+    try {
+      const res = await fetch("/api/profile/from-github", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ github }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "GitHub download failed");
+      applyImportedProfile(
+        data.profile as StudentProfile,
+        data.fromRoster
+          ? `Loaded cohort roster data for @${data.handle}, refreshed from GitHub.`
+          : `Downloaded public GitHub profile for @${data.handle}.`,
+      );
+      return true;
+    } catch (err) {
+      if (!opts?.silent) {
+        setError(err instanceof Error ? err.message : "GitHub download failed");
+      }
+      return false;
+    } finally {
+      setImporting(false);
+    }
+  }
+
   useEffect(() => {
-    const local = loadLocal(defaultName);
-    setProfile(local);
-    setSkillsInput(local.skills.join(", "));
-    setUniInput(local.universities.join(", "));
-    setHydrated(true);
-  }, [defaultName]);
+    let cancelled = false;
+    (async () => {
+      const local = loadLocal(defaultName);
+      if (local && !isBlankProfile(local)) {
+        if (cancelled) return;
+        setProfile(local);
+        setSkillsInput(local.skills.join(", "));
+        setUniInput(local.universities.join(", "));
+        setHydrated(true);
+        return;
+      }
+
+      if (github) {
+        const ok = await downloadFromGithub({ silent: true });
+        if (cancelled) return;
+        if (!ok) {
+          const fallback = emptyProfile(defaultName);
+          setProfile(fallback);
+          setSkillsInput("");
+          setUniInput("");
+        }
+        setHydrated(true);
+        return;
+      }
+
+      if (cancelled) return;
+      const empty = emptyProfile(defaultName);
+      setProfile(empty);
+      setSkillsInput("");
+      setUniInput("");
+      setHydrated(true);
+    })();
+    return () => {
+      cancelled = true;
+    };
+    // Intentionally run once on mount for this signed-in student.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [defaultName, github]);
 
   const complete = useMemo(() => isProfileComplete(profile), [profile]);
 
@@ -188,7 +278,11 @@ export function ProfileBuilder({
 
   if (!hydrated) {
     return (
-      <div className="panel p-8 text-[var(--ink-soft)]">Loading your profile builder…</div>
+      <div className="panel p-8 text-[var(--ink-soft)]">
+        {importing
+          ? "Downloading your public GitHub profile into the builder…"
+          : "Loading your profile builder…"}
+      </div>
     );
   }
 
@@ -198,11 +292,34 @@ export function ProfileBuilder({
         <p className="eyebrow">Profile builder</p>
         <h1 className="display mt-3 text-4xl sm:text-5xl">Build your student profile</h1>
         <p className="mt-4 text-lg leading-relaxed text-[var(--ink-soft)]">
-          Add what you can now — bio, universities, skills, and projects. For this testing phase you
-          can save a partial profile and continue to{" "}
+          We pull the same public GitHub data used for the Partners directory — name, avatar, bio,
+          skills, repos, and live project links — so you can develop your forward-facing profile.
+          Edit anything, then continue to{" "}
           <strong className="text-[var(--ink)]">What do you want to do today?</strong>
         </p>
-        <p className="mt-2 text-sm text-[var(--ink-soft)]">Signed in as {email}</p>
+        <p className="mt-2 text-sm text-[var(--ink-soft)]">
+          Signed in as {github ? `@${github}` : email}
+        </p>
+        {github ? (
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              className="btn btn-secondary !py-2"
+              disabled={importing || saving}
+              onClick={() => downloadFromGithub()}
+            >
+              {importing ? "Downloading…" : "Re-download from GitHub"}
+            </button>
+            <span className="text-sm text-[var(--ink-soft)]">
+              Overwrites the builder with a fresh public GitHub pull.
+            </span>
+          </div>
+        ) : null}
+        {notice ? (
+          <p className="mt-3 text-sm font-medium text-[var(--rose-deep)]" role="status">
+            {notice}
+          </p>
+        ) : null}
       </header>
 
       <section className="panel-solid p-6 sm:p-8">
@@ -348,7 +465,7 @@ export function ProfileBuilder({
                     value={project.title}
                     onChange={(e) => updateProject(project.id, { title: e.target.value })}
                     className="field"
-                    placeholder="Pixie Dust Cheesecake"
+                    placeholder="NextMove"
                   />
                 </label>
                 <label className="label">

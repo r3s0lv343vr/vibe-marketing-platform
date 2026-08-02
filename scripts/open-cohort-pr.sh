@@ -5,7 +5,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SUBMISSION="$ROOT/submissions/r3s0lv343vr-project-3.md"
 WORKDIR="${TMPDIR:-/tmp}/hult-cohort-program-p3"
-PROD_URL="${PROD_URL:-https://pixie-dust-cheesecake.vercel.app}"
+PROD_URL="${PROD_URL:-https://nextmove-hult.vercel.app}"
 
 if [[ ! -f "$SUBMISSION" ]]; then
   echo "Missing $SUBMISSION" >&2
@@ -22,8 +22,8 @@ git checkout -B participants/summer26/phase-1-project-3/r3s0lv343vr \
 mkdir -p submissions
 cp "$SUBMISSION" submissions/r3s0lv343vr-project-3.md
 # Refresh production URLs in the copied submission if overridden
-if [[ "$PROD_URL" != "https://pixie-dust-cheesecake.vercel.app" ]]; then
-  sed -i.bak "s|https://pixie-dust-cheesecake.vercel.app|${PROD_URL}|g" \
+if [[ "$PROD_URL" != "https://nextmove-hult.vercel.app" ]]; then
+  sed -i.bak "s|https://nextmove-hult.vercel.app|${PROD_URL}|g" \
     submissions/r3s0lv343vr-project-3.md
   rm -f submissions/r3s0lv343vr-project-3.md.bak
 fi
@@ -39,7 +39,7 @@ gh pr create \
   --title "[Project 3] Submission — r3s0lv343vr" \
   --body "$(cat <<EOF
 ## Summary
-Pixie Dust Cheesecake — vibe marketing platform for the Hult Cohort Summer Pilot 2026. Ships cohort profiles, partner intro flow, PM status snapshot, and an AI Brand Designer studio. Build repo: https://github.com/r3s0lv343vr/vibe-marketing-platform
+NextMove — vibe marketing platform for the Hult Cohort Summer Pilot 2026. Ships cohort profiles, partner intro flow, PM status snapshot, and an AI Brand Designer studio. Build repo: https://github.com/r3s0lv343vr/vibe-marketing-platform
 
 ## Production URL
 ${PROD_URL}
@@ -50,7 +50,7 @@ ${PROD_URL}
 - ${PROD_URL}/profiles/jordan-crumbtrail
 
 ## Vibe / positioning notes
-**One-liner:** Pixie Dust Cheesecake plates cohort proof for hiring partners — Brand DNA, live profiles, and intros you can taste.
+**One-liner:** NextMove plates cohort proof for hiring partners — Brand DNA, live profiles, and intros you can taste.
 
 **Tone:** Warm, sensorial, lightly magical (rose sugar, champagne gold, mint frosting) without soft standards — partners skim for GitHub-visible evidence, not hype.
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ProjectShowcaseSlider } from "@/components/ProjectShowcaseSlider";
 import { RequestIntroForm } from "@/components/RequestIntroForm";
 import { getSession } from "@/lib/auth";
-import { getRosterShowcaseSlides } from "@/lib/roster";
 
 export const metadata: Metadata = {
   title: "Partners",
@@ -13,7 +11,6 @@ export const metadata: Metadata = {
 
 export default async function PartnersPage() {
   const session = await getSession();
-  const slides = getRosterShowcaseSlides();
   const isPartner = session?.role === "partner";
 
   return (
@@ -47,23 +44,6 @@ export default async function PartnersPage() {
           </>
         )}
       </div>
-
-      <section id="showcase" className="mt-14">
-        <div className="mb-6 max-w-2xl">
-          <p className="eyebrow">Preview</p>
-          <h2 className="display mt-3 text-4xl">Live project slider</h2>
-          <p className="mt-3 text-[var(--ink-soft)]">
-            After you sign in, this becomes your greeting screen — bigger, with builder details under
-            each slide and the MSN-style feed below.
-          </p>
-        </div>
-        <ProjectShowcaseSlider
-          slides={slides}
-          variant="stacked"
-          detailsPosition="bottom"
-          size="large"
-        />
-      </section>
 
       <div className="mt-14 grid gap-6 lg:grid-cols-3">
         {[

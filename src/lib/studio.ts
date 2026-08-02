@@ -151,7 +151,7 @@ export function buildPreview(prompt: string, brand: BrandDna, goal: string): str
   const title = prompt.trim() || "What are we marketing today?";
   return [
     `<section style="font-family:Georgia,serif;padding:2rem;background:linear-gradient(160deg,${brand.colors[0]},${brand.colors[1]});color:${brand.colors[3] || "#2B2420"}">`,
-    `<p style="letter-spacing:.18em;text-transform:uppercase;font-size:.7rem;opacity:.8">Pixie Dust · ${goal}</p>`,
+    `<p style="letter-spacing:.18em;text-transform:uppercase;font-size:.7rem;opacity:.8">NextMove · ${goal}</p>`,
     `<h1 style="font-size:2.2rem;line-height:1.1;margin:.6rem 0 1rem">${title}</h1>`,
     `<p style="max-width:36ch;font-family:system-ui,sans-serif;font-size:1rem">${brand.mission}</p>`,
     `<p style="margin-top:1.5rem;font-family:system-ui,sans-serif;font-size:.85rem"><strong>Tone:</strong> ${brand.tone} · <strong>Type:</strong> ${brand.typography}</p>`,

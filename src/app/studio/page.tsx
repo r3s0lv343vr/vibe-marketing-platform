@@ -4,7 +4,7 @@ import { StudioApp } from "@/components/StudioApp";
 export const metadata: Metadata = {
   title: "Studio",
   description:
-    "Pixie Dust Cheesecake AI Brand Designer — conversational Brand DNA, Vibe Meter, mood board, and campaign builder.",
+    "NextMove AI Brand Designer — conversational Brand DNA, Vibe Meter, mood board, and campaign builder.",
 };
 
 export default function StudioPage() {

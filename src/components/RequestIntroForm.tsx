@@ -38,7 +38,7 @@ export function RequestIntroForm() {
       // Static / Pages fallback — open mail client for placement lead
       const students = payload.students.join(", ") || "(none selected)";
       const subject = encodeURIComponent(
-        `Pixie Dust Cheesecake intro request — ${payload.company}`,
+        `NextMove intro request — ${payload.company}`,
       );
       const body = encodeURIComponent(
         [

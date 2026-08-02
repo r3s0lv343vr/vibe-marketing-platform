@@ -3,13 +3,12 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { LogoutButton } from "@/components/LogoutButton";
 import { PartnerFeed } from "@/components/PartnerFeed";
-import { ProjectShowcaseSlider } from "@/components/ProjectShowcaseSlider";
 import { getSession } from "@/lib/auth";
 import { getRosterShowcaseSlides, publicRoster } from "@/lib/roster";
 
 export const metadata: Metadata = {
   title: "Partners home",
-  description: "Signed-in Partners showcase — live project slider and cohort portal feed.",
+  description: "Signed-in Partners showcase — cohort portal feed and builder directory.",
 };
 
 export default async function PartnersHomePage() {
@@ -47,16 +46,6 @@ export default async function PartnersHomePage() {
       </div>
 
       <section className="site-shell pt-6">
-        <ProjectShowcaseSlider
-          slides={slides}
-          variant="stacked"
-          detailsPosition="bottom"
-          size="hero"
-          autoPlayMs={7000}
-        />
-      </section>
-
-      <section className="site-shell">
         <PartnerFeed builders={builders} slides={slides} />
       </section>
     </div>

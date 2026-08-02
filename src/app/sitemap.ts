@@ -5,7 +5,7 @@ import { getRoster } from "@/lib/roster";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://pixie-dust-cheesecake.vercel.app";
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://nextmove-hult.vercel.app";
   const staticRoutes = [
     "",
     "/cohort",

@@ -1,10 +1,10 @@
-# Pixie Dust Cheesecake
+# NextMove
 
 Vibe marketing platform for the **Hult Cohort Developer Program · Summer Pilot 2026**.
 
-Pixie Dust Cheesecake presents the cohort — and each participant’s shipped work — with energy that attracts hiring partners. It is also an AI Brand Designer studio: from a single conversation it drafts Brand DNA, assets, campaign starters, and a live preview you can refine in plain English.
+NextMove presents the cohort — and each participant’s shipped work — with energy that attracts hiring partners. It is also an AI Brand Designer studio: from a single conversation it drafts Brand DNA, assets, campaign starters, and a live preview you can refine in plain English.
 
-**Production:** [https://pixie-dust-cheesecake.vercel.app](https://pixie-dust-cheesecake.vercel.app)
+**Production:** [https://nextmove-hult.vercel.app](https://nextmove-hult.vercel.app)
 
 **Build repo:** [r3s0lv343vr/vibe-marketing-platform](https://github.com/r3s0lv343vr/vibe-marketing-platform)
 
@@ -14,7 +14,7 @@ Pixie Dust Cheesecake presents the cohort — and each participant’s shipped w
 
 ## Project overview
 
-Hiring partners should not have to trust a résumé. They should open a profile, click into production apps, and let GitHub tell the story. Pixie Dust Cheesecake is that outward-facing surface:
+Hiring partners should not have to trust a résumé. They should open a profile, click into production apps, and let GitHub tell the story. NextMove is that outward-facing surface:
 
 - Public cohort homepage with narrative and brand presence
 - Per-student profiles (GitHub, campus, skills, portfolio links)
@@ -147,8 +147,8 @@ Cohort submission PRs target `rogerSuperBuilderAlpha/hult-cohort-program` base `
 
 Once deployed:
 
-- https://pixie-dust-cheesecake.vercel.app/profiles/r3s0lv343vr
-- https://pixie-dust-cheesecake.vercel.app/profiles/maya-sugarveil
-- https://pixie-dust-cheesecake.vercel.app/profiles/jordan-crumbtrail
+- https://nextmove-hult.vercel.app/profiles/r3s0lv343vr
+- https://nextmove-hult.vercel.app/profiles/maya-sugarveil
+- https://nextmove-hult.vercel.app/profiles/jordan-crumbtrail
 
 (Additional placeholders: `aisha-glaze`; opt-out demo: `private-opt-out`.)

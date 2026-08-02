@@ -51,11 +51,11 @@ export const pmProjects: PmProject[] = [
   {
     id: "p3-showcase",
     name: "Phase 1 · Project 3 — Public showcase",
-    owner: "r3s0lv343vr · Pixie Dust Cheesecake",
+    owner: "r3s0lv343vr · NextMove",
     status: "on-track",
     phase: "Submission window",
     progress: 85,
-    deployUrl: "https://pixie-dust-cheesecake.vercel.app",
+    deployUrl: "https://nextmove-hult.vercel.app",
     repoUrl: "https://github.com/r3s0lv343vr/vibe-marketing-platform",
     notes: "Partner-facing vibe marketing showcase with profiles, intro requests, and PM snapshot.",
   },
