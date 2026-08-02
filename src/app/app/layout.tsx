@@ -10,7 +10,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
 
   return (
     <div className="site-shell py-10">
-      <div className="mb-10 flex flex-wrap items-center justify-between gap-3 rounded-[var(--radius-lg)] border border-[var(--line)] bg-white px-4 py-4 shadow-[var(--shadow-sm)]">
+      <div className="panel-solid mb-10 flex flex-wrap items-center justify-between gap-3 px-4 py-4">
         <div>
           <p className="eyebrow">Workspace</p>
           <p className="mt-1 text-lg font-semibold text-[var(--ink)]">Hi, {session.name}</p>
@@ -18,6 +18,9 @@ export default async function AppLayout({ children }: { children: React.ReactNod
         <div className="flex flex-wrap gap-2 text-sm">
           <Link href="/app/profile" className="btn btn-ghost !py-2">
             Profile
+          </Link>
+          <Link href="/app/social" className="btn btn-ghost !py-2">
+            Social
           </Link>
           <Link href="/app" className="btn btn-ghost !py-2">
             Agents home

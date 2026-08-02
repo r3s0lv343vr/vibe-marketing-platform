@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SocialBrandRow } from "@/components/SocialIcons";
 import { TASKS } from "@/lib/agents";
 
 export const metadata: Metadata = {
@@ -22,9 +23,12 @@ function TileGrid({
         <Link key={tile.slug} href={tile.href} className="tile group">
           <div>
             <p className="eyebrow">Agent task</p>
-            <h2 className="display mt-3 text-3xl transition-colors group-hover:text-[var(--rose-deep)]">
+            <h2 className="display mt-3 text-3xl transition-colors group-hover:text-[var(--aurora)]">
               {tile.title}
             </h2>
+            {tile.slug === "social" ? (
+              <SocialBrandRow className="mt-3" iconClassName="h-6 w-6" />
+            ) : null}
             <p className="mt-3 text-[var(--ink-soft)] leading-relaxed">{tile.blurb}</p>
           </div>
           <p className="mt-6 text-sm font-semibold text-[var(--ink)]">Begin →</p>
