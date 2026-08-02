@@ -6,7 +6,7 @@ type Props = {
   slides: ShowcaseSlide[];
 };
 
-/** Dense MSN-style portal grid under the Partners hero slider. */
+/** Dense MSN-style portal grid for signed-in Partners home. */
 export function PartnerFeed({ builders, slides }: Props) {
   const featured = slides.slice(0, 1)[0];
   const secondary = slides.slice(1, 5);
@@ -209,7 +209,7 @@ export function PartnerFeed({ builders, slides }: Props) {
             },
             {
               title: "Click live apps",
-              body: "Use the slider and wire to open production homepages in seconds.",
+              body: "Open production homepages from the directory and project links in seconds.",
             },
             {
               title: "Request an intro",
