@@ -279,17 +279,100 @@ a {
   box-shadow: var(--shadow-sm);
 }
 
-.band-brand {
+.band-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-bottom: 1px solid rgba(148, 200, 255, 0.12);
   background:
-    radial-gradient(620px 280px at 12% 0%, rgba(62, 255, 176, 0.28), transparent 60%),
-    radial-gradient(500px 240px at 90% 100%, rgba(56, 189, 248, 0.18), transparent 55%),
-    linear-gradient(135deg, #031525 0%, #0a2f52 45%, #064e3b 100%);
+    radial-gradient(900px 420px at 8% 0%, rgba(62, 255, 176, 0.16), transparent 58%),
+    radial-gradient(720px 380px at 92% 18%, rgba(56, 189, 248, 0.12), transparent 55%),
+    linear-gradient(165deg, rgba(4, 22, 42, 0.92) 0%, rgba(8, 36, 68, 0.78) 55%, rgba(3, 18, 36, 0.55) 100%);
+}
+
+.band-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.22;
+  background-image:
+    repeating-linear-gradient(
+      -18deg,
+      rgba(125, 211, 252, 0.05) 0,
+      rgba(125, 211, 252, 0.05) 1px,
+      transparent 1px,
+      transparent 14px
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.band-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.band-brand {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   color: var(--cream);
-  animation: aurora-glow 6s ease-in-out infinite alternate;
+  /* Complementary focus strip: deeper teal-cyan within the same aurora family */
+  background:
+    radial-gradient(720px 320px at 10% 0%, rgba(45, 212, 191, 0.34), transparent 58%),
+    radial-gradient(640px 300px at 88% 100%, rgba(14, 165, 233, 0.28), transparent 55%),
+    linear-gradient(128deg, #02263a 0%, #0a4a5c 38%, #0f766e 72%, #115e59 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(167, 243, 208, 0.18),
+    inset 0 -1px 0 rgba(2, 20, 36, 0.35),
+    0 24px 60px rgba(6, 78, 59, 0.28);
+  animation: aurora-glow 7s ease-in-out infinite alternate;
+}
+
+.band-brand::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.28;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08), transparent 34%),
+    repeating-linear-gradient(
+      24deg,
+      rgba(204, 251, 241, 0.07) 0,
+      rgba(204, 251, 241, 0.07) 1px,
+      transparent 1px,
+      transparent 16px
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.band-brand::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 24, 40, 0.2) 0%,
+    transparent 35%,
+    transparent 65%,
+    rgba(6, 40, 52, 0.22) 100%
+  );
+  pointer-events: none;
+}
+
+.band-brand > * {
+  position: relative;
+  z-index: 1;
 }
 
 .band-brand .eyebrow {
-  color: rgba(126, 240, 200, 0.9);
+  color: rgba(167, 243, 208, 0.95);
 }
 
 .btn {
@@ -475,6 +558,7 @@ a:focus-visible {
   .btn:hover,
   .tile:hover,
   .band-brand,
+  .band-hero,
   body::before {
     animation: none;
     transform: none;

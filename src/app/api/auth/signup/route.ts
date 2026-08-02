@@ -3,6 +3,10 @@ import { encodeSession, sessionCookieOptions, type UserRole } from "@/lib/auth";
 import { githubIdentityEmail, normalizeGithubHandle } from "@/lib/githubHandle";
 import { downloadGithubStudentProfile, getRosterByGithub } from "@/lib/githubProfileImport";
 
+function looksLikeEmail(value: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
 export async function POST(request: Request) {
   let body: {
     name?: string;
@@ -10,6 +14,7 @@ export async function POST(request: Request) {
     password?: string;
     role?: string;
     github?: string;
+    identity?: string;
   };
   try {
     body = await request.json();
@@ -19,6 +24,7 @@ export async function POST(request: Request) {
 
   const password = body.password?.trim();
   const role: UserRole = body.role === "partner" ? "partner" : "student";
+  const preferEmail = body.identity === "email" || (!body.github && looksLikeEmail(body.email || ""));
 
   if (!password || password.length < 6) {
     return NextResponse.json(
@@ -27,7 +33,7 @@ export async function POST(request: Request) {
     );
   }
 
-  if (role === "student") {
+  if (role === "student" && !preferEmail) {
     const handle = normalizeGithubHandle(body.github || body.email);
     if (!handle) {
       return NextResponse.json(
@@ -62,7 +68,7 @@ export async function POST(request: Request) {
 
   const name = body.name?.trim();
   const email = body.email?.trim().toLowerCase();
-  if (!name || !email) {
+  if (!name || !email || !looksLikeEmail(email)) {
     return NextResponse.json(
       { error: "Name, email, and password (6+ chars) are required." },
       { status: 400 },
@@ -70,7 +76,11 @@ export async function POST(request: Request) {
   }
 
   const token = encodeSession({ name, email, role });
-  const response = NextResponse.json({ ok: true, user: { name, email, role } });
+  const response = NextResponse.json({
+    ok: true,
+    user: { name, email, role },
+    next: role === "partner" ? "/partners/home" : "/app/profile",
+  });
   response.cookies.set(sessionCookieOptions(token));
   return response;
 }

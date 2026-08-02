@@ -3,6 +3,10 @@ import { encodeSession, sessionCookieOptions, type UserRole } from "@/lib/auth";
 import { githubIdentityEmail, normalizeGithubHandle } from "@/lib/githubHandle";
 import { getRosterByGithub } from "@/lib/githubProfileImport";
 
+function looksLikeEmail(value: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
 export async function POST(request: Request) {
   let body: {
     email?: string;
@@ -10,6 +14,7 @@ export async function POST(request: Request) {
     name?: string;
     role?: string;
     github?: string;
+    identity?: string;
   };
   try {
     body = await request.json();
@@ -19,12 +24,16 @@ export async function POST(request: Request) {
 
   const password = body.password?.trim();
   const role: UserRole = body.role === "partner" ? "partner" : "student";
+  const preferEmail =
+    body.identity === "email" ||
+    looksLikeEmail(body.email || "") ||
+    role === "partner";
 
   if (!password) {
     return NextResponse.json({ error: "Password is required." }, { status: 400 });
   }
 
-  if (role === "student") {
+  if (role === "student" && !preferEmail) {
     const handle = normalizeGithubHandle(body.github || body.email);
     if (!handle) {
       return NextResponse.json(
@@ -34,10 +43,7 @@ export async function POST(request: Request) {
     }
 
     const roster = getRosterByGithub(handle);
-    const name =
-      body.name?.trim() ||
-      roster?.name ||
-      handle;
+    const name = body.name?.trim() || roster?.name || handle;
     const email = githubIdentityEmail(handle);
     const token = encodeSession({ name, email, role, github: handle });
     const response = NextResponse.json({
@@ -50,14 +56,17 @@ export async function POST(request: Request) {
   }
 
   const email = body.email?.trim().toLowerCase();
-  if (!email) {
+  if (!email || !looksLikeEmail(email)) {
     return NextResponse.json({ error: "Email and password are required." }, { status: 400 });
   }
 
-  // MVP demo auth: any valid email/password pair receives a partner session.
-  const name = body.name?.trim() || email.split("@")[0] || "Partner";
+  const name = body.name?.trim() || email.split("@")[0] || (role === "partner" ? "Partner" : "Student");
   const token = encodeSession({ name, email, role });
-  const response = NextResponse.json({ ok: true, user: { name, email, role } });
+  const response = NextResponse.json({
+    ok: true,
+    user: { name, email, role },
+    next: role === "partner" ? "/partners/home" : "/app/profile",
+  });
   response.cookies.set(sessionCookieOptions(token));
   return response;
 }
