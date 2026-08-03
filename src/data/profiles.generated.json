@@ -506,7 +506,7 @@
         "HTML",
         "RouterOS Script"
       ],
-      "bio": "Hey! My name is Calvin and I'm a Developer Advocate and full-stack software engineer with an AI focus in Resilient Coders and 100Devs.",
+      "bio": "Hey! My name is Calvin and I'm a Developer Advocate and full-stack software engineer with an AI focus in Resilient Coders and 100Devs. Built Forth (PM) — winner of the first project week.",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/200448977?v=4",
       "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
@@ -549,12 +549,12 @@
           "kind": "showcase"
         },
         {
-          "label": "forth",
+          "label": "Forth · repo",
           "href": "https://github.com/CodingWCal/forth",
           "kind": "repo"
         },
         {
-          "label": "forth · live",
+          "label": "Forth · PM platform (Project 1 winner)",
           "href": "https://forth-bice.vercel.app/",
           "kind": "pm"
         },
@@ -661,8 +661,8 @@
         },
         {
           "id": "codingwcal-forth",
-          "name": "forth",
-          "description": "Project work with a pulse — a motivational project-management workspace.",
+          "name": "Forth",
+          "description": "Project work with a pulse — a motivational project-management workspace. Project 1 week winner for the Hult Cohort Summer Pilot.",
           "repoUrl": "https://github.com/CodingWCal/forth",
           "liveUrl": "https://forth-bice.vercel.app/",
           "languages": [
@@ -754,7 +754,7 @@
         "HTML",
         "RouterOS Script"
       ],
-      "highlight": "Live: https://calvinvancreations.com/"
+      "highlight": "Forth · Project 1 week winner"
     },
     {
       "slug": "divyaprakash04",

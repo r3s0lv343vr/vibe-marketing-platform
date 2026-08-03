@@ -314,8 +314,8 @@
         },
         {
           "id": "codingwcal-forth",
-          "name": "forth",
-          "description": "Project work with a pulse — a motivational project-management workspace.",
+          "name": "Forth",
+          "description": "Project work with a pulse — a motivational project-management workspace. Project 1 week winner for the Hult Cohort Summer Pilot.",
           "repoUrl": "https://github.com/CodingWCal/forth",
           "liveUrl": "https://forth-bice.vercel.app/",
           "languages": [
