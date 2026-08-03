@@ -76,7 +76,7 @@ export const profiles: CohortProfile[] = [
     campus: "Boston, MA",
     role: "Builder · Developer Advocate",
     skills: ["TypeScript", "Next.js", "Full-stack", "AI"],
-    bio: "Developer Advocate and full-stack engineer. Built Forth — the Project 1 week winning PM platform for the Hult Cohort Summer Pilot — plus liaison, odyssey, and other shipped cohort work.",
+    bio: "Hey! My name is Calvin and I'm a Developer Advocate and full-stack software engineer with an AI focus in Resilient Coders and 100Devs. Built Forth (PM) — winner of the first project week.",
     public: true,
     avatarUrl: "https://avatars.githubusercontent.com/u/200448977?v=4",
     photoGradient: "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
