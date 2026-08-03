@@ -73,8 +73,9 @@ export const TASKS = {
   },
   social: {
     slug: "social",
-    title: "Social Profile Studio",
-    blurb: "Professionally manage Facebook, Instagram, and LinkedIn presence for hireability.",
+    title: "Social Media Marketing",
+    blurb:
+      "Facebook, Instagram, and LinkedIn terminals — craft, preview, copy/export, and link accounts.",
     href: "/app/social",
     group: "career" as const,
     agents: [

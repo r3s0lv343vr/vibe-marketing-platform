@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
-import { AgentRunner } from "@/components/AgentRunner";
-import { TASKS } from "@/lib/agents";
+import { SocialMarketingStudio } from "@/components/SocialMarketingStudio";
 
 export const metadata: Metadata = {
-  title: "Social Profile Studio",
+  title: "Social Media Marketing",
+  description:
+    "Facebook, Instagram, and LinkedIn terminals — craft, preview, copy/export, and manually link accounts.",
 };
 
 export default function SocialAgentPage() {
-  return (
-    <AgentRunner
-      task="social"
-      title={TASKS.social.title}
-      agents={[...TASKS.social.agents]}
-      placeholder="Example: I’m shipping a PM platform + comms app; help me upgrade LinkedIn, Instagram, and Facebook for hiring partners"
-    />
-  );
+  return <SocialMarketingStudio />;
 }

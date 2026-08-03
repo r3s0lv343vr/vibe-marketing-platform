@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialBrandRow } from "@/components/SocialIcons";
 
 const capabilities = [
   {
@@ -14,8 +15,9 @@ const capabilities = [
     body: "Demo scripts and shot lists that make your build easy to share.",
   },
   {
-    title: "Social Profile Studio",
-    body: "Professionally manage Facebook, Instagram, and LinkedIn for hireability.",
+    title: "Social Media Marketing",
+    body: "Craft, preview, and export Facebook, Instagram, and LinkedIn posts — then link your accounts for shipping later.",
+    social: true as const,
   },
   {
     title: "Employer & Market Pulse",
@@ -116,7 +118,12 @@ export default function HomePage() {
               <span className="display text-sm font-semibold text-[var(--aurora)] sm:pt-1">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h3 className="display text-2xl text-[var(--ink)]">{item.title}</h3>
+              <div>
+                <h3 className="display text-2xl text-[var(--ink)]">{item.title}</h3>
+                {"social" in item && item.social ? (
+                  <SocialBrandRow className="mt-2" iconClassName="h-5 w-5" />
+                ) : null}
+              </div>
               <p className="leading-relaxed text-[var(--ink-soft)]">{item.body}</p>
             </div>
           ))}
