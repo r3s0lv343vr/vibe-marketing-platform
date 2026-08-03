@@ -16,7 +16,7 @@
         "HTML",
         "PLpgSQL"
       ],
-      "bio": "Arjun Singh \u2014 Hult Cohort builder (@arjun-singh2127).",
+      "bio": "Arjun Singh — Hult Cohort builder (@arjun-singh2127).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/241372456?v=4",
       "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
@@ -35,7 +35,7 @@
           "kind": "repo"
         },
         {
-          "label": "helm \u00b7 live",
+          "label": "helm · live",
           "href": "https://helm-web-neon.vercel.app/",
           "kind": "showcase"
         },
@@ -45,7 +45,7 @@
           "kind": "repo"
         },
         {
-          "label": "my-portfolio \u00b7 live",
+          "label": "my-portfolio · live",
           "href": "https://my-portfolio-plum-beta-10.vercel.app/",
           "kind": "showcase"
         },
@@ -176,7 +176,7 @@
         "Shell",
         "Makefile"
       ],
-      "bio": "Arti Ramanathan \u2014 Hult Cohort builder (@artira).",
+      "bio": "Arti Ramanathan — Hult Cohort builder (@artira).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/21232614?v=4",
       "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)",
@@ -198,7 +198,7 @@
           "kind": "repo"
         },
         {
-          "label": "cohort-showcase \u00b7 live",
+          "label": "cohort-showcase · live",
           "href": "https://cohort-showcase-pearl.vercel.app/",
           "kind": "showcase"
         },
@@ -208,7 +208,7 @@
           "kind": "repo"
         },
         {
-          "label": "cohort-comms \u00b7 live",
+          "label": "cohort-comms · live",
           "href": "https://cohort-comms-rho.vercel.app/",
           "kind": "comms"
         },
@@ -218,7 +218,7 @@
           "kind": "repo"
         },
         {
-          "label": "pm-artira \u00b7 live",
+          "label": "pm-artira · live",
           "href": "https://pm-artira-azure.vercel.app/",
           "kind": "pm"
         },
@@ -374,7 +374,7 @@
         "CSS",
         "JavaScript"
       ],
-      "bio": "celiciakitty-creator \u2014 Hult Cohort builder (@celiciakitty-creator).",
+      "bio": "celiciakitty-creator — Hult Cohort builder (@celiciakitty-creator).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/293418490?v=4",
       "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
@@ -393,7 +393,7 @@
           "kind": "repo"
         },
         {
-          "label": "cohort-in-bloom \u00b7 live",
+          "label": "cohort-in-bloom · live",
           "href": "https://cohort-in-bloom.vercel.app/",
           "kind": "showcase"
         },
@@ -403,7 +403,7 @@
           "kind": "repo"
         },
         {
-          "label": "anovia \u00b7 live",
+          "label": "anovia · live",
           "href": "https://anovia.vercel.app/",
           "kind": "showcase"
         },
@@ -413,7 +413,7 @@
           "kind": "repo"
         },
         {
-          "label": "my-portfolio \u00b7 live",
+          "label": "my-portfolio · live",
           "href": "https://my-portfolio-plum-nine-25.vercel.app/",
           "kind": "showcase"
         },
@@ -534,7 +534,7 @@
           "kind": "repo"
         },
         {
-          "label": "liaison-mvp \u00b7 live",
+          "label": "liaison-mvp · live",
           "href": "https://liaison-mvp.vercel.app/",
           "kind": "showcase"
         },
@@ -544,17 +544,17 @@
           "kind": "repo"
         },
         {
-          "label": "cursor-boston-showcase \u00b7 live",
+          "label": "cursor-boston-showcase · live",
           "href": "https://cursor-boston-showcase.vercel.app/",
           "kind": "showcase"
         },
         {
-          "label": "Forth \u00b7 repo",
+          "label": "Forth · repo",
           "href": "https://github.com/CodingWCal/forth",
           "kind": "repo"
         },
         {
-          "label": "Forth \u00b7 PM platform (Project 1 winner)",
+          "label": "Forth · PM platform (Project 1 winner)",
           "href": "https://forth-bice.vercel.app/",
           "kind": "pm"
         },
@@ -564,7 +564,7 @@
           "kind": "repo"
         },
         {
-          "label": "odyssey \u00b7 live",
+          "label": "odyssey · live",
           "href": "https://odyssey-trips.vercel.app/",
           "kind": "showcase"
         },
@@ -574,7 +574,7 @@
           "kind": "repo"
         },
         {
-          "label": "attention-sink-playground \u00b7 live",
+          "label": "attention-sink-playground · live",
           "href": "https://molab.marimo.io/notebooks/nb_BjxT4fWi3DtMSNFA7kVXk7/app",
           "kind": "showcase"
         },
@@ -584,7 +584,7 @@
           "kind": "repo"
         },
         {
-          "label": "frutiger-flocus \u00b7 live",
+          "label": "frutiger-flocus · live",
           "href": "https://frutiger-flocus.vercel.app/",
           "kind": "showcase"
         },
@@ -594,7 +594,7 @@
           "kind": "repo"
         },
         {
-          "label": "chakrax-image-model \u00b7 live",
+          "label": "chakrax-image-model · live",
           "href": "https://chakrax-generator.vercel.app/",
           "kind": "showcase"
         },
@@ -604,7 +604,7 @@
           "kind": "repo"
         },
         {
-          "label": "dc-comic-cover-generator \u00b7 live",
+          "label": "dc-comic-cover-generator · live",
           "href": "https://dc-comic-cover-generator.vercel.app/",
           "kind": "showcase"
         },
@@ -662,7 +662,7 @@
         {
           "id": "codingwcal-forth",
           "name": "Forth",
-          "description": "Project work with a pulse \u2014 a motivational project-management workspace. Project 1 week winner for the Hult Cohort Summer Pilot.",
+          "description": "Project work with a pulse — a motivational project-management workspace. Project 1 week winner for the Hult Cohort Summer Pilot.",
           "repoUrl": "https://github.com/CodingWCal/forth",
           "liveUrl": "https://forth-bice.vercel.app/",
           "languages": [
@@ -754,7 +754,7 @@
         "HTML",
         "RouterOS Script"
       ],
-      "highlight": "Forth \u00b7 Project 1 week winner"
+      "highlight": "Forth · Project 1 week winner"
     },
     {
       "slug": "divyaprakash04",
@@ -774,7 +774,7 @@
         "Jupyter Notebook",
         "Shell"
       ],
-      "bio": "Divya Prakash \u2014 Hult Cohort builder (@DivyaPrakash04).",
+      "bio": "Divya Prakash — Hult Cohort builder (@DivyaPrakash04).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/171474297?v=4",
       "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
@@ -793,7 +793,7 @@
           "kind": "repo"
         },
         {
-          "label": "ourvelocity \u00b7 live",
+          "label": "ourvelocity · live",
           "href": "https://ourvelocity.vercel.app/",
           "kind": "showcase"
         },
@@ -803,7 +803,7 @@
           "kind": "repo"
         },
         {
-          "label": "MyTwinAgent-rasa-bos-hackathon-2026 \u00b7 live",
+          "label": "MyTwinAgent-rasa-bos-hackathon-2026 · live",
           "href": "https://partiful.com/e/UaCivuHqb00uIv1YO6qZ",
           "kind": "showcase"
         },
@@ -880,7 +880,7 @@
         {
           "id": "divyaprakash04-diffsense",
           "name": "diffsense",
-          "description": "DiffSense \u2014 AI-powered CLI to turn raw git diffs into Conventional Commits, changelog snippets, and risk triage JSON. Offline-first, model-agnostic, and demo-ready.",
+          "description": "DiffSense — AI-powered CLI to turn raw git diffs into Conventional Commits, changelog snippets, and risk triage JSON. Offline-first, model-agnostic, and demo-ready.",
           "repoUrl": "https://github.com/DivyaPrakash04/diffsense",
           "languages": [
             "Python"
@@ -891,7 +891,7 @@
         {
           "id": "divyaprakash04-mythosguard",
           "name": "Mythosguard",
-          "description": "Mythosguard is an autonomous AI security system that simulates adversarial attacks, detects vulnerabilities, generates structured patches, and verifies fixes through sandboxed tests. It delivers self\u2011healing code, multi\u2011agent intelligence, and real\u2011time, reproducible security validation without human intervention.",
+          "description": "Mythosguard is an autonomous AI security system that simulates adversarial attacks, detects vulnerabilities, generates structured patches, and verifies fixes through sandboxed tests. It delivers self‑healing code, multi‑agent intelligence, and real‑time, reproducible security validation without human intervention.",
           "repoUrl": "https://github.com/DivyaPrakash04/Mythosguard",
           "languages": [
             "HTML",
@@ -915,7 +915,7 @@
         {
           "id": "divyaprakash04-support-ticket-ai-agent-framework-microsoft-dev-day-jan2026",
           "name": "Support-ticket-AI-agent-framework-microsoft-dev-day-Jan2026",
-          "description": "Support ticketing automation and my completed labs from Microsoft Agent Framework Dev Day in Jan 2026 \u2014 including support ticketing automation, MCP servers/clients, workflow patterns, and Agentic RAG implementations in .NET and Python.",
+          "description": "Support ticketing automation and my completed labs from Microsoft Agent Framework Dev Day in Jan 2026 — including support ticketing automation, MCP servers/clients, workflow patterns, and Agentic RAG implementations in .NET and Python.",
           "repoUrl": "https://github.com/DivyaPrakash04/Support-ticket-AI-agent-framework-microsoft-dev-day-Jan2026",
           "languages": [
             "C#",
@@ -982,7 +982,7 @@
         "TypeScript",
         "Python"
       ],
-      "bio": "Franklin Gomez \u2014 Hult Cohort builder (@frankgomezdev).",
+      "bio": "Franklin Gomez — Hult Cohort builder (@frankgomezdev).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/78661719?v=4",
       "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)",
@@ -1002,7 +1002,7 @@
           "kind": "repo"
         },
         {
-          "label": "edh-dashboard \u00b7 live",
+          "label": "edh-dashboard · live",
           "href": "https://enough-edh-dashboard.netlify.app/",
           "kind": "showcase"
         },
@@ -1012,7 +1012,7 @@
           "kind": "repo"
         },
         {
-          "label": "mtg-high-or-low \u00b7 live",
+          "label": "mtg-high-or-low · live",
           "href": "https://mtg-high-or-low.vercel.app/",
           "kind": "showcase"
         },
@@ -1022,7 +1022,7 @@
           "kind": "repo"
         },
         {
-          "label": "eye-lasers \u00b7 live",
+          "label": "eye-lasers · live",
           "href": "https://eye-lasers.netlify.app/",
           "kind": "showcase"
         },
@@ -1193,7 +1193,7 @@
         "Shell",
         "EJS"
       ],
-      "bio": "Godwin Kamau \u2014 Hult Cohort builder (@godwinKamau).",
+      "bio": "Godwin Kamau — Hult Cohort builder (@godwinKamau).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/229975188?v=4",
       "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
@@ -1219,7 +1219,7 @@
           "kind": "repo"
         },
         {
-          "label": "top-tier-app \u00b7 live",
+          "label": "top-tier-app · live",
           "href": "https://top-tier-app-lemon.vercel.app/",
           "kind": "showcase"
         },
@@ -1229,7 +1229,7 @@
           "kind": "repo"
         },
         {
-          "label": "hult-cohort-comms \u00b7 live",
+          "label": "hult-cohort-comms · live",
           "href": "https://hult-cohort-comms.vercel.app/",
           "kind": "comms"
         },
@@ -1239,7 +1239,7 @@
           "kind": "repo"
         },
         {
-          "label": "layouts4taytay \u00b7 live",
+          "label": "layouts4taytay · live",
           "href": "https://layouts4taytay.vercel.app/",
           "kind": "showcase"
         },
@@ -1249,7 +1249,7 @@
           "kind": "repo"
         },
         {
-          "label": "hult-cohort-PM-Project \u00b7 live",
+          "label": "hult-cohort-PM-Project · live",
           "href": "https://hult-cohort-pm-project.vercel.app/",
           "kind": "pm"
         },
@@ -1259,7 +1259,7 @@
           "kind": "repo"
         },
         {
-          "label": "Sharn-Map \u00b7 live",
+          "label": "Sharn-Map · live",
           "href": "https://sharn-map.vercel.app/",
           "kind": "showcase"
         },
@@ -1269,7 +1269,7 @@
           "kind": "repo"
         },
         {
-          "label": "alameda-county-asset-based-scaffold \u00b7 live",
+          "label": "alameda-county-asset-based-scaffold · live",
           "href": "https://alameda-county-asset-based-scaffold.vercel.app/",
           "kind": "showcase"
         },
@@ -1279,7 +1279,7 @@
           "kind": "repo"
         },
         {
-          "label": "evaluation-suite \u00b7 live",
+          "label": "evaluation-suite · live",
           "href": "https://evaluation-suite.vercel.app/",
           "kind": "showcase"
         },
@@ -1289,7 +1289,7 @@
           "kind": "repo"
         },
         {
-          "label": "secretKeys \u00b7 live",
+          "label": "secretKeys · live",
           "href": "https://secretkeys.onrender.com/",
           "kind": "showcase"
         },
@@ -1443,7 +1443,7 @@
         "JavaScript",
         "HTML"
       ],
-      "bio": "Jayden Phillip \u2014 Hult Cohort builder (@jayyyW34).",
+      "bio": "Jayden Phillip — Hult Cohort builder (@jayyyW34).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/296315793?v=4",
       "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
@@ -1461,7 +1461,7 @@
           "kind": "repo"
         },
         {
-          "label": "my-portfolio \u00b7 live",
+          "label": "my-portfolio · live",
           "href": "https://my-portfolio-jayden15.vercel.app/",
           "kind": "showcase"
         },
@@ -1532,7 +1532,7 @@
         "Shell",
         "Jupyter Notebook"
       ],
-      "bio": "jiaxinaspenlin-dotcom \u2014 Hult Cohort builder (@jiaxinaspenlin-dotcom).",
+      "bio": "jiaxinaspenlin-dotcom — Hult Cohort builder (@jiaxinaspenlin-dotcom).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/252278128?v=4",
       "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
@@ -1556,7 +1556,7 @@
           "kind": "repo"
         },
         {
-          "label": "signal-atlas \u00b7 live",
+          "label": "signal-atlas · live",
           "href": "https://signal-atlas-omega.vercel.app/",
           "kind": "showcase"
         },
@@ -1566,7 +1566,7 @@
           "kind": "repo"
         },
         {
-          "label": "Ember \u00b7 live",
+          "label": "Ember · live",
           "href": "https://ember-ohio.onrender.com/",
           "kind": "showcase"
         },
@@ -1576,7 +1576,7 @@
           "kind": "repo"
         },
         {
-          "label": "grow-sprout \u00b7 live",
+          "label": "grow-sprout · live",
           "href": "https://grow-sprout.vercel.app/",
           "kind": "showcase"
         },
@@ -1586,7 +1586,7 @@
           "kind": "repo"
         },
         {
-          "label": "Trajectory \u00b7 live",
+          "label": "Trajectory · live",
           "href": "https://trajectory-tan.vercel.app/",
           "kind": "showcase"
         },
@@ -1596,7 +1596,7 @@
           "kind": "repo"
         },
         {
-          "label": "mbta-real-time-transfer-helper \u00b7 live",
+          "label": "mbta-real-time-transfer-helper · live",
           "href": "https://mbta-real-time-transfer-helper.vercel.app/",
           "kind": "showcase"
         },
@@ -1606,7 +1606,7 @@
           "kind": "repo"
         },
         {
-          "label": "smart-gate-dashboard \u00b7 live",
+          "label": "smart-gate-dashboard · live",
           "href": "https://smart-gate-dashboard-orpin.vercel.app/",
           "kind": "showcase"
         },
@@ -1654,7 +1654,7 @@
         {
           "id": "jiaxinaspenlin-dotcom-ember",
           "name": "Ember",
-          "description": "Multi-tenant cohort communications platform built with FastAPI, HTMX, and PostgreSQL\u2014where conversations turn into action.",
+          "description": "Multi-tenant cohort communications platform built with FastAPI, HTMX, and PostgreSQL—where conversations turn into action.",
           "repoUrl": "https://github.com/jiaxinaspenlin-dotcom/Ember",
           "liveUrl": "https://ember-ohio.onrender.com/",
           "languages": [
@@ -1801,7 +1801,7 @@
           "kind": "repo"
         },
         {
-          "label": "Archivist \u00b7 live",
+          "label": "Archivist · live",
           "href": "https://archivist-blue.vercel.app/",
           "kind": "showcase"
         },
@@ -1811,7 +1811,7 @@
           "kind": "repo"
         },
         {
-          "label": "Ideata_B2B \u00b7 live",
+          "label": "Ideata_B2B · live",
           "href": "https://ideata-b2-b.vercel.app/",
           "kind": "showcase"
         },
@@ -1987,7 +1987,7 @@
         "Kotlin",
         "Objective-C"
       ],
-      "bio": "Joseph Singh \u2014 Hult Cohort builder (@joes9987).",
+      "bio": "Joseph Singh — Hult Cohort builder (@joes9987).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/46075221?v=4",
       "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
@@ -2011,7 +2011,7 @@
           "kind": "repo"
         },
         {
-          "label": "pm-joes9987 \u00b7 live",
+          "label": "pm-joes9987 · live",
           "href": "https://pm-joes9987.vercel.app/",
           "kind": "pm"
         },
@@ -2021,7 +2021,7 @@
           "kind": "repo"
         },
         {
-          "label": "comms-joes9987 \u00b7 live",
+          "label": "comms-joes9987 · live",
           "href": "https://comms-joes9987.vercel.app/",
           "kind": "comms"
         },
@@ -2031,7 +2031,7 @@
           "kind": "repo"
         },
         {
-          "label": "showcase-joes9987 \u00b7 live",
+          "label": "showcase-joes9987 · live",
           "href": "https://showcase-joes9987.vercel.app/",
           "kind": "showcase"
         },
@@ -2041,7 +2041,7 @@
           "kind": "repo"
         },
         {
-          "label": "CreatorAssistant \u00b7 live",
+          "label": "CreatorAssistant · live",
           "href": "https://creator-assistant.vercel.app/",
           "kind": "showcase"
         },
@@ -2100,7 +2100,7 @@
         {
           "id": "joes9987-comms-joes9987",
           "name": "comms-joes9987",
-          "description": "EudaChat \u2014 cohort internal communications platform (Hult Week 2)",
+          "description": "EudaChat — cohort internal communications platform (Hult Week 2)",
           "repoUrl": "https://github.com/joes9987/comms-joes9987",
           "liveUrl": "https://comms-joes9987.vercel.app/",
           "languages": [
@@ -2115,7 +2115,7 @@
         {
           "id": "joes9987-showcase-joes9987",
           "name": "showcase-joes9987",
-          "description": "EudaMarket \u2014 public showcase for the Hult Summer Pilot (Project 3)",
+          "description": "EudaMarket — public showcase for the Hult Summer Pilot (Project 3)",
           "repoUrl": "https://github.com/joes9987/showcase-joes9987",
           "liveUrl": "https://showcase-joes9987.vercel.app/",
           "languages": [
@@ -2204,7 +2204,7 @@
       "skills": [
         "JavaScript"
       ],
-      "bio": "Josie-ctrl \u2014 Hult Cohort builder (@Josie-ctrl).",
+      "bio": "Josie-ctrl — Hult Cohort builder (@Josie-ctrl).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/60654514?v=4",
       "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
@@ -2221,7 +2221,7 @@
           "kind": "repo"
         },
         {
-          "label": "projectmanagament \u00b7 live",
+          "label": "projectmanagament · live",
           "href": "https://projectmanagement-josie11.vercel.app/",
           "kind": "showcase"
         },
@@ -2275,7 +2275,7 @@
         "CSS",
         "JavaScript"
       ],
-      "bio": "kiaracaesar5627 \u2014 Hult Cohort builder (@kiaracaesar5627).",
+      "bio": "kiaracaesar5627 — Hult Cohort builder (@kiaracaesar5627).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/298455749?v=4",
       "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
@@ -2295,7 +2295,7 @@
           "kind": "repo"
         },
         {
-          "label": "my-portfolio \u00b7 live",
+          "label": "my-portfolio · live",
           "href": "https://my-portfolio-snowy-seven-rorcsx6ve6.vercel.app/",
           "kind": "showcase"
         },
@@ -2305,7 +2305,7 @@
           "kind": "repo"
         },
         {
-          "label": "personal-portfolio-kc \u00b7 live",
+          "label": "personal-portfolio-kc · live",
           "href": "https://personal-portfolio-kc.vercel.app/",
           "kind": "showcase"
         },
@@ -2415,7 +2415,7 @@
           "kind": "repo"
         },
         {
-          "label": "buddywire \u00b7 live",
+          "label": "buddywire · live",
           "href": "https://buddywire.vercel.app/",
           "kind": "showcase"
         },
@@ -2425,7 +2425,7 @@
           "kind": "repo"
         },
         {
-          "label": "DORA \u00b7 live",
+          "label": "DORA · live",
           "href": "https://dora-mfpa.onrender.com/",
           "kind": "pm"
         },
@@ -2435,7 +2435,7 @@
           "kind": "repo"
         },
         {
-          "label": "NIDORA \u00b7 live",
+          "label": "NIDORA · live",
           "href": "https://nidora-one.vercel.app/",
           "kind": "showcase"
         },
@@ -2445,7 +2445,7 @@
           "kind": "repo"
         },
         {
-          "label": "MeetUp-Tool \u00b7 live",
+          "label": "MeetUp-Tool · live",
           "href": "https://meetup-tool.onrender.com/",
           "kind": "showcase"
         },
@@ -2455,7 +2455,7 @@
           "kind": "repo"
         },
         {
-          "label": "MemoryMatch \u00b7 live",
+          "label": "MemoryMatch · live",
           "href": "https://memorymatch-sepia.vercel.app/",
           "kind": "showcase"
         },
@@ -2465,7 +2465,7 @@
           "kind": "repo"
         },
         {
-          "label": "kperpignant.github.io \u00b7 live",
+          "label": "kperpignant.github.io · live",
           "href": "https://kperpignant.github.io/",
           "kind": "showcase"
         },
@@ -2475,7 +2475,7 @@
           "kind": "repo"
         },
         {
-          "label": "HelpDesk \u00b7 live",
+          "label": "HelpDesk · live",
           "href": "https://help-desk-sepia.vercel.app/",
           "kind": "showcase"
         },
@@ -2485,7 +2485,7 @@
           "kind": "repo"
         },
         {
-          "label": "AlphaTest \u00b7 live",
+          "label": "AlphaTest · live",
           "href": "https://alphatest-208q.onrender.com/",
           "kind": "showcase"
         },
@@ -2642,7 +2642,7 @@
         "Vim Snippet",
         "HTML"
       ],
-      "bio": "kureen-cyber \u2014 Hult Cohort builder (@kureen-cyber).",
+      "bio": "kureen-cyber — Hult Cohort builder (@kureen-cyber).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/295988929?v=4",
       "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
@@ -2664,7 +2664,7 @@
           "kind": "repo"
         },
         {
-          "label": "Banterfolio \u00b7 live",
+          "label": "Banterfolio · live",
           "href": "https://banterfolio.vercel.app/",
           "kind": "showcase"
         },
@@ -2674,7 +2674,7 @@
           "kind": "repo"
         },
         {
-          "label": "Banter \u00b7 live",
+          "label": "Banter · live",
           "href": "https://banter-kureen-cyber.vercel.app/",
           "kind": "showcase"
         },
@@ -2684,7 +2684,7 @@
           "kind": "repo"
         },
         {
-          "label": "PM-tool-Hult-Cohort-4 \u00b7 live",
+          "label": "PM-tool-Hult-Cohort-4 · live",
           "href": "https://pm-tool-hult-cohort-4.vercel.app/",
           "kind": "pm"
         },
@@ -2694,7 +2694,7 @@
           "kind": "repo"
         },
         {
-          "label": "my-portfolio \u00b7 live",
+          "label": "my-portfolio · live",
           "href": "https://my-portfolio-alpha-murex-77.vercel.app/",
           "kind": "showcase"
         },
@@ -2833,7 +2833,7 @@
       "campus": "TBD",
       "role": "Builder",
       "skills": [],
-      "bio": "Lorraine Villaroel \u2014 Hult Cohort builder (@Lorra-V).",
+      "bio": "Lorraine Villaroel — Hult Cohort builder (@Lorra-V).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/216057099?v=4",
       "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
@@ -2906,7 +2906,7 @@
         "PLpgSQL",
         "HTML"
       ],
-      "bio": "Lucas Brandao \u2014 Hult Cohort builder (@lvcasmadeit).",
+      "bio": "Lucas Brandao — Hult Cohort builder (@lvcasmadeit).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/109086409?v=4",
       "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
@@ -2924,7 +2924,7 @@
           "kind": "repo"
         },
         {
-          "label": "Mast \u00b7 live",
+          "label": "Mast · live",
           "href": "https://mast-six.vercel.app/",
           "kind": "showcase"
         },
@@ -2977,7 +2977,7 @@
         {
           "id": "lvcasmadeit-teamwrk",
           "name": "teamwrk",
-          "description": "Cohort communications platform \u2014 channels, DMs, announcements, and realtime messaging",
+          "description": "Cohort communications platform — channels, DMs, announcements, and realtime messaging",
           "repoUrl": "https://github.com/lvcasmadeit/teamwrk",
           "languages": [
             "TypeScript",
@@ -3042,7 +3042,7 @@
       "skills": [
         "HTML"
       ],
-      "bio": "Dante Mitchell \u2014 Hult Cohort builder (@mitchelldante99-create).",
+      "bio": "Dante Mitchell — Hult Cohort builder (@mitchelldante99-create).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/222322612?v=4",
       "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)",
@@ -3124,7 +3124,7 @@
         "HTML",
         "Dockerfile"
       ],
-      "bio": "I re-architect trillion-dollar financial systems into AI-native platforms, and build AI-first products from zero. 3x founder \u00b7 IIT-Bombay \u00b7 Forbes 30U30",
+      "bio": "I re-architect trillion-dollar financial systems into AI-native platforms, and build AI-first products from zero. 3x founder · IIT-Bombay · Forbes 30U30",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/161231855?v=4",
       "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
@@ -3150,7 +3150,7 @@
           "kind": "repo"
         },
         {
-          "label": "build-os \u00b7 live",
+          "label": "build-os · live",
           "href": "https://nikjain15.github.io/build-os/",
           "kind": "showcase"
         },
@@ -3160,7 +3160,7 @@
           "kind": "repo"
         },
         {
-          "label": "rally \u00b7 live",
+          "label": "rally · live",
           "href": "https://rally-nikjain15.vercel.app/",
           "kind": "comms"
         },
@@ -3170,7 +3170,7 @@
           "kind": "repo"
         },
         {
-          "label": "founderfirst.one \u00b7 live",
+          "label": "founderfirst.one · live",
           "href": "https://founderfirst.one/",
           "kind": "showcase"
         },
@@ -3180,7 +3180,7 @@
           "kind": "repo"
         },
         {
-          "label": "pulse \u00b7 live",
+          "label": "pulse · live",
           "href": "https://pm-nikjain15.vercel.app/",
           "kind": "pm"
         },
@@ -3190,7 +3190,7 @@
           "kind": "repo"
         },
         {
-          "label": "roleos-site \u00b7 live",
+          "label": "roleos-site · live",
           "href": "https://roleos.fyi/",
           "kind": "comms"
         },
@@ -3239,7 +3239,7 @@
         {
           "id": "nikjain15-build-os",
           "name": "build-os",
-          "description": "Build OS \u2014 a self-improving operating system for shipping excellent products, by Nik Jain",
+          "description": "Build OS — a self-improving operating system for shipping excellent products, by Nik Jain",
           "repoUrl": "https://github.com/nikjain15/build-os",
           "liveUrl": "https://nikjain15.github.io/build-os/",
           "languages": [
@@ -3251,7 +3251,7 @@
         {
           "id": "nikjain15-rally",
           "name": "rally",
-          "description": "Your cohort, in sync \u2014 a realtime comms platform with peer-confirmed recognition, tracked commitments, and a Claude-powered assistant. Next.js + Firebase.",
+          "description": "Your cohort, in sync — a realtime comms platform with peer-confirmed recognition, tracked commitments, and a Claude-powered assistant. Next.js + Firebase.",
           "repoUrl": "https://github.com/nikjain15/rally",
           "liveUrl": "https://rally-nikjain15.vercel.app/",
           "languages": [
@@ -3285,7 +3285,7 @@
         {
           "id": "nikjain15-pulse",
           "name": "pulse",
-          "description": "Pulse \u2014 the cohort's heartbeat. A project management platform built to motivate people to ship, by making the whole cohort's progress visible in real time. Hult Cohort Developer Program, Summer Pilot 2026.",
+          "description": "Pulse — the cohort's heartbeat. A project management platform built to motivate people to ship, by making the whole cohort's progress visible in real time. Hult Cohort Developer Program, Summer Pilot 2026.",
           "repoUrl": "https://github.com/nikjain15/pulse",
           "liveUrl": "https://pm-nikjain15.vercel.app/",
           "languages": [
@@ -3323,7 +3323,7 @@
         {
           "id": "nikjain15-roleos-app",
           "name": "roleos-app",
-          "description": "RoleOS \u2014 the product. AI-first agent that runs your senior job hunt end-to-end (Next.js on Cloudflare Workers). Live at ro.roleos.fyi.",
+          "description": "RoleOS — the product. AI-first agent that runs your senior job hunt end-to-end (Next.js on Cloudflare Workers). Live at ro.roleos.fyi.",
           "repoUrl": "https://github.com/nikjain15/roleos-app",
           "languages": [
             "TypeScript",
@@ -3400,7 +3400,7 @@
           "kind": "repo"
         },
         {
-          "label": "ShipVote \u00b7 live",
+          "label": "ShipVote · live",
           "href": "https://ship-vote-three.vercel.app/",
           "kind": "showcase"
         },
@@ -3410,7 +3410,7 @@
           "kind": "repo"
         },
         {
-          "label": "QuickQuiz \u00b7 live",
+          "label": "QuickQuiz · live",
           "href": "https://quick-quiz-seven-coral.vercel.app/",
           "kind": "showcase"
         },
@@ -3420,7 +3420,7 @@
           "kind": "repo"
         },
         {
-          "label": "JobCopilot \u00b7 live",
+          "label": "JobCopilot · live",
           "href": "https://job-copilot-six.vercel.app/",
           "kind": "showcase"
         },
@@ -3430,7 +3430,7 @@
           "kind": "repo"
         },
         {
-          "label": "Cornerman \u00b7 live",
+          "label": "Cornerman · live",
           "href": "https://cornerman.streamlit.app/",
           "kind": "showcase"
         },
@@ -3440,7 +3440,7 @@
           "kind": "repo"
         },
         {
-          "label": "WorkLog \u00b7 live",
+          "label": "WorkLog · live",
           "href": "https://web-rust-alpha-21.vercel.app/",
           "kind": "showcase"
         },
@@ -3450,7 +3450,7 @@
           "kind": "repo"
         },
         {
-          "label": "3D-Portfolio \u00b7 live",
+          "label": "3D-Portfolio · live",
           "href": "https://3-d-portfolio-one-lilac.vercel.app/",
           "kind": "showcase"
         },
@@ -3517,7 +3517,7 @@
         {
           "id": "paramjeet-singh-neu-cornerman",
           "name": "Cornerman",
-          "description": "Feedback architecture for AI-enhanced learning. A boxing tutor that asks the question instead of giving the answer. Built for Cursor Boston \u00d7 Hult Sports Hack 2026.",
+          "description": "Feedback architecture for AI-enhanced learning. A boxing tutor that asks the question instead of giving the answer. Built for Cursor Boston × Hult Sports Hack 2026.",
           "repoUrl": "https://github.com/Paramjeet-singh-neu/Cornerman",
           "liveUrl": "https://cornerman.streamlit.app/",
           "languages": [
@@ -3645,7 +3645,7 @@
           "kind": "repo"
         },
         {
-          "label": "shiplog \u00b7 live",
+          "label": "shiplog · live",
           "href": "https://shiplog-snowy.vercel.app/",
           "kind": "showcase"
         },
@@ -3655,7 +3655,7 @@
           "kind": "repo"
         },
         {
-          "label": "cohort-comms \u00b7 live",
+          "label": "cohort-comms · live",
           "href": "https://cohort-comms-phi.vercel.app/",
           "kind": "comms"
         },
@@ -3665,7 +3665,7 @@
           "kind": "repo"
         },
         {
-          "label": "Crypto-Price-Prediction \u00b7 live",
+          "label": "Crypto-Price-Prediction · live",
           "href": "https://crypto-price-prediction-ten.vercel.app/",
           "kind": "showcase"
         },
@@ -3675,7 +3675,7 @@
           "kind": "repo"
         },
         {
-          "label": "keel-pm \u00b7 live",
+          "label": "keel-pm · live",
           "href": "https://keel-pm.vercel.app/",
           "kind": "pm"
         },
@@ -3685,7 +3685,7 @@
           "kind": "repo"
         },
         {
-          "label": "athlix-ai \u00b7 live",
+          "label": "athlix-ai · live",
           "href": "https://athlix-ai.vercel.app/",
           "kind": "showcase"
         },
@@ -3695,7 +3695,7 @@
           "kind": "repo"
         },
         {
-          "label": "polymarket-sentiment-agent \u00b7 live",
+          "label": "polymarket-sentiment-agent · live",
           "href": "https://poly-agent.fly.dev/",
           "kind": "showcase"
         },
@@ -3705,7 +3705,7 @@
           "kind": "repo"
         },
         {
-          "label": "fusionscope \u00b7 live",
+          "label": "fusionscope · live",
           "href": "https://fusionscope.vercel.app/",
           "kind": "showcase"
         },
@@ -3715,7 +3715,7 @@
           "kind": "repo"
         },
         {
-          "label": "fraud-job-detection-pipeline \u00b7 live",
+          "label": "fraud-job-detection-pipeline · live",
           "href": "https://v0-personal-portfolio-website-eight-theta.vercel.app/",
           "kind": "showcase"
         },
@@ -3744,7 +3744,7 @@
         {
           "id": "priyanshshahh-shiplog",
           "name": "shiplog",
-          "description": "Cohort 67 vibe marketing platform \u2014 proof of work, not a portfolio.",
+          "description": "Cohort 67 vibe marketing platform — proof of work, not a portfolio.",
           "repoUrl": "https://github.com/priyanshshahh/shiplog",
           "liveUrl": "https://shiplog-snowy.vercel.app/",
           "languages": [
@@ -3789,7 +3789,7 @@
         {
           "id": "priyanshshahh-keel-pm",
           "name": "keel-pm",
-          "description": "Keel \u2014 motivation-first project management for Hult Cohort Summer Pilot 2026",
+          "description": "Keel — motivation-first project management for Hult Cohort Summer Pilot 2026",
           "repoUrl": "https://github.com/priyanshshahh/keel-pm",
           "liveUrl": "https://keel-pm.vercel.app/",
           "languages": [
@@ -3803,7 +3803,7 @@
         {
           "id": "priyanshshahh-athlix-ai",
           "name": "athlix-ai",
-          "description": "The Financial Intelligence Layer For Sports \u2014 AI-powered athlete risk forecasting. Built for the Cursor Boston \u00d7 Hult Sports Hack 2026.",
+          "description": "The Financial Intelligence Layer For Sports — AI-powered athlete risk forecasting. Built for the Cursor Boston × Hult Sports Hack 2026.",
           "repoUrl": "https://github.com/priyanshshahh/athlix-ai",
           "liveUrl": "https://athlix-ai.vercel.app/",
           "languages": [
@@ -3886,7 +3886,7 @@
         "Shell",
         "JavaScript"
       ],
-      "bio": "r3s0lv343vr \u2014 Hult Cohort builder (@r3s0lv343vr).",
+      "bio": "r3s0lv343vr — Hult Cohort builder (@r3s0lv343vr).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/297017555?v=4",
       "photoGradient": "linear-gradient(140deg, #f8c8d8 0%, #ffe8c8 50%, #d8f0e8 100%)",
@@ -3907,7 +3907,7 @@
           "kind": "repo"
         },
         {
-          "label": "lnq \u00b7 live",
+          "label": "lnq · live",
           "href": "https://lnq-eight.vercel.app/",
           "kind": "comms"
         },
@@ -4004,7 +4004,7 @@
         {
           "id": "r3s0lv343vr-pm-r3s0lv343vr",
           "name": "pm-r3s0lv343vr",
-          "description": "Hult Cohort Project 1 \u2014 Project Intelligence Platform (PM)",
+          "description": "Hult Cohort Project 1 — Project Intelligence Platform (PM)",
           "repoUrl": "https://github.com/r3s0lv343vr/pm-r3s0lv343vr",
           "languages": [
             "TypeScript",
@@ -4057,7 +4057,7 @@
         "JavaScript",
         "CSS"
       ],
-      "bio": "RamyaTolety \u2014 Hult Cohort builder (@RamyaTolety).",
+      "bio": "RamyaTolety — Hult Cohort builder (@RamyaTolety).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/57016501?v=4",
       "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
@@ -4077,7 +4077,7 @@
           "kind": "repo"
         },
         {
-          "label": "beacon-ramyatolety \u00b7 live",
+          "label": "beacon-ramyatolety · live",
           "href": "https://beacon-ramyatolety.vercel.app/",
           "kind": "showcase"
         },
@@ -4087,7 +4087,7 @@
           "kind": "repo"
         },
         {
-          "label": "pm-ramyatolety \u00b7 live",
+          "label": "pm-ramyatolety · live",
           "href": "https://pm-ramyatolety.vercel.app/",
           "kind": "pm"
         },
@@ -4149,7 +4149,7 @@
         {
           "id": "ramyatolety-lighthouse-ramyatolety",
           "name": "lighthouse-ramyatolety",
-          "description": "Cohort vibe marketing platform \u2014 Hult Cohort Developer Program, Phase 1 Project 3",
+          "description": "Cohort vibe marketing platform — Hult Cohort Developer Program, Phase 1 Project 3",
           "repoUrl": "https://github.com/RamyaTolety/lighthouse-ramyatolety",
           "languages": [
             "TypeScript",
@@ -4191,7 +4191,7 @@
         "Python",
         "HTML"
       ],
-      "bio": "RAVEN-dubgub \u2014 Hult Cohort builder (@RAVEN-dubgub).",
+      "bio": "RAVEN-dubgub — Hult Cohort builder (@RAVEN-dubgub).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/181426915?v=4",
       "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
@@ -4212,7 +4212,7 @@
           "kind": "repo"
         },
         {
-          "label": "showcase-raven-dubgub \u00b7 live",
+          "label": "showcase-raven-dubgub · live",
           "href": "https://showcase-raven-dubgub.vercel.app/",
           "kind": "showcase"
         },
@@ -4222,7 +4222,7 @@
           "kind": "repo"
         },
         {
-          "label": "pm-RAVEN-dubgub \u00b7 live",
+          "label": "pm-RAVEN-dubgub · live",
           "href": "https://pm-raven-dubgub.vercel.app/",
           "kind": "pm"
         },
@@ -4232,7 +4232,7 @@
           "kind": "repo"
         },
         {
-          "label": "comms-raven-dubgub \u00b7 live",
+          "label": "comms-raven-dubgub · live",
           "href": "https://comms-raven-dubgub.vercel.app/",
           "kind": "comms"
         },
@@ -4352,7 +4352,7 @@
       "skills": [
         "Python"
       ],
-      "bio": "Rebekah Wigton \u2014 Hult Cohort builder (@rebekah-dev).",
+      "bio": "Rebekah Wigton — Hult Cohort builder (@rebekah-dev).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/57730012?v=4",
       "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
@@ -4474,7 +4474,7 @@
         "CSS",
         "JavaScript"
       ],
-      "bio": "solzco1 \u2014 Hult Cohort builder (@solzco1).",
+      "bio": "solzco1 — Hult Cohort builder (@solzco1).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/297009782?v=4",
       "photoGradient": "linear-gradient(145deg, #cfe8de 0%, #f7d7b8 55%, #f2b7c8 100%)",
@@ -4491,7 +4491,7 @@
           "kind": "repo"
         },
         {
-          "label": "my-portfolio \u00b7 live",
+          "label": "my-portfolio · live",
           "href": "https://my-portfolio-eight-smoky-76.vercel.app/",
           "kind": "showcase"
         },
@@ -4549,7 +4549,7 @@
         "JavaScript",
         "CSS"
       ],
-      "bio": "Studmuffin01 \u2014 Hult Cohort builder (@Studmuffin01).",
+      "bio": "Studmuffin01 — Hult Cohort builder (@Studmuffin01).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/294016067?v=4",
       "photoGradient": "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
@@ -4571,7 +4571,7 @@
           "kind": "repo"
         },
         {
-          "label": "Project-Management-Build \u00b7 live",
+          "label": "Project-Management-Build · live",
           "href": "https://initiara.vercel.app/",
           "kind": "showcase"
         },
@@ -4581,7 +4581,7 @@
           "kind": "repo"
         },
         {
-          "label": "my-portfolio \u00b7 live",
+          "label": "my-portfolio · live",
           "href": "https://my-portfolio-rawle.vercel.app/",
           "kind": "showcase"
         },
@@ -4692,7 +4692,7 @@
         "CSS",
         "HTML"
       ],
-      "bio": "SuperCUDA \u2014 Hult Cohort builder (@SuperCUDA).",
+      "bio": "SuperCUDA — Hult Cohort builder (@SuperCUDA).",
       "public": true,
       "avatarUrl": "https://avatars.githubusercontent.com/u/7886329?v=4",
       "photoGradient": "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
@@ -4820,7 +4820,7 @@
           "kind": "repo"
         },
         {
-          "label": "Momentum \u00b7 live",
+          "label": "Momentum · live",
           "href": "https://momentum-bay-two.vercel.app/",
           "kind": "showcase"
         },
@@ -4830,7 +4830,7 @@
           "kind": "repo"
         },
         {
-          "label": "Formation \u00b7 live",
+          "label": "Formation · live",
           "href": "https://formation-mu-beryl.vercel.app/",
           "kind": "showcase"
         },
@@ -4919,7 +4919,7 @@
         {
           "id": "zukhriddingit-veraai",
           "name": "VeraAI",
-          "description": "Vera \u2014 a deterministic, safety-first rental search assistant demo",
+          "description": "Vera — a deterministic, safety-first rental search assistant demo",
           "repoUrl": "https://github.com/zukhriddingit/VeraAI",
           "languages": [
             "TypeScript",
