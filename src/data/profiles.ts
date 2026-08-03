@@ -34,13 +34,12 @@ export const profiles: CohortProfile[] = [
     campus: "Boston",
     role: "Builder · Operator",
     skills: ["Next.js", "TypeScript", "Firebase", "Prisma", "Vercel"],
-    bio: "Shipping production cohort tools with agent-assisted velocity. Built Forth (PM), Lnq (comms), and NextMove (showcase) — each deployed, reviewed, and wired for ecosystem unification.",
+    bio: "Shipping production cohort tools with agent-assisted velocity. Built Lnq (comms) and NextMove (showcase) — each deployed, reviewed, and wired for ecosystem unification.",
     public: true,
     avatarUrl: "https://avatars.githubusercontent.com/r3s0lv343vr",
     photoGradient: "linear-gradient(135deg, #f7b6c8 0%, #f3d9a4 45%, #9fd6c2 100%)",
     highlight: "Operator of NextMove",
     homepageUrls: [
-      "https://forth-bice.vercel.app",
       "https://lnq-eight.vercel.app",
       "https://nextmove-hult.vercel.app",
     ],
@@ -48,11 +47,6 @@ export const profiles: CohortProfile[] = [
       "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/185",
     ],
     portfolio: [
-      {
-        label: "Forth · PM platform",
-        href: "https://forth-bice.vercel.app",
-        kind: "pm",
-      },
       {
         label: "PM build repo",
         href: "https://github.com/r3s0lv343vr/pm-r3s0lv343vr",
@@ -72,6 +66,32 @@ export const profiles: CohortProfile[] = [
         label: "Project 3 submission PR",
         href: "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program/pull/185",
         kind: "pr",
+      },
+    ],
+  },
+  {
+    slug: "codingwcal",
+    name: "Calvin V.",
+    github: "CodingWCal",
+    campus: "Boston, MA",
+    role: "Builder · Developer Advocate",
+    skills: ["TypeScript", "Next.js", "Full-stack", "AI"],
+    bio: "Developer Advocate and full-stack engineer. Built Forth — the Project 1 week winning PM platform for the Hult Cohort Summer Pilot — plus liaison, odyssey, and other shipped cohort work.",
+    public: true,
+    avatarUrl: "https://avatars.githubusercontent.com/u/200448977?v=4",
+    photoGradient: "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
+    highlight: "Forth · Project 1 week winner",
+    homepageUrls: ["https://forth-bice.vercel.app/"],
+    portfolio: [
+      {
+        label: "Forth · PM platform (Project 1 winner)",
+        href: "https://forth-bice.vercel.app/",
+        kind: "pm",
+      },
+      {
+        label: "Forth · repo",
+        href: "https://github.com/CodingWCal/forth",
+        kind: "repo",
       },
     ],
   },
@@ -133,8 +153,8 @@ export const profiles: CohortProfile[] = [
     photoGradient: "linear-gradient(160deg, #f3d9a4 0%, #f7b6c8 40%, #b8d4f0 100%)",
     portfolio: [
       {
-        label: "PM snapshot (placeholder)",
-        href: "https://forth-bice.vercel.app",
+        label: "PM build (placeholder)",
+        href: "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program",
         kind: "pm",
       },
     ],

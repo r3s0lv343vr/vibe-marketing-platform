@@ -18,6 +18,8 @@ export type PmProject = {
 export const pmSnapshotMeta = {
   source: "Forth / participant PM platforms",
   forthUrl: "https://forth-bice.vercel.app",
+  forthBuilder: "Calvin V. · CodingWCal",
+  forthBuilderSlug: "codingwcal",
   participantPmUrl: "https://pm-r3s0lv343vr.vercel.app",
   refreshedAt: "2026-07-30T18:00:00Z",
   cohort: "Hult Cohort · Summer Pilot 2026",
@@ -29,13 +31,14 @@ export const pmProjects: PmProject[] = [
   {
     id: "p1-pm",
     name: "Phase 1 · Project 1 — PM platforms",
-    owner: "Cohort (multi-operator)",
+    owner: "Calvin V. · Forth (Project 1 week winner)",
     status: "shipped",
     phase: "Review complete / merged submissions",
     progress: 100,
     deployUrl: "https://forth-bice.vercel.app",
-    repoUrl: "https://github.com/rogerSuperBuilderAlpha/hult-cohort-program",
-    notes: "Peer-reviewed PM builds live; Forth is the reference production surface.",
+    repoUrl: "https://github.com/CodingWCal/forth",
+    notes:
+      "Forth by Calvin V. won Project 1 week. Peer-reviewed PM builds live; Forth is the reference production surface.",
   },
   {
     id: "p2-comms",

@@ -39,11 +39,17 @@ export default function StatusPage() {
           </dd>
         </div>
         <div className="rounded-2xl border border-[var(--line)] bg-white/55 p-4">
-          <dt className="text-[var(--ink-soft)]">Forth</dt>
+          <dt className="text-[var(--ink-soft)]">Forth · Project 1 winner</dt>
           <dd className="mt-1 font-medium">
             <a href={pmSnapshotMeta.forthUrl} target="_blank" rel="noreferrer" className="underline">
               Open live PM
             </a>
+            <span className="mt-1 block text-xs text-[var(--ink-soft)]">
+              Built by{" "}
+              <a href={`/profiles/${pmSnapshotMeta.forthBuilderSlug}`} className="underline">
+                {pmSnapshotMeta.forthBuilder}
+              </a>
+            </span>
           </dd>
         </div>
         <div className="rounded-2xl border border-[var(--line)] bg-white/55 p-4">
